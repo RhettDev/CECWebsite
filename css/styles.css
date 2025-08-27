@@ -1,1 +1,8 @@
 /* init style.css */
+
+.top {
+    position: absolute;
+    left: auto;
+    right: auto;
+    z-index: 1;
+}
