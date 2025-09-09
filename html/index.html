@@ -3,171 +3,191 @@
 <html lang="en-UK">
     <head>
         <meta charset="utf-8" />
-        <title>Curtin Engineers Club Landing Page</title>
-        <meta name="viewport" content="width=device-width" />
-        <style>
-            @import "styles.css" layer(firstlayer);
-        </style>
+        <title>Curtin Engineers Club</title>
+        <meta name="viewport" content="width=100%" />
+        <link rel="stylesheet" href="/css/styles.css" />
+        <script src="https://kit.fontawesome.com/4c5395be19.js" crossorigin="anonymous"></script> <!-- Set up to add icons via Font Awesome but currently all Icons are local files--> 
     </head>
-    <!-- Header-->
-    <div data-property-1="Main" style="width: auto; height: 45px; padding: 24px; background: var(--Background-Primary, #FBFBFE); box-shadow: 0px 3.2px 3.2px rgba(0, 0, 0, 0.25); justify-content: flex-start; align-items: center; gap: 60px; display: inline-flex">
-        <div data-property-1="Full" style="justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-            <img style="width: 41.60px; height: 41.60px;" src="/assets/images/GearBlackVector.svg"></img>
-            <h1 style="color: var(--Misc-Black, black); font-size: 22.40px; font-family: Poppins; font-weight: 500; word-wrap: break-word">Curtin Engineers Club</h1>
+
+    <!-- Navigation Bar-->
+    <div class="navbar">
+        <!-- Left side of Navigation Bar-->
+        <div class="nav-left">
+            <a href="#index">
+                <img class='icon' src="/assets/icons/CECGearBlack.svg" alt="CEC Logo">
+            </a>
+            <a href="#index">Curtin Engineers Club</a>
+            <a href="#about">About</a>
+            <a href="#events">Events</a>
+            <a href="#sponsors">Sponsors</a>
+            <a href="#history">History</a>
+            <a href="#links">Links</a>
         </div>
-        <div style="flex: 1 1 0; justify-content: flex-start; align-items: center; gap: 42.40px; display: flex">
-            <div data-property-1="PassiveAlpha" style="height: 32px; padding-left: 6px; padding-right: 6px; padding-top: 4px; padding-bottom: 4px; background: var(--Background-Primary, #FBFBFE); border-radius: 6.40px; justify-content: center; align-items: center; gap: 6px; display: flex">
-                <div style="text-align: center; color: var(--Text-Primary, #050414); font-size: 16px; font-family: Poppins; font-weight: 400; word-wrap: break-word">About</div>
-            </div>
-            <div data-property-1="PassiveAlpha" style="height: 32px; padding-left: 6px; padding-right: 6px; padding-top: 4px; padding-bottom: 4px; background: var(--Background-Primary, #FBFBFE); border-radius: 6.40px; justify-content: center; align-items: center; gap: 6px; display: flex">
-                <div style="text-align: center; color: var(--Text-Primary, #050414); font-size: 16px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Events</div>
-            </div>
-            <div data-property-1="PassiveAlpha" style="height: 32px; padding-left: 6spx; padding-right: 6px; padding-top: 4px; padding-bottom: 4px; background: var(--Background-Primary, #FBFBFE); border-radius: 6.40px; justify-content: center; align-items: center; gap: 6px; display: flex">
-                <div style="text-align: center; color: var(--Text-Primary, #050414); font-size: 16px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Sponsors</div>
-            </div>
-            <div data-property-1="PassiveAlpha" style="height: 32px; padding-left: 6px; padding-right: 6px; padding-top: 4px; padding-bottom: 4px; background: var(--Background-Primary, #FBFBFE); border-radius: 6.40px; justify-content: center; align-items: center; gap: 6px; display: flex">
-                <div style="text-align: center; color: var(--Text-Primary, #050414); font-size: 16px; font-family: Poppins; font-weight: 400; word-wrap: break-word">History</div>
-            </div>
-            <div data-property-1="PassiveAlpha" style="height: 32px; padding-left: 6px; padding-right: 6px; padding-top: 4px; padding-bottom: 4px; background: var(--Background-Primary, #FBFBFE); border-radius: 6.40px; justify-content: center; align-items: center; gap: 6px; display: flex">
-                <div style="text-align: center; color: var(--Text-Primary, #050414); font-size: 16px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Links</div>
-            </div>
-            <div data-property-1="PassiveAlpha" style="height: 32px; padding-left: 6px; padding-right: 6px; padding-top: 4px; padding-bottom: 4px; background: var(--Background-Primary, #FBFBFE); border-radius: 6.40px; justify-content: center; align-items: center; gap: 6px; display: flex">
-                <div style="text-align: center; color: var(--Text-Primary, #050414); font-size: 16px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Opportunities</div>
-            </div>
+        <!-- Right side of Navigation Bar-->
+        <div class="nav-right">
+            <a href="#dark">
+                <img class="icon" src="/assets/icons/DARKMODE-Icon.png">
+            </a>
+            <button class="mainButton">
+                <a href="https://curtin-cec.tidyhq.com/public/membership_levels">Sign Up!</a>
+            </button>
         </div>
-        <div data-size="48" style="width: 38.40px; height: 38.40px; position: relative; overflow: hidden">
-            <div style="width: 28.74px; height: 28.74px; left: 4.86px; top: 4.80px; position: absolute; outline: 3.20px var(--Text-Primary, #050414) solid; outline-offset: -1.60px"></div>
-        </div>
-        <div data-property-1="PassiveBeta" style="padding: 8px; background: var(--Brand-YellowPrimary, #FFEB31); border-radius: 12.80px; justify-content: center; align-items: center; gap: 8px; display: flex">
-            <div style="text-align: center; color: var(--Text-Black, #050414); font-size: 19.20px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Sign Up!</div>
-        </div>
-    </div>
+    </div>  
+
+    <!-- Landing Image -->
     <div>
-        <img style="width: 1922px; height: 941px; background: linear-gradient(0deg, var(--Background-ImageFade, rgba(36, 36, 36, 0.40)) 0%, var(--Background-ImageFade, rgba(36, 36, 36, 0.40)) 100%)" src="/assets/images/LandingImage.png">
-        <img class="top" src="/assets/images/GearWhiteVector.svg">
+        <img class="top-img" alt="CECGear" src="/assets/icons/CECGearWhite.svg" id="CECGearLanding">
+        <!-- script to make the Landing page Gear rotate as the user scrolls -->
+        <!-- <script>
+            const image = document.getElementById('CECGearLanding');
+
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.scrollY; // Current scroll position
+                const rotation = scrollTop % 360; // Limit rotation to 0–360 degrees
+                image.style.transform = `rotate(${rotation}deg)`;
+            });
+        </script> -->
+        <img class="bg-img" alt="LandingImage" style="width: 100%; height: auto;" src="/assets/images/LandingImage.png">
     </div>
+
+    <!-- BG stuff-->
     <div style="width: 100%; height: 100%; background: var(--Background-Primary, #FBFBFE); overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 75px; display: inline-flex">
-        <img style="width: 300px; height: 300px; background: var(--Text-White, #EFEFEF)" src="/assets/images/GearWhiteVector.svg"></img>
-        <div style="width: 1020.80px; border-radius: 12.80px; justify-content: flex-start; align-items: center; gap: 24px; display: inline-flex"></div>
-            <div style="flex: 1 1 0; align-self: stretch; padding: 24px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
-                <div data-property-1="LightMode" style="flex-direction: column; justify-content: center; align-items: center; gap: 4px; display: flex">
-                    <div style="text-align: center; color: var(--Text-Primary, #050414); font-size: 19.20px; font-family: Poppins; font-weight: 600; word-wrap: break-word">What is CEC About?</div>
-                </div>
-                <div style="align-self: stretch; height: 335.20px; text-align: center; justify-content: center; display: flex; flex-direction: column; color: var(--Text-Primary, #050414); font-size: 14.40px; font-family: Inter; font-weight: 400; word-wrap: break-word">description of the club and yap yap yap<br/>Vivamus eu feugiat risus, eget malesuada ligula. Cras quis enim id lorem feugiat bibendum. Nulla dui ligula, rutrum eget nisi non, euismod condimentum mauris. Proin convallis velit libero, non aliquet odio scelerisque non. Curabitur sodales egestas sapien quis venenatis.<br/> Fusce suscipit diam sed metus lis porttitor. Nunc nec elementum nisl, vel dapibus metus. Nam massa nunc, sagittis non odio id, tristique feugiat urna. Praesent at augue eget ipsum malesuada tristique. Sed mi ligula, auctor quis hendrerit eu, porttitor vitae magna. Fu </div>
+        <div style="width: 1020.80px; border-radius: 12.80px; justify-content: flex-start; align-items: center; display: inline-flex"></div>
+
+        <!-- About CEC Hero-->
+        <div class="heroContainer">
+            <div class="heroGroup">
+                <h2 class="txSubtitleBlack">What is CEC About?</h2>
+                <p class="txParagraph1Black">Description of the club and general idea behind it. Description of the club and general idea behind it. Description of the club and general idea behind it. Description of the club and general idea behind it. Description of the club and general idea behind it. Description of the club and general idea behind it. </p>
             </div>
-            <div style="flex: 1 1 0; height: 538.40px; padding: 24px; border-radius: 12.80px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
-                <div data-property-1="LightMode" style="flex-direction: column; justify-content: center; align-items: center; gap: 4px; display: flex">
-                    <div style="text-align: center; color: var(--Text-Primary, #050414); font-size: 19.20px; font-family: Poppins; font-weight: 600; word-wrap: break-word">Come Find Us!</div>
-                </div>
-                <img style="align-self: stretch; flex: 1 1 0; box-shadow: 0px 3.200000047683716px 3.200000047683716px rgba(0, 0, 0, 0.25); border-radius: 12.80px; outline: 2.40px var(--Brand-BluePrimary, #5271FF) solid" src="https://placehold.co/450x449" />
-            </div>
-        <div data-property-1="Sponsor" style="align-self: stretch; padding-top: 24px; background: var(--Brand-BluePrimary, #5271FF); box-shadow: 0px 3.200000047683716px 3.200000047683716px rgba(0, 0, 0, 0.25); overflow: hidden; flex-direction: column; justify-content: center; align-items: center; gap: 24px; display: flex">
-        <div style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 12px; display: flex">
-            <div style="color: var(--Text-White, #EFEFEF); font-size: 19.20px; font-family: Poppins; font-weight: 700; word-wrap: break-word">Want to Become a Sponsor?</div>
-            <div style="width: 405.60px; color: var(--Text-White, #EFEFEF); font-size: 16px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Connect with the club and students directly by sponsoring us! Be first in line for networking events and student engagement.</div>
-            <div data-property-1="PassiveBeta" style="height: 32px; padding-left: 8px; padding-right: 8px; padding-top: 4px; padding-bottom: 4px; background: var(--Brand-YellowPrimary, #FFEB31); border-radius: 6.40px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
-                <div style="color: var(--Text-Black, #050414); font-size: 19.20px; font-family: Inter; font-weight: 400; word-wrap: break-word">Email Us: contact@cec.curtin.edu.au</div>
+            <div class="heroGroup">
+                <h2 class="txSubtitleBlack">Where Can you Find Us?</h2>
+                <img alt="Map location of CEC Office" src="https://placehold.co/450x450" class="imageHero">
             </div>
         </div>
-        <img style="width: 283.20px; height: 149.60px; border-radius: 12.80px; border: 2.40px var(--Brand-BlueTertiary, #2C4DAF) solid" src="https://placehold.co/283x150" />
-        <div data-property-1="A" style="align-self: stretch; height: 112px; background: var(--Background-Primary, #FBFBFE); justify-content: space-between; align-items: flex-start; display: inline-flex">
-            <div style="flex: 1 1 0; align-self: stretch; padding-left: 32px; padding-right: 32px; background: var(--Background-Primary, #FBFBFE); outline: 0.80px var(--Background-Secondary, #DBDBDB) solid; outline-offset: -0.80px; justify-content: center; align-items: center; gap: 8px; display: flex">
-                <div style="color: var(--Text-Primary, #050414); font-size: 12.80px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Contents</div>
-            </div>
-            <div style="flex: 1 1 0; align-self: stretch; padding-left: 32px; padding-right: 32px; background: var(--Background-Primary, #FBFBFE); outline: 0.80px var(--Background-Secondary, #DBDBDB) solid; outline-offset: -0.80px; justify-content: center; align-items: center; gap: 8px; display: flex">
-                <div style="color: var(--Text-Primary, #050414); font-size: 12.80px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Contents</div>
-            </div>
-            <div style="flex: 1 1 0; align-self: stretch; padding-left: 32px; padding-right: 32px; background: var(--Background-Primary, #FBFBFE); outline: 0.80px var(--Background-Secondary, #DBDBDB) solid; outline-offset: -0.80px; justify-content: center; align-items: center; gap: 8px; display: flex">
-                <div style="color: var(--Text-Primary, #050414); font-size: 12.80px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Contents</div>
-            </div>
-            <div style="flex: 1 1 0; align-self: stretch; padding-left: 32px; padding-right: 32px; background: var(--Background-Primary, #FBFBFE); outline: 0.80px var(--Background-Secondary, #DBDBDB) solid; outline-offset: -0.80px; justify-content: center; align-items: center; gap: 8px; display: flex">
-                <div style="color: var(--Text-Primary, #050414); font-size: 12.80px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Contents</div>
-            </div>
-            <div style="flex: 1 1 0; align-self: stretch; padding-left: 32px; padding-right: 32px; background: var(--Background-Primary, #FBFBFE); outline: 0.80px var(--Background-Secondary, #DBDBDB) solid; outline-offset: -0.80px; justify-content: center; align-items: center; gap: 8px; display: flex">
-                <div style="color: var(--Text-Primary, #050414); font-size: 12.80px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Contents</div>
-            </div>
-            <div style="flex: 1 1 0; align-self: stretch; padding-left: 32px; padding-right: 32px; background: var(--Background-Primary, #FBFBFE); outline: 0.80px var(--Background-Secondary, #DBDBDB) solid; outline-offset: -0.80px; justify-content: center; align-items: center; gap: 8px; display: flex">
-                <div style="color: var(--Text-Primary, #050414); font-size: 12.80px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Contents</div>
-            </div>
-            <div style="flex: 1 1 0; align-self: stretch; padding-left: 32px; padding-right: 32px; background: var(--Background-Primary, #FBFBFE); outline: 0.80px var(--Background-Secondary, #DBDBDB) solid; outline-offset: -0.80px; justify-content: center; align-items: center; gap: 8px; display: flex">
-                <div style="color: var(--Text-Primary, #050414); font-size: 12.80px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Contents</div>
-            </div>
-        </div>
-        </div>
-        <div data-property-1="LightMode" style="flex-direction: column; justify-content: center; align-items: center; gap: 5px; display: flex">
-            <div style="text-align: center; color: var(--Text-Primary, #050414); font-size: 32px; font-family: Poppins; font-weight: 600; word-wrap: break-word">2025 Executive Committee</div>
-        </div>
-        <div style="width: 795.52px; height: 462.31px; overflow: hidden; justify-content: space-between; align-items: flex-start; display: inline-flex">
-            <div style="align-self: stretch; padding: 7.63px; flex-direction: column; justify-content: space-between; align-items: flex-start; display: inline-flex">
-                <div data-exec-photo-round="Blue" style="width: 351.95px; justify-content: flex-start; align-items: center; gap: 15.27px; display: inline-flex">
-                    <img style="width: 133.60px; height: 133.60px; border-radius: 229.04px; border: 4.58px var(--Brand-BluePrimary, #5271FF) solid" src="https://placehold.co/134x134" />
-                    <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 1.53px; display: inline-flex">
-                        <div style="color: var(--Text-Primary, #050414); font-size: 18.32px; font-family: Poppins; font-weight: 500; word-wrap: break-word">Tahni Rowe</div>
-                        <div style="color: var(--Text-Primary, #050414); font-size: 18.32px; font-family: Poppins; font-weight: 500; word-wrap: break-word">President</div>
-                    </div>
+
+        <!-- Sponsorship Banner -->
+        <div style="width: 100%;">
+            <!-- Call to Action -->
+            <div class="heroBar" style="background-color: #5271FF; align-items: center;">
+                <div class="heroGroup" style="justify-items: center;">
+                    <p class="txSubtitleWhite">Want to Become a Sponsor?</p>
+                    <p class="txParagraph1White">Connect with the club and students directly by sponsoring us! Be first in line for networking events and student engagement.</p>
+                    <button class="mainButton">
+                        <a href=#sponsors>Find Out More</a>
+                    </button>
                 </div>
-                <div data-exec-photo-round="Blue" style="justify-content: flex-start; align-items: center; gap: 15.27px; display: inline-flex">
-                    <img style="width: 133.60px; height: 133.60px; border-radius: 229.04px; border: 4.58px var(--Brand-BluePrimary, #5271FF) solid" src="https://placehold.co/134x134" />
-                    <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 1.53px; display: inline-flex">
-                        <div style="color: var(--Text-Primary, #050414); font-size: 18.32px; font-family: Poppins; font-weight: 500; word-wrap: break-word">Jiyona Jipson</div>
-                        <div style="color: var(--Text-Primary, #050414); font-size: 18.32px; font-family: Poppins; font-weight: 500; word-wrap: break-word">Treasurer</div>
-                    </div>
-                </div>
-                <div data-exec-photo-round="Yellow" style="justify-content: flex-start; align-items: center; gap: 15.27px; display: inline-flex">
-                    <img style="width: 133.60px; height: 133.60px; border-radius: 229.04px; border: 4.58px var(--Brand-YellowPrimary, #FFEB31) solid" src="https://placehold.co/134x134" />
-                    <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 1.53px; display: inline-flex">
-                        <div style="color: var(--Text-Primary, #050414); font-size: 18.32px; font-family: Poppins; font-weight: 500; word-wrap: break-word">Jaz Lieshout</div>
-                        <div style="color: var(--Text-Primary, #050414); font-size: 18.32px; font-family: Poppins; font-weight: 500; word-wrap: break-word">Industry Coordinatory</div>
-                    </div>
+                <div class="heroGroup" >
+                    <img alt="Sponsorship Photo" src="https://placehold.co/280x150" class="imageHero" style="border-color: #2C4DAF;">
                 </div>
             </div>
-            <div style="align-self: stretch; padding: 7.63px; flex-direction: column; justify-content: space-between; align-items: flex-start; display: inline-flex">
-                <div data-exec-photo-round="Blue" style="justify-content: flex-start; align-items: center; gap: 15.27px; display: inline-flex">
-                    <img style="width: 133.60px; height: 133.60px; border-radius: 229.04px; border: 4.58px var(--Brand-BluePrimary, #5271FF) solid" src="https://placehold.co/134x134" />
-                    <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 1.53px; display: inline-flex">
-                        <div style="color: var(--Text-Primary, #050414); font-size: 18.32px; font-family: Poppins; font-weight: 500; word-wrap: break-word">Finn Manning</div>
-                        <div style="color: var(--Text-Primary, #050414); font-size: 18.32px; font-family: Poppins; font-weight: 500; word-wrap: break-word">Vice President</div>
-                    </div>
+            <!-- Sponsor Logo Carosel-->
+            <div class="heroBar" style="background-color: #FBFBFE; gap: 16px;">
+                <div class="sponsorLogo">
+                    <img alt="Sponsor Logo" src="https://placehold.co/210x112">
                 </div>
-                <div data-exec-photo-round="Blue" style="justify-content: flex-start; align-items: center; gap: 15.27px; display: inline-flex">
-                    <img style="width: 133.60px; height: 133.60px; border-radius: 229.04px; border: 4.58px var(--Brand-BluePrimary, #5271FF) solid" src="https://placehold.co/134x134" />
-                    <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 1.53px; display: inline-flex">
-                        <div style="color: var(--Text-Primary, #050414); font-size: 18.32px; font-family: Poppins; font-weight: 500; word-wrap: break-word">Charita Byndoor</div>
-                        <div style="color: var(--Text-Primary, #050414); font-size: 18.32px; font-family: Poppins; font-weight: 500; word-wrap: break-word">Secratarty</div>
-                    </div>
+                <div class="sponsorLogo">
+                    <img alt="Sponsor Logo" src="https://placehold.co/210x112">
                 </div>
-                <div data-exec-photo-round="Yellow" style="width: 386.31px; justify-content: flex-start; align-items: center; gap: 15.27px; display: inline-flex">
-                    <img style="width: 133.60px; height: 133.60px; border-radius: 229.04px; border: 4.58px var(--Brand-YellowPrimary, #FFEB31) solid" src="https://placehold.co/134x134" />
-                    <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 1.53px; display: inline-flex">
-                        <div style="color: var(--Text-Primary, #050414); font-size: 18.32px; font-family: Poppins; font-weight: 500; word-wrap: break-word">Callum Mackay</div>
-                        <div style="color: var(--Text-Primary, #050414); font-size: 18.32px; font-family: Poppins; font-weight: 500; word-wrap: break-word">Social Events Coordinator</div>
-                    </div>
+                <div class="sponsorLogo">
+                    <img alt="Sponsor Logo" src="https://placehold.co/210x112">
+                </div>
+                <div class="sponsorLogo">
+                    <img alt="Sponsor Logo" src="https://placehold.co/210x112">
+                </div>
+                <div class="sponsorLogo">
+                    <img alt="Sponsor Logo" src="https://placehold.co/210x112">
+                </div>
+                <div class="sponsorLogo">
+                    <img alt="Sponsor Logo" src="https://placehold.co/210x112">
+                </div>
+                <div class="sponsorLogo">
+                    <img alt="Sponsor Logo" src="https://placehold.co/210x112">
                 </div>
             </div>
         </div>
-        <div data-property-1="SmallText" style="align-self: stretch; padding: 36px; background: var(--Brand-BluePrimary, #5271FF); justify-content: space-between; align-items: center; display: inline-flex">
-            <div style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 24px; display: inline-flex">
-                <div><span style="color: var(--Text-White, #EFEFEF); font-size: 24px; font-family: Poppins; font-weight: 700; word-wrap: break-word">Curtin Engineers Club <br/></span><span style="color: var(--Text-White, #EFEFEF); font-size: 20px; font-family: Poppins; font-weight: 700; word-wrap: break-word">(CEC)</span><span style="color: var(--Text-White, #EFEFEF); font-size: 24px; font-family: Poppins; font-weight: 700; word-wrap: break-word"> </span><span style="color: var(--Text-White, #EFEFEF); font-size: 20px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Est. 1989</span></div>
-                <div style="color: var(--Text-White, #EFEFEF); font-size: 12.80px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Engineering Pavilion Room 106 (215:106)<br/>Curtin University, Bentley, WA</div>
+        
+    </div>
+    <!-- Exec Committee-->
+
+    <p class="txHeaderBlack">2025 Executive Committee</p>
+    <div class="heroContainer">
+        <div class="heroGroup" style="max-width: 450px;"> <!-- Left Column of Exec Porfiles-->
+            <div class="execProfile"> <!-- Profile-->
+                <img class="execPhotoBlue" src="https://placehold.co/134x134">
+                <div class="txColumn">
+                    <p class="txExecProf">Tahni Rowe</p>
+                    <p class="txExecProf">President</p>
+                </div>
             </div>
-            <div><span style="color: var(--Text-White, #EFEFEF); font-size: 24px; font-family: Poppins; font-weight: 700; word-wrap: break-word">Contact Us:<br/></span><span style="color: var(--Text-White, #EFEFEF); font-size: 20px; font-family: Poppins; font-weight: 400; word-wrap: break-word">contact@cec.curtin.edu.au<br/></span><span style="color: var(--Text-White, #EFEFEF); font-size: 13px; font-family: Poppins; font-weight: 400; word-wrap: break-word"><br/>@ CEC 2024<br/>Design and Code by Rhett Bauchop</span></div>
-            <div style="justify-content: flex-end; align-items: center; gap: 24px; display: flex">
-                <div style="height: 78.40px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                    <img style="width: 105.60px; height: 61.97px" src="https://placehold.co/106x62" />
-                    <div data-size="48" style="width: 38.40px; height: 38.40px; position: relative; overflow: hidden">
-                        <div style="width: 17.60px; height: 32px; left: 11.20px; top: 3.20px; position: absolute; outline: 3.20px var(--Text-White, #EFEFEF) solid; outline-offset: -1.60px"></div>
-                    </div>
-                    <div data-size="48" style="width: 38.40px; height: 38.40px; position: relative; overflow: hidden">
-                        <div style="width: 32px; height: 32px; left: 3.20px; top: 3.20px; position: absolute; outline: 3.20px var(--Text-White, #EFEFEF) solid; outline-offset: -1.60px"></div>
-                    </div>
-                    <div data-size="48" style="width: 38.40px; height: 38.40px; position: relative; overflow: hidden">
-                        <div style="width: 32px; height: 30.40px; left: 3.20px; top: 3.20px; position: absolute; outline: 3.20px var(--Text-White, #EFEFEF) solid; outline-offset: -1.60px"></div>
-                    </div>
-                    <div style="width: 31.44px; height: 38.40px; position: relative; overflow: hidden">
-                        <div style="width: 31.44px; height: 38.44px; left: 0px; top: 0px; position: absolute; background: var(--Text-White, #EFEFEF)"></div>
-                    </div>
+            <div class="execProfile"> <!-- Profile-->
+                <img class="execPhotoBlue" src="https://placehold.co/134x134">
+                <div class="txColumn">
+                    <p class="txExecProf">Jiyona Jipson</p>
+                    <p class="txExecProf">Treasurer</p>
+                </div>
+            </div>
+            <div class="execProfile"> <!-- Profile-->
+                <img class="execPhotoYellow" src="https://placehold.co/134x134">
+                <div class="txColumn">
+                    <p class="txExecProf">Jaz Lieshout</p>
+                    <p class="txExecProf">Industry Coordinator</p>
+                </div>
+            </div>
+        </div>
+        <div class="heroGroup" style="max-width: 450px;"> <!-- Right Column of Exec Porfiles-->
+            <div class="execProfile"> <!-- Profile-->
+                <img class="execPhotoBlue" src="https://placehold.co/134x134">
+                <div class="txColumn">
+                    <p class="txExecProf">Finn Manning</p>
+                    <p class="txExecProf">Vice President</p>
+                </div>
+            </div>
+            <div class="execProfile"> <!-- Profile-->
+                <img class="execPhotoBlue" src="https://placehold.co/134x134">
+                <div class="txColumn">
+                    <p class="txExecProf">Charita Byndoor</p>
+                    <p class="txExecProf">Secratarty</p>
+                </div>
+            </div>
+            <div class="execProfile"> <!-- Profile-->
+                <img class="execPhotoYellow" src="https://placehold.co/134x134">
+                <div class="txColumn">
+                    <p class="txExecProf">Callum Mackay</p>
+                    <p class="txExecProf">Social Events Coordinator</p>
                 </div>
             </div>
         </div>
     </div>
-    </html>
+
+    <!-- Footer -->
+    <div class="heroBar" style="background-color: #5271FF; align-items: center;">
+        <div class="heroGroup">
+            <p class="txSubtitleWhite" style="text-align: left; margin-bottom: 5px;">Curtin Engineers Club</p>
+            <p class="txParagraph1White" style="margin-bottom: 30px; margin-top: 0px;">(CEC) Est. 1989</p>
+            <a href="https://use.mazemap.com/#v=1&config=curtinuniversity&campusid=296&zlevel=1&center=115.894634,-32.007317&zoom=18&sharepoitype=poi&sharepoi=800206" class="txParagraph3White" style="margin-bottom: 30px;">Engineering Pavilion Room 106 (215:106) Curtin University, Bentley, WA</a>            
+        </div>
+        <div class="heroGroup">
+            <p class="txSubtitleWhite" style="text-align: left; margin-bottom: 5px;">Contact Us:</p>
+            <p class="txParagraph1White" style="margin-bottom: 30px; margin-top: 0px;">contact@cec.curtin.edu.au</p>
+            <a href="https://github.com/RhettDev/CECWebsite" class="txParagraph3White" style="margin-bottom: 30px;">@ CEC 2024 Design and Code by Rhett Bauchop</a>
+        </div>
+        <div class="iconGrid">
+            <a href="https://guild.curtin.edu.au/">
+                <img src="/assets/icons/CUR-GUILD-Logo-Secondary-WHITE.png"> <!-- Curtin Guiild Logo -->
+            </a>
+            <a href="https://www.facebook.com/CurtinEngineersClub">
+                <img src="/assets/icons/FB-Icon.png"> <!-- Facebook Logo -->
+            </a>
+            <a href="https://www.instagram.com/curtinengineersclub/">
+                <img src="/assets/icons/IG-Icon.png"> <!-- Instagram Logo -->
+            </a>
+            <a href="https://au.linkedin.com/company/curtin-engineers-club">
+                <img src="/assets/icons/INDEED-Icon.png"> <!-- Linkedin Logo -->
+            </a>
+            <a href="https://linktr.ee/Curtin.Engineers.Club">
+                <img src="/assets/icons/LINKTREE-Icon.png"> <!-- Linktree Logo -->
+            </a>
+        </div>
+    </div>
+</html>

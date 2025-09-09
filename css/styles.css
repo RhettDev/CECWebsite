@@ -1,8 +1,339 @@
 /* init style.css */
 
-.top {
+/* Global styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(/assets/fonts/Poppins-Regular.ttf);
+}
+
+/* Navigation Bar Classes */
+.navbar {
+    width: 100%;
+    background-color: #FBFBFE;
+    overflow: hidden;
+    font-family: Poppins;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+/* Classes for Left Side Navigation Bar Items */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-left a {
+    color: #050414;
+    text-align: center;
+    /* padding: 14px 16px; */
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-left a.hover {
+    background-color: #FBFBFE;
+    color: black;
+}
+
+.nav-left a.active {
+    background-color: #DBDBDB;
+    color: white;
+}
+
+.nav-left img {
+    float: left;
+}
+
+/* Classes for Right Side Navigation Bar Items */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-right a {
+    float: right;
+    display: flex;
+    align-items: center;
+    padding: 12px 14px;
+}
+
+/* End of Navigation Bar Classes */
+
+/* Button Classes */
+.mainButton {
+    background-color: #FFEB31; /* Brand Yellow */
+    border: none;
+    color: #050414; /* Text Primary */
+    padding: 2px 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
+
+.mainButton:hover {
+    background-color: #F6B33E; /* Brand Yellow Secondary*/
+    color: #050414; /* Text Primary */
+}
+
+.heroContainer {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    margin-bottom: 36px;
+}
+
+.heroGroup {
+    flex: 1;
+    /* padding: 16px; */
+    max-width: 600px;
+}
+
+.heroBar {
+    display: flex;
+    width: 100%;
+    justify-items: center;
+    padding: 36px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.sponsorLogo {
+    flex: 1;
+    display: block;
+    background-color: #DBDBDB;
+    max-width: 210px;
+}
+
+.iconGrid {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+
+/* Text Styles */
+
+/* Headers */
+.txHeaderBlack {
+    color: var(--Text-Primary, #050414);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-weight: bolder;
+}
+
+.txHeaderWhite {
+    color: var(--Text-Primary, #EFEFEF);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-weight: bolder;
+}
+
+/* Subtitles */
+.txSubtitleBlack {
+    color: var(--Text-Primary, #050414);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.txSubtitleWhite {
+    color: var(--Text-Primary, #EFEFEF);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: left;
+}
+
+/* Paragraph Text */
+.txParagraph1Black {
+    color: var(--Text-Primary, #050414);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 500px;
+    
+}
+
+.txParagraph1White {
+    color: var(--Text-Primary, #EFEFEF);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    max-width: 400px;
+}
+
+.txParagraph2Black {
+    color: var(--Text-Primary, #050414);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 500px;
+    
+}
+
+.txParagraph2White {
+    color: var(--Text-Primary, #EFEFEF);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    max-width: 400px;
+}
+
+.txParagraph3Black {
+    color: var(--Text-Primary, #050414);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 500px;
+    
+}
+
+.txParagraph3White {
+    color: var(--Text-Primary, #EFEFEF);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    max-width: 400px;
+}
+
+.txExecProf {
+    color: var(--Text-Primary, #050414);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 500px;
+    text-align: left;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.txColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* Image and Image Border Classes */
+.execPhotoBlue {
+    width: 134px;
+    height: auto;
+    border-radius: 72px;
+    border: 4px #5271FF solid;
+}
+
+.execPhotoYellow {
+    width: 134px;
+    height: auto;
+    border-radius: 72px;
+    border: 4px #FFEB31 solid;
+}
+
+.imageHero {
+    border: 4px #5271FF solid;
+    border-radius: 16px;
+}
+
+
+/* Image Overlay Classes */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.bg-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.top-img {
     position: absolute;
-    left: auto;
-    right: auto;
-    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 240px;
+    height: auto;
+    transition: transform 0.1s linear;
+}
+/* End Image Overlay Classes */
+
+.icon {
+    width: 48px;
+    height: 48px;
+}
+
+
+.execProfile {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 18px;
+    min-width: 400px;
+    max-width: 450px;
+}
+
+/* Grid Classes */
+
+.execGrid {
+    display: inline-flex;
+    /* grid-template-columns: 1fr 1fr; */
+    gap: 10px 20px;
 }
