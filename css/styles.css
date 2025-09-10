@@ -3,10 +3,12 @@
 /* Global styles */
 * {
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
   margin: 0;
+  color: FBFBFE;
 }
 
 a {
@@ -31,6 +33,7 @@ a {
     padding-right: 16px;
     padding-top: 8px;
     padding-bottom: 8px;
+    box-shadow: 2px 2px 1px #BEBEC0;
 }
 
 /* Classes for Left Side Navigation Bar Items */
@@ -79,7 +82,7 @@ a {
 /* End of Navigation Bar Classes */
 
 /* Button Classes */
-.mainButton {
+.yellowButton {
     background-color: #FFEB31; /* Brand Yellow */
     border: none;
     color: #050414; /* Text Primary */
@@ -92,9 +95,28 @@ a {
     transition-duration: 0.4s;
 }
 
-.mainButton:hover {
+.yellowButton:hover {
     background-color: #F6B33E; /* Brand Yellow Secondary*/
     color: #050414; /* Text Primary */
+}
+
+.blueButton {
+    background-color: #5271FF; /* Brand Yellow */
+    border: none;
+    color: #EFEFEF; /* Text Primary */
+    padding: 2px 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    font-family: Poppins;
+}
+
+.blueButton:hover {
+    background-color: #2C4DAF; /* Brand Yellow Secondary*/
+    color: #EFEFEF; /* Text Primary */
 }
 
 .heroContainer {
@@ -105,10 +127,20 @@ a {
 }
 
 .heroGroup {
+    display: block;
     flex: 1;
     /* padding: 16px; */
     max-width: 600px;
-    
+    min-width: fit-content;
+
+}
+
+.heroGroup.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    min-width: fit-content;
 }
 
 .heroBar {
