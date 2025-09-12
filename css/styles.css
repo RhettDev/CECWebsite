@@ -7,8 +7,11 @@
 }
 
 body {
-  margin: 0;
-  color: #FBFBFE;
+    margin: 0;
+    color: #FBFBFE;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -34,6 +37,7 @@ a {
     padding-top: 8px;
     padding-bottom: 8px;
     box-shadow: 2px 2px 1px #BEBEC0;
+    position: sticky;
 }
 
 /* Classes for Left Side Navigation Bar Items */
@@ -150,6 +154,18 @@ a {
     padding: 36px;
     box-sizing: border-box;
     justify-content: center;
+}
+
+.e404Hero {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    margin-bottom: 36px;
+    align-items: center; 
+    margin-top: 36px; 
+    padding: 36px; 
+    gap: 128px; 
+    flex: 1;
 }
 
 .sponsorLogo {
