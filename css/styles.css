@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  color: FBFBFE;
+  color: #FBFBFE;
 }
 
 a {
@@ -165,6 +165,39 @@ a {
     align-items: center;
 }
 
+.faqContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.faqGroup {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    max-width: 1000px;
+    word-wrap: break-word;
+    margin-bottom: 16px;
+}
+
+.faqQuestion {
+    width: 300px;
+}
+
+.faqAnswer {
+    width: 700px;
+}
+
+.faqSeparator {
+    width: 4px;
+    height: 60px;
+    background-color: #5271FF;
+    margin: 0px 12px;
+    align-self: center;
+    border-radius: 2px;
+}
+
 
 /* Text Styles */
 
@@ -178,6 +211,10 @@ a {
     font-weight: 600;
     line-height: normal;
     font-weight: bolder;
+    border-bottom: 4px solid #5271FF;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 2px;
 }
 
 .txHeaderWhite {
@@ -200,6 +237,10 @@ a {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    border-bottom: 3px solid #5271FF;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 2px;
 }
 
 .txSubtitleWhite {
@@ -222,7 +263,6 @@ a {
     font-weight: 400;
     line-height: normal;
     max-width: 500px;
-    
 }
 
 .txParagraph1White {
