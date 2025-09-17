@@ -5,6 +5,5 @@
 * Sponsor Hero - Add Sponsor Logos
 * Exec Committee - Add headshots
 * NavBar - Update Button format on other pages
-* Index.html About - Fix subtitle alignment
 * Merchandise Hero Bar - Fix Text decoration in button
 * FAQ - fix height of seperator bar, being the height of the answer

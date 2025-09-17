@@ -232,10 +232,6 @@ a {
     font-weight: 600;
     line-height: normal;
     font-weight: bolder;
-    border-bottom: 4px solid #5271FF;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 2px;
 }
 
 .txHeaderWhite {
@@ -445,4 +441,51 @@ a {
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 2px;
+}
+
+.contactField{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+input,
+.contactEntry {
+    border: #2C4DAF 2px solid;
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    align-items: start;
+}
+
+.sponsorGroup {
+    display: block;
+    flex: 1;
+    padding: 16px;
+}
+
+.sponsorHighlightPlat {
+    border:4px solid #5271FF;
+    border-radius: 8px;
+    width: 230px;
+    height: auto;
+    margin: 16px
+}
+
+.sponsorHighlightGold {
+    border:4px solid #5271FF;
+    border-radius: 8px;
+    width: 200px;
+    height: auto;
+    margin: 16px
+}
+
+.sponsorHighlightSilv {
+    border:4px solid #5271FF;
+    border-radius: 8px;
+    width: 180px;
+    height: auto;
+    margin: 16px
 }
