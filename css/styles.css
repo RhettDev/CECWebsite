@@ -131,12 +131,17 @@ a {
 }
 
 .heroGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerGroup {
     display: block;
     flex: 1;
-    /* padding: 16px; */
     max-width: 600px;
     min-width: fit-content;
-
+    text-align: left;
 }
 
 .heroGroup.center {
@@ -253,10 +258,6 @@ a {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    border-bottom: 3px solid #5271FF;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 2px;
 }
 
 .txSubtitleWhite {
@@ -376,6 +377,8 @@ a {
 .imageHero {
     border: 4px #5271FF solid;
     border-radius: 16px;
+    max-width: 450px;
+    height: auto;
 }
 
 
@@ -425,4 +428,21 @@ a {
     display: inline-flex;
     /* grid-template-columns: 1fr 1fr; */
     gap: 10px 20px;
+}
+
+
+.headingBorder{
+    display: inline-block;
+    border-bottom: 4px solid #5271FF;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 2px;
+}
+
+.subtitleBorder{
+    display: inline-block;
+    border-bottom: 3px solid #5271FF;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 2px;
 }
