@@ -548,9 +548,9 @@ input,
 }
 
 .pagination a.active{
-    background-color: #2C4DAF;
-    color: white;
+    background-color: #DBDBDB;
+    color: #2C4DAF;
     border-radius: 8px;
 }
 
-.pagination a:hover:not(.active) {background-color: #ddd;}
+.pagination a:hover:not(.active) {background-color: #DBDBDB;}

@@ -33,74 +33,69 @@
         </div>
 
         <div style="width: 100%; height: 100%;  overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 50px; display: inline-flex">
-            <div style="width: 1020.80px; border-radius: 12.80px; justify-content: flex-start; align-items: center; display: inline-flex"></div>
-        
-            <!-- Upcoming Events -->
-            <p class="txHeaderBlack headingBorder" style="margin-bottom: 0px;">Upcoming Events</p>
-            <div style="display: flex; flex-direction: column; width: 1100px; height: auto; gap: 32px;">
-                <div class="eventCard">
-                    <img class="eventImg" src="https://placehold.co/400x250" alt="Event Image">
-                    <div class="eventInfo">
-                        <div class="eventDetails">
-                            <p class="txParagraph1White">Event Details</p>
-                            <p class="txParagraph2White" style="text-align: right;">23rd of Feburary<br>11am-2pm</p>
+        <div style="width: 1020.80px; border-radius: 12.80px; justify-content: flex-start; align-items: center; display: inline-flex"></div>
+    
+        <!-- Upcoming Events -->
+        <p class="txHeaderBlack headingBorder" style="margin-bottom: 0px;">Upcoming Events</p>
+            <div id="upcomingEventsContainer" style="display: flex; flex-direction: column; width: 1100px; height: auto; gap: 32px;"></div>
+            <script>
+                fetch('/html/events/upcomingEvents.json')
+                .then(res => res.json())
+                .then(events => {
+                    const container = document.getElementById('upcomingEventsContainer');
+                    events.forEach(event => {
+                        container.innerHTML += `
+                        <div class="eventCard">
+                            <img class="eventImg" src="${event.image}" alt="Event Image">
+                            <div class="eventInfo">
+                                <div class="eventDetails">
+                                    <p class="txParagraph1White">${event.title}</p>
+                                    <p class="txParagraph2White" style="text-align: right;">${event.date}<br>${event.time}</p>
+                                </div>
+                                <p class="txParagraph2White" style="max-width: none;">${event.description}</p>
+                                <button class="yellowButton" style="display: flex; padding: 6px 8px;">
+                                    <a href="${event.link}">Find Out More!</a>
+                                </button>
+                            </div>
                         </div>
-                        <p class="txParagraph2White" style="max-width: none;">Event DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent Description</p>
-                        <button class="yellowButton" style="display: flex; padding: 6px 8px;">
-                            <a href=https://curtin-cec.tidyhq.com/public/schedule/events>TidyHQ Link</a>
-                        </button>
-                    </div>
-                </div>
-                <div class="eventCard">
-                    <img class="eventImg" src="https://placehold.co/400x250" alt="Event Image">
-                    <div class="eventInfo">
-                        <div class="eventDetails">
-                            <p class="txParagraph1White">Event Details</p>
-                            <p class="txParagraph2White" style="text-align: right;">23rd of Feburary<br>11am-2pm</p>
-                        </div>
-                        <p class="txParagraph2White" style="max-width: none;">Event DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent Description</p>
-                        <button class="yellowButton" style="display: flex; padding: 6px 8px;">
-                            <a href=https://curtin-cec.tidyhq.com/public/schedule/events>TidyHQ Link</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
+                        `;
+                    })
+                })
+            </script>
             
 
             <!-- Past Events -->
             <p class="txHeaderBlack headingBorder" style="margin-bottom: 0px;">Past Events</p>
-            <div style="display: flex; flex-direction: column; width: 1100px; height: auto; gap: 32px;">
-                <div class="eventCard">
-                    <img class="eventImg" src="https://placehold.co/400x250" alt="Event Image">
-                    <div class="eventInfo">
-                        <div class="eventDetails">
-                            <p class="txParagraph1White">Event Details</p>
-                            <p class="txParagraph2White" style="text-align: right;">23rd of Feburary<br>11am-2pm</p>
+                
+            <div id="pastEventsContainer" style="display: flex; flex-direction: column; width: 1100px; height: auto; gap: 32px;"></div>
+            <script>
+                fetch('/html/events/pastEvents.json')
+                .then(res => res.json())
+                .then(events => {
+                    const container = document.getElementById('pastEventsContainer');
+                    events.slice(0,8).forEach(event => {
+                        container.innerHTML += `
+                        <div class="eventCard">
+                            <img class="eventImg" src="${event.image}" alt="Event Image">
+                            <div class="eventInfo">
+                                <div class="eventDetails">
+                                    <p class="txParagraph1White">${event.title}</p>
+                                    <p class="txParagraph2White" style="text-align: right;">${event.date}<br>${event.time}</p>
+                                </div>
+                                <p class="txParagraph2White" style="max-width: none;">${event.description}</p>
+                                <button class="yellowButton" style="display: flex; padding: 6px 8px;">
+                                    <a href="${event.link}">Find Out More!</a>
+                                </button>
+                            </div>
                         </div>
-                        <p class="txParagraph2White" style="max-width: none;">Event DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent Description</p>
-                        <button class="yellowButton" style="display: flex; padding: 6px 8px;">
-                            <a href=https://curtin-cec.tidyhq.com/public/schedule/events>TidyHQ Link</a>
-                        </button>
-                    </div>
-                </div>
-                <div class="eventCard">
-                    <img class="eventImg" src="https://placehold.co/400x250" alt="Event Image">
-                    <div class="eventInfo">
-                        <div class="eventDetails">
-                            <p class="txParagraph1White">Event Details</p>
-                            <p class="txParagraph2White" style="text-align: right;">23rd of Feburary<br>11am-2pm</p>
-                        </div>
-                        <p class="txParagraph2White" style="max-width: none;">Event DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent DescriptionEvent Description</p>
-                        <button class="yellowButton" style="display: flex; padding: 6px 8px;">
-                            <a href=https://curtin-cec.tidyhq.com/public/schedule/events>TidyHQ Link</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
+                        `;
+                    })
+                })
+            </script>
 
             <!-- Page Numbers -->
             <div class="pagination">
-                <a href="/html/events/events0.html">1</a>
+                <a class="active" href="/html/events/events0.html">1</a>
                 <a href="/html/events/events1.html">2</a>
             </div>
         </div>
