@@ -104,62 +104,37 @@
         </div>
 
     <!-- Exec Committee-->
-        <p class="txHeaderBlack" style="width: max-content; margin-bottom: 0px;">2025 Executive Committee</p>
-        <div class="heroContainer" style="margin-left: 50px;">
-            <div class="heroGroup" style="max-width: 450px;"> <!-- Left Column of Exec Porfiles-->
-                <div class="execProfile"> <!-- Profile-->
-                    <img class="execPhotoBlue" src="https://placehold.co/134x134">
-                    <div class="txColumn">
-                        <p class="txExecProf">Rhett Bauchop</p>
-                        <p class="txExecProf">President</p>
-                    </div>
-                </div>
-                <div class="execProfile"> <!-- Profile-->
-                    <img class="execPhotoBlue" src="https://placehold.co/134x134">
-                    <div class="txColumn">
-                        <p class="txExecProf">Jen Allison</p>
-                        <p class="txExecProf">Treasurer</p>
-                    </div>
-                </div>
-                <div class="execProfile"> <!-- Profile-->
-                    <img class="execPhotoYellow" src="https://placehold.co/134x134">
-                    <div class="txColumn">
-                        <p class="txExecProf">Freda Rule</p>
-                        <p class="txExecProf">Industry Coordinator</p>
-                    </div>
-                </div>
-            </div>
-            <div class="heroGroup" style="max-width: 450px;"> <!-- Right Column of Exec Porfiles-->
-                <div class="execProfile"> <!-- Profile-->
-                    <img class="execPhotoBlue" src="https://placehold.co/134x134">
-                    <div class="txColumn">
-                        <p class="txExecProf">Callum Mackay</p>
-                        <p class="txExecProf">Vice President</p>
-                    </div>
-                </div>
-                <div class="execProfile"> <!-- Profile-->
-                    <img class="execPhotoBlue" src="https://placehold.co/134x134">
-                    <div class="txColumn">
-                        <p class="txExecProf">Meg Atwill</p>
-                        <p class="txExecProf">Secretary</p>
-                    </div>
-                </div>
-                <div class="execProfile"> <!-- Profile-->
-                    <img class="execPhotoYellow" src="https://placehold.co/134x134">
-                    <div class="txColumn">
-                        <p class="txExecProf">Jiyona Jipson</p>
-                        <p class="txExecProf">Social Events Coordinator</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="execProfile"> <!-- Profile-->
-            <img class="execPhotoYellow" src="https://placehold.co/134x134">
-            <div class="txColumn">
-                <p class="txExecProf">Alyssa Unwin</p>
-                <p class="txExecProf">Marketing and Merchandise</p>
-            </div>
-        </div>
+        <p class="txHeaderBlack headingBorder" style="width: max-content; margin-bottom: 0px;"><script>document.write(new Date().getFullYear())</script> Executive Committee</p>
+
+        <div id="execContainer" class="heroContainerCOL" style="margin-left: 50px"></div>
+        <script>
+            fetch('/data/execData.json')
+            .then(res => res.json())
+            .then(execs => {
+                const container = document.getElementById('execContainer')
+                let rowHTML = '';
+                execs.forEach((exec, i) => {
+                    const random = Math.floor(Math.random() * 2);
+                    const profileHTML = `
+                        <div class="execProfile">
+                            <img class="${random % 2 === 0 ? 'execPhotoBlue' : 'execPhotoYellow'}" src="${exec.image}">
+                            <div class="txColumn">
+                                <p class="txExecProf">${exec.name}</p>
+                                <p class="txExecProf">${exec.role}</p>
+                            </div>
+                        </div>
+                    `;
+                    if (i % 2 === 0){
+                        rowHTML += `<div class="execRow">`;
+                    }
+                    rowHTML += profileHTML;
+                    if (i % 2 === 1 || i === execs.length - 1) {
+                        rowHTML += `</div>`;
+                    }
+                });
+                container.innerHTML = rowHTML;
+            });
+        </script>
     </div> 
 
     <!-- Footer -->
