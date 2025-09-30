@@ -1,0 +1,43 @@
+[
+    {
+        "name": "Rhett Bauchop",
+        "role": "President",
+        "image": "https://placehold.co/134x134"
+    },
+
+    {
+        "name": "Callum Mackay",
+        "role": "Vice President",
+        "image": "https://placehold.co/134x134"
+    },
+
+    {
+        "name": "Jen Allison",
+        "role": "Tresurer",
+        "image": "https://placehold.co/134x134"
+    },
+
+    {
+        "name": "Meg Atwill",
+        "role": "Secratary",
+        "image": "https://placehold.co/134x134"
+    },
+
+    {
+        "name": "Freda Rule",
+        "role": "Industry Coordinator",
+        "image": "https://placehold.co/134x134"
+    },
+
+    {
+        "name": "Jiyona Jipson",
+        "role": "Social Events Coordinator",
+        "image": "https://placehold.co/134x134"
+    },
+
+    {
+        "name": "Alyssa Unwin",
+        "role": "Marketing and Merchandise",
+        "image": "https://placehold.co/134x134"
+    }
+]

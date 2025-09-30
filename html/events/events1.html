@@ -40,7 +40,7 @@
                 
             <div id="pastEventsContainer" style="display: flex; flex-direction: column; width: 1100px; height: auto; gap: 32px;"></div>
             <script>
-                fetch('/html/events/pastEvents.json')
+                fetch('/data/pastEvents.json')
                 .then(res => res.json())
                 .then(events => {
                     const container = document.getElementById('pastEventsContainer');
@@ -54,9 +54,7 @@
                                     <p class="txParagraph2White" style="text-align: right;">${event.date}<br>${event.time}</p>
                                 </div>
                                 <p class="txParagraph2White" style="max-width: none;">${event.description}</p>
-                                <button class="yellowButton" style="display: flex; padding: 6px 8px;">
-                                    <a href="${event.link}">Find Out More!</a>
-                                </button>
+                                <a href="${event.link}" class="yellowButton" style="padding: 6px 8px;">Find Out More!</a>
                             </div>
                         </div>
                         `;
@@ -66,10 +64,10 @@
 
             <!-- Page Numbers -->
             <div class="pagination">
-                <a href="/html/events/events0.html"><</a>
+                <!-- <a href="/html/events/events0.html"><</a> -->
                 <a href="/html/events/events0.html">1</a>
                 <a class="active" href="/html/events/events1.html">2</a>
-                <a href="/html/events/events1.html">></a>
+                <!-- <a href="/html/events/events1.html">></a> -->
             </div>
             
         </div>
