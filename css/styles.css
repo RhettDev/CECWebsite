@@ -573,3 +573,58 @@ input,
 }
 
 .pagination a:hover:not(.active) {background-color: #DBDBDB;}
+
+.txHistoryYear{
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--Text-Primary, #050414);
+}
+
+.txHistoryName{
+    font-family: Poppins;
+    font-size: 16px;
+    color: var(--Text-Primary, #050414);
+    margin-bottom: 0px;
+}
+
+.txHistoryRole{
+    font-family: Poppins;
+    font-size: 14px;
+    color: var(--Text-Secondary, #414141);
+    margin-top: 0px;
+    
+}
+
+.historyRow {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    width: 100%;
+    margin-bottom: 24px;
+    justify-content: center;
+}
+
+.historyYearRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+.historyYearLabel {
+    min-width: 100px;
+    font-weight: bold;
+    margin-right: 24px;
+    align-items: center;
+    margin-right: 0px;
+}
+.historyRolesRow {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+.historyRoleCard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

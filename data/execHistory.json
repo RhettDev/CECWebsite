@@ -1,0 +1,988 @@
+[
+    {
+        "year": 2026,
+        "roles": [
+            {
+                "name": ["Rhett Bauchop"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Callum Mackay"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Jen Allison"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Meg Atwill"],
+                "role": ["Secretary"]
+            },
+            {
+                "name": ["Freda Rule"],
+                "role": ["Industry Coordinator"]
+            },
+            {
+                "name": ["Jiyona Jipson"],
+                "role": ["Social Events Coordinator"]
+            },
+            {
+                "name": ["Alyssa Unwin"],
+                "role": ["Marketing and Merchandise"]
+            }
+        ]
+    },
+    {
+        "year": 2025,
+        "roles": [
+            {
+                "name": ["Tahni Rowe"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Finn Manning"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Jiyona Jipson"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Charita Byndoor"],
+                "role": ["Secretary"]
+            },
+            {
+                "name": ["Jaz Leishout"],
+                "role": ["Industry Coordinator"]
+            },
+            {
+                "name": ["Callum Mackay"],
+                "role": ["Social Events Coordinator"]
+            },
+            {
+                "name": ["Rhett Bauchop"],
+                "role": ["Marketing and Merchandise"]
+            }
+        ]
+    },
+    {
+        "year": 2024,
+        "roles": [
+            {
+                "name": ["Bojana Dedovic"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Byron Seinor"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Max Anderson"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Tahni Rowe"],
+                "role": ["Secretary"]
+            },
+            {
+                "name": ["Connor Higgins"],
+                "role": ["Social Events"]
+            },
+            {
+                "name": ["Lucas Dobrescu"],
+                "role": ["Professional Events"]
+            },
+            {
+                "name": ["Jiyona Jipson"],
+                "role": ["Sponsorship and Merchandise"]
+            },
+            {
+                "name": ["Charita Byndoor"],
+                "role": ["Marketing"]
+            }
+        ]
+    },
+    {
+        "year": 2023,
+        "roles": [
+            {
+                "name": ["Brittany Pascoe"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Harry Cassidy"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Byron Seinor"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Bojana Dedovic"],
+                "role": ["Secretary"]
+            },
+            {
+                "name": ["Ronnie Fellows-Smith"],
+                "role": ["Social Events"]
+            },
+            {
+                "name": ["Ivan Munoz"],
+                "role": ["Professional Events"]
+            },
+            {
+                "name": ["Connor Higgins"],
+                "role": ["Sponsorship and Merchandise"]
+            },
+            {
+                "name": ["Tahni Rowe"],
+                "role": ["Marketing"]
+            }
+        ]
+    },
+    {
+        "year": 2022,
+        "roles": [
+            {
+                "name": ["Jacob Donovan-Sinclair"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Lachlan Lee"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Jason Smithdale"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Brittany Pascoe"],
+                "role": ["Secretary"]
+            },
+            {
+                "name": ["Byron Seinor"],
+                "role": ["Social Events"]
+            },
+            {
+                "name": ["Elizabeth Tran"],
+                "role": ["Professional Events"]
+            },
+            {
+                "name": ["Marc Di Giuseppe"],
+                "role": ["Sponsorship Coordinator"]
+            }
+        ]
+    },
+    {
+        "year": 2021,
+        "roles": [
+            {
+                "name": ["Karl Jones"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Ashley Ure"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Jason Smithdale"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Cor Moore"],
+                "role": ["Secretary"]
+            },
+            {
+                "name": ["Keira Petty"],
+                "role": ["Professional Events"]
+            },
+            {
+                "name": ["Jacob Donovan-Sinclair"],
+                "role": ["Social Events"]
+            },
+            {
+                "name": ["Lindsay Bodenham"],
+                "role": ["Sponsorship Coordinator"]
+            }
+        ]
+    },
+    {
+        "year": 2020,
+        "roles": [
+            {
+                "name": ["Cody Lee"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Ashley Ure"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Karl Jones"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Keira Petty"],
+                "role": ["Secretary"]
+            },
+            {
+                "name": ["Joshua White"],
+                "role": ["Social Events"]
+            },
+            {
+                "name": ["Cor Moore"],
+                "role": ["Professional Events"]
+            },
+            {
+                "name": ["Cameron Johnson"],
+                "role": ["Sponsorship Coordinator"]
+            }
+        ]
+    },
+    {
+        "year": 2019,
+        "roles": [
+            {
+                "name": ["Sara Morava"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Benjamin Eiszele"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Lachlan Simmons"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Sithu Win Than"],
+                "role": ["Secretary"]
+            },
+            {
+                "name": ["Karl Jones"],
+                "role": ["Social Events"]
+            },
+            {
+                "name": ["Lachlan Cosgrove"],
+                "role": ["Professional Events"]
+            },
+            {
+                "name": ["Cameron Johnson"],
+                "role": ["Sponsorship Coordinator"]
+            }
+        ]
+    },
+    {
+        "year": 2018,
+        "roles": [
+            {
+                "name": ["Stephan Gamble"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Shahn Rajah"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Andrey Alexandrov"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Caitlin Jarvis"],
+                "role": ["Secretary"]
+            },
+            {
+                "name": ["Benjamin Eiszele"],
+                "role": ["Events Coordinator"]
+            },
+            {
+                "name": ["Brandon Cavallaro"],
+                "role": ["Promotions and Technology Officer"]
+            },
+            {
+                "name": ["Norbert Drage"],
+                "role": ["Sponsorship Coordinator"]
+            }
+        ]
+    },
+    {
+        "year": 2017,
+        "roles": [
+            {
+                "name": ["Mitchell Craig"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Stephan Gamble"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Shahn Rajah"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Andrey Alexandrov"],
+                "role": ["Secretary"]
+            }
+        ]
+    },
+    {
+        "year": 2016,
+        "roles": [
+            {
+                "name": ["David Jorritsma"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Daniela Adams"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Mitchell Craig"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Jelena Ceranic"],
+                "role": ["Secretary"]
+            },
+            {
+                "name": ["Shahn Rajah"],
+                "role": ["Sponsorship Coordinator"]
+            }
+        ]
+    },
+    {
+        "year": 2015,
+        "roles": [
+            {
+                "name": ["Daniela Adams"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Alexander Crook"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Robert Ruse"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["David Jorritsma"],
+                "role": ["Secretary"]
+            }
+        ]
+    },
+    {
+        "year": 2014,
+        "roles": [
+            {
+                "name": ["Quaelan Brooks"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Alex Panomarenko"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Carl Nicholls"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Timothy Hargreaves"],
+                "role": ["Secretary"]
+            },
+            {
+                "name": ["Daniel Casilio"],
+                "role": ["Sponsorship Coordinator"]
+            }
+        ]
+    },
+    {
+        "year": 2013,
+        "roles": [
+            {
+                "name": ["Timothy Ey"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Maxime Roozendaal"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Thomas Walkemeyer"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["calum O'Neil"],
+                "role": ["Secretary"]
+            }
+        ]
+    },
+    {
+        "year": 2012,
+        "roles": [
+            {
+                "name": ["Hannah Edwards"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Sven Colic"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Thomas Walkemeyer"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Maxime Roozendaal"],
+                "role": ["Secretary"]
+            },
+            {
+                "name": ["Daniel Sargent"],
+                "role": ["Sports Guy"]
+            }
+        ]
+    },
+    {
+        "year": 2011,
+        "roles": [
+            {
+                "name": ["Daniel Sargent"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Peta Blight"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Keaton Wheeler"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Hannah Edwards"],
+                "role": ["Secretary"]
+            },
+            {
+                "name": ["Matt Wojas"],
+                "role": ["Sports Guy"]
+            },
+            {
+                "name": ["Thomas Walkemeyer"],
+                "role": ["Website Monkey"]
+            },
+            {
+                "name": ["Chris Coman"],
+                "role": ["Advertising & Newsletter"]
+            }
+        ]
+    },
+    {
+        "year": 2010,
+        "roles": [
+            {
+                "name": ["Callum Yeomans"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Jacinta Kingdon"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Rodney Louden"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Rachel Callus"],
+                "role": ["Secretary"]
+            },
+            {
+                "name": ["Phillip Scharf"],
+                "role": ["Sports Guy"]
+            },
+            {
+                "name": ["Stephen Moore"],
+                "role": ["Website Monkey"]
+            },
+            {
+                "name": ["Jeffro Lee"],
+                "role": ["Advertising & Newsletter"]
+            }
+        ]
+    },
+    {
+        "year": 2009,
+        "roles": [
+            {
+                "name": ["Cameron Bonds"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Callum Yeomans"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Jacinta Kingdon"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Rachel Callus"],
+                "role": ["Secretary"]
+            },
+            {
+                "name": ["Rodney Louden"],
+                "role": ["Sponsorship Coordinator"]
+            },
+            {
+                "name": ["Phillip Scharf"],
+                "role": ["Sports Guy"]
+            },
+            {
+                "name": ["Stephen Moore"],
+                "role": ["Website Monkey"]
+            },
+            {
+                "name": ["Jeff Lee"],
+                "role": ["Advertising"]
+            }
+        ]
+    },
+    {
+        "year": 2008,
+        "roles": [
+            {
+                "name": ["Peter Walsh"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Cameron Bonds"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Simon McKenna"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Alex Jade"],
+                "role": ["Secretary"]
+            }
+        ]
+    },
+    {
+        "year": 2007,
+        "roles": [
+            {
+                "name": ["Mark Banes"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Jeff Choate"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Andrew Brown"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["David Cantoni"],
+                "role": ["Secretary"]
+            },
+            {
+                "name": ["Richard Projokes"],
+                "role": ["Sponsorship Coordinator"]
+            },
+            {
+                "name": ["Max Ashford"],
+                "role": ["Sports Guy"]
+            },
+            {
+                "name": ["Byron"],
+                "role": ["Website Monkey"]
+            }
+        ]
+    },
+    {
+        "year": 2006,
+        "roles": [
+            {
+                "name": ["Leigh Van Der Merwe"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Ben Gardner"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Shaun Lawson"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Mark Banes"],
+                "role": ["Secretary"]
+            }
+        ]
+    },
+    {
+        "year": 2005,
+        "roles": [
+            {
+                "name": ["Emmanuel Manolas"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Anthony Wong"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Nyssa Covich"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Joel Teraci"],
+                "role": ["Secretary"]
+            }
+        ]
+    },
+    {
+        "year": 2004,
+        "roles": [
+            {
+                "name": ["Emmanuel Manolas"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Paul Stuchbury"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Nyssa Covich"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Anthony Wong"],
+                "role": ["Secretary"]
+            }
+        ]
+    },
+    {
+        "year": 2003,
+        "roles": [
+            {
+                "name": ["Guy Ware"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Scott Kelly"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Susanne Tomsic"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Murray Cobb"],
+                "role": ["Secretary"]
+            }
+        ]
+    },
+    {
+        "year": 2002,
+        "roles": [
+            {
+                "name": ["Neil D'Cruze"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Unknown"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Caroline Welsh"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Unknown"],
+                "role": ["Secretary"]
+            }
+        ]
+    },
+    {
+        "year": 2001,
+        "roles": [
+            {
+                "name": ["Christoper Cleave"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Methmal Chandrasekara"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Kanch Karunartne"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Rhys Quirk"],
+                "role": ["Secretary"]
+            }
+        ]
+    },
+    {
+        "year": 2000,
+        "roles": [
+            {
+                "name": ["Pamela Hitchcock"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Andrew King"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Chriss Gallen "],
+                "role": ["Secretary"]
+            },
+            {
+                "name": ["Praemathala Ranganatham"],
+                "role": ["Coprorate Officer"]
+            },
+            {
+                "name": ["Edin Alispahic"],
+                "role": ["Social Coordinator"]
+            }
+        ]
+    },
+    {
+        "year": 1999,
+        "roles": [
+            {
+                "name": ["Benjamin Rose"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Ben Johnston"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Chriss Gallen"],
+                "role": ["Secretary"]
+            },
+            {
+                "name": ["Aaron Francesconi"],
+                "role": ["Social Organiser"]
+            },
+            {
+                "name": ["Danielle Byra"],
+                "role": ["Corporate Officer"]
+            }
+        ]
+    },
+    {
+        "year": 1998,
+        "roles": [
+            {
+                "name": ["Cassandra Cuxson"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Unknown"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Jennifer Hudson"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Unknown"],
+                "role": ["Secretary"]
+            }
+        ]
+    },
+    {
+        "year": 1997,
+        "roles": [
+            {
+                "name": ["Allistar Macrae"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Jennifer Henderson"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Cassandra Cuxson"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Unknown"],
+                "role": ["Secretary"]
+            }
+        ]
+    },
+    {
+        "year": 1996,
+        "roles": [
+            {
+                "name": ["Unknown"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Unknown"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Graeme Poole"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Unknown"],
+                "role": ["Secretary"]
+            }
+        ]
+    },
+    {
+        "year": 1995,
+        "roles": [
+            {
+                "name": ["Mathew Taylor"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Unknown"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Graeme Poole"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Kellie Wheatcroft"],
+                "role": ["Secretary"]
+            }
+        ]
+    },
+    {
+        "year": 1994,
+        "roles": [
+            {
+                "name": ["Kellie Wheatcroft"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Unknown"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Graeme Poole"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Unknown"],
+                "role": ["Secretary"]
+            }
+        ]
+    },
+    {
+        "year": 1993,
+        "roles": [
+            {
+                "name": ["Dione Bilick"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Unknown"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Kellie Wheatcroft"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Unknown"],
+                "role": ["Secretary"]
+            }
+        ]
+    },
+    {
+        "year": 1992,
+        "roles": [
+            {
+                "name": ["Dione Bilick"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Unknown"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Kellie Wheatcroft"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Unknown"],
+                "role": ["Secretary"]
+            }
+        ]
+    },
+    {
+        "year": 1991,
+        "roles": [
+            {
+                "name": ["Jason Venning"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Unknown"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["David Mountford"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Unknown"],
+                "role": ["Secretary"]
+            }
+        ]
+    },
+    {
+        "year": 1990,
+        "roles": [
+            {
+                "name": ["Jeff Burns"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Unknown"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Helen Mclennan"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Unknown"],
+                "role": ["Secretary"]
+            }
+        ]
+    },
+    {
+        "year": 1989,
+        "roles": [
+            {
+                "name": ["Jeff Burns"],
+                "role": ["President"]
+            },
+            {
+                "name": ["Unknown"],
+                "role": ["Vice President"]
+            },
+            {
+                "name": ["Helen Mclennan"],
+                "role": ["Treasurer"]
+            },
+            {
+                "name": ["Unknown"],
+                "role": ["Secretary"]
+            }
+        ]
+    }
+]

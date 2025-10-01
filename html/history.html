@@ -32,6 +32,46 @@
             </div>
         </div>
 
+        <div style="width: 100%; height: 100%;  overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 50px; display: inline-flex">
+            <div style="width: 1020.80px; border-radius: 12.80px; justify-content: flex-start; align-items: center; display: inline-flex"></div>
+    
+            <!-- Past Events -->
+            <p class="txHeaderBlack headingBorder" style="margin-bottom: 0px;">Past Executive Committees</p>
+            
+            <div id="execHistoryContainer" class="heroContainerCOL"></div>
+            <script>
+            fetch('/data/execHistory.json')
+            .then(res => res.json())
+            .then(history => {
+                const container = document.getElementById('execHistoryContainer');
+                let html = '';
+                history.forEach(yearObj => {
+                    html += `
+                    <div class=historyYearRow style="align-items: center">
+                        <div class="historyYearLabel">
+                            <p class="txHistoryYear">${yearObj.year}</p>
+                        </div>
+                    <div class="historyRolesRow">
+                            `;
+                    yearObj.roles.forEach(roleObj => {
+                        // Each roleObj has a name array and a role array
+                        html += `
+                        <div class="historyRoleCard" style="align-items: start;">
+                            <p class="txHistoryName">${roleObj.name[0]}</p>
+                            <p class="txHistoryRole">${roleObj.role.join(', ')}</p>
+                        </div>
+                        `;
+                    });
+                    html += `
+                        </div>
+                    </div>
+                    `;
+                });
+                container.innerHTML = html;
+            });
+            </script>
+
+        </div> 
         <!-- Footer -->
         <div class="heroBar" style="background-color: #5271FF; align-items: center;">
             <div class="footerGroup">
