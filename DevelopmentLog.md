@@ -23,3 +23,12 @@ Pushing the project out of the design phase into development
 Especially using git and github in VScode
 ### Issue: Need to learn webdev
 Now to start learning HTML and CSS
+
+## 04/10/25 Dev Log 0.1.2
+main Branch, Rhett Bauchop
+### Goal: Finally Linked GitHub
+After around six weeks of development, all done locally on my laptop, my GitHub account has finally been able to push to the repo.
+### Leason: Reseting users logged in
+There was a cache that I did not know about that had kept my user data from another GitHub account that did not have permissions to push to the website repo. Once that was deleted and my active account was signed back in, I was able to sync the repo and local files.
+### Issue: Learn how to transfer all data to another repo with another account
+Currently the entire repo is under my personal account (RhettDev) where it should eventually be only used by accounts with a CEC email. This ensures only certain people will gain access to editing the repo, and that the contact email will be availble to recover the repo in any case of personal email loss.
