@@ -20,7 +20,7 @@
                 <a href="/html/about.html">About</a>
                 <a href="/html/events/events0.html">Events</a>
                 <a href="/html/sponsor.html">Sponsors</a>
-                <a href="/html/history.html">History</a>
+                <a href="/html/history.html#clubHistory">History</a>
                 <a href="/html/links.html">Links</a>
             </div>
             <!-- Right side of Navigation Bar-->
@@ -35,41 +35,163 @@
         <div style="width: 100%; height: 100%;  overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 50px; display: inline-flex">
             <div style="width: 1020.80px; border-radius: 12.80px; justify-content: flex-start; align-items: center; display: inline-flex"></div>
     
-            <!-- Past Events -->
-            <p class="txHeaderBlack headingBorder" style="margin-bottom: 0px;">Past Executive Committees</p>
-            
-            <div id="execHistoryContainer" class="heroContainerCOL"></div>
-            <script>
-            fetch('/data/execHistory.json')
-            .then(res => res.json())
-            .then(history => {
-                const container = document.getElementById('execHistoryContainer');
-                let html = '';
-                history.forEach(yearObj => {
-                    html += `
-                    <div class=historyYearRow style="align-items: center">
-                        <div class="historyYearLabel">
-                            <p class="txHistoryYear">${yearObj.year}</p>
-                        </div>
-                    <div class="historyRolesRow">
+            <!-- Buttons -->
+            <!-- <div class="tab" style="gap: 100px; align-items: center;">
+                <button class="txSubtitleBlack" onclick="openHistory('Club History')">Club History</button>
+                <button class="txHeaderBlack" onclick="openHistory('Past Executives')">Past Executive Committees</button>
+                <button class="txSubtitleBlack" onclick="openHistory('Life Members')">Life Members List</button>
+            </div> -->
+
+            <div class="heroBar"style="gap: 100px; align-items: center;">
+                <a href="#clubHistory" class="txSubtitleBlack" id="clubHistoryHeading">Club History</a>
+                <a href="#pastExecs" class="txSubtitleBlack" id="pastExecsHeading">Past Executive Committees</a>
+                <a href="#lifeMembers" class="txSubtitleBlack" id="lifeMembersHeading">Life Members</a>
+            </div>
+
+            <!-- Club History -->
+            <div id="Club History" class="tabContent">
+                <p class="txParagraph1Black"> Club History</p>
+            </div>
+
+            <!-- Past Execs -->
+            <div id="Past Executives"  class="tabContent">
+                <div id="execHistoryContainer" class="heroContainerCOL"></div>
+                <script>
+                    fetch('/data/execHistory.json')
+                    .then(res => res.json())
+                    .then(history => {
+                        const container = document.getElementById('execHistoryContainer');
+                        let html = '';
+                        history.forEach(yearObj => {
+                            html += `
+                            <div class=historyYearRow style="align-items: center">
+                                <div class="historyYearLabel">
+                                    <p class="txHistoryYear">${yearObj.year}</p>
+                                </div>
+                            <div class="historyRolesRow">
+                                    `;
+                            yearObj.roles.forEach(roleObj => {
+                                // Each roleObj has a name array and a role array
+                                html += `
+                                <div class="historyRoleCard" style="align-items: start;">
+                                    <p class="txHistoryName">${roleObj.name[0]}</p>
+                                    <p class="txHistoryRole">${roleObj.role.join(', ')}</p>
+                                </div>
+                                `;
+                            });
+                            html += `
+                                </div>
+                            </div>
                             `;
-                    yearObj.roles.forEach(roleObj => {
-                        // Each roleObj has a name array and a role array
-                        html += `
-                        <div class="historyRoleCard" style="align-items: start;">
-                            <p class="txHistoryName">${roleObj.name[0]}</p>
-                            <p class="txHistoryRole">${roleObj.role.join(', ')}</p>
-                        </div>
-                        `;
+                        });
+                        container.innerHTML = html;
                     });
-                    html += `
-                        </div>
-                    </div>
-                    `;
-                });
-                container.innerHTML = html;
-            });
+                </script>
+            </div>
+
+            <!-- Life Members -->
+            <div id="Life Members" class="tabContent">
+                <div id="lifeMemberContainer" class="heroContainerCOL"></div>
+                <script>
+                    fetch('/data/lifeMembers.json')
+                    .then(res =>res.json())
+                    .then(lifeMembers => {
+                        const container = document.getElementById('lifeMemberContainer');
+                        let html = ''
+                        var i, n, m;
+                        for(i = 0; i < lifeMembers.length; i+=3){
+                            n = i;
+                            m = i+3;
+                            lifeMembers.slice(n,m).forEach(lifeObj => {
+                                html += ` 
+                                    <div class="historyRow">
+                                        <div class="historyYearLabel" style="text-align: center;">
+                                            <p class="txHistoryYear">${lifeObj.year}</p>
+                                        </div>
+                                        <div class="historyRoleCard" style="justify-content: center;">
+                                            <p class="txParagraph1Black">${lifeObj.name}</p>
+                                        </div>
+                                    </div>
+                                `;
+                            });
+                            container.innerHTML = html;
+                        }
+                    });
+                </script>
+            </div>
+
+            <script>
+                document.getElementById("Club History").style.display = "block";
+                // function showTabFromHash() {
+                //     const hash = location.hash || "#clubHistory"; // default to tab1
+                //     document.querySelectorAll(".tabContent").forEach(tab => {
+                //         tab.classList.remove("active");
+                //     });
+                //     const activeTab = document.querySelector(hash);
+                //     if (activeTab) {
+                //         activeTab.classList.add("active");
+                //     }
+                // }
+
+                function changeHistoryTab(){
+                    const hash = location.hash
+                    if(hash === "#clubHistory"){
+                        document.getElementById("Club History").style.display = "block";
+                        document.getElementById("Past Executives").style.display = "none";
+                        document.getElementById("Life Members").style.display = "none";
+
+                        var current = document.getElementById("clubHistoryHeading");
+                        current.classList.add("headingBorder");
+
+                        var current = document.getElementById("pastExecsHeading");
+                        current.classList.remove("headingBorder");
+                        var current = document.getElementById("lifeMembersHeading");
+                        current.classList.remove("headingBorder");
+                    }
+                    if(hash === "#pastExecs"){
+                        document.getElementById("Club History").style.display = "none";
+                        document.getElementById("Past Executives").style.display = "block";
+                        document.getElementById("Life Members").style.display = "none";
+
+                        var current = document.getElementById("pastExecsHeading");
+                        current.classList.add("headingBorder");
+
+                        var current = document.getElementById("clubHistoryHeading");
+                        current.classList.remove("headingBorder");
+                        var current = document.getElementById("lifeMembersHeading");
+                        current.classList.remove("headingBorder");
+                    }
+                    if(hash === "#lifeMembers"){
+                        document.getElementById("Club History").style.display = "none";
+                        document.getElementById("Past Executives").style.display = "none";
+                        document.getElementById("Life Members").style.display = "block";
+
+                        var current = document.getElementById("lifeMembersHeading");
+                        current.classList.add("headingBorder");
+
+                        var current = document.getElementById("pastExecsHeading");
+                        current.classList.remove("headingBorder");
+                        var current = document.getElementById("clubHistoryHeading");
+                        current.classList.remove("headingBorder");
+                    }
+                }
+
+                // Run when hash changes
+                window.addEventListener("hashchange", changeHistoryTab);
+
+                // Run on initial load
+                changeHistoryTab();
             </script>
+
+            <!-- <script>
+                function openHistory(historyPage){
+                    var i;
+                    var x = document.getElementsByClassName("Club History");
+                    for (i = 0; i < x.length; i++){
+                        x[i].style.display = "none";
+                    }
+                }
+            </script> -->
 
         </div> 
         <!-- Footer -->

@@ -8,164 +8,159 @@
         <link rel="stylesheet" href="/css/styles.css" />
         <script src="https://kit.fontawesome.com/4c5395be19.js" crossorigin="anonymous"></script> <!-- Set up to add icons via Font Awesome but currently all Icons are local files--> 
     </head>
-
-    <!-- Navigation Bar-->
-    <div class="navbar">
-        <!-- Left side of Navigation Bar-->
-        <div class="nav-left">
-            <a href="/html/index.html">
-                <img class='icon' src="/assets/icons/CECGearBlack.svg" alt="CEC Logo">
-            </a>
-            <a href="/html/index.html">Curtin Engineers Club</a>
-            <a href="/html/about.html">About</a>
-            <a href="/html/events/events0.html">Events</a>
-            <a href="/html/sponsor.html">Sponsors</a>
-            <a href="/html/history.html">History</a>
-            <a href="/html/links.html">Links</a>
-        </div>
-        <!-- Right side of Navigation Bar-->
-        <div class="nav-right">
-            <a href="#dark">
-                <img class="icon" src="/assets/icons/DARKMODE-Icon.png">
-            </a>
-            <a href="https://curtin-cec.tidyhq.com/public/membership_levels" class="yellowButton">Sign Up!</a>
-        </div>
-    </div>  
-
-    <!-- Landing Image -->
-    <div>
-        <img class="top-img" alt="CECGear" src="/assets/icons/CECGearWhite.svg" id="CECGearLanding">
-        <!-- script to make the Landing page Gear rotate as the user scrolls -->
-        <!-- <script>
-            const image = document.getElementById('CECGearLanding');
-
-            window.addEventListener('scroll', () => {
-                const scrollTop = window.scrollY; // Current scroll position
-                const rotation = scrollTop % 360; // Limit rotation to 0–360 degrees
-                image.style.transform = `rotate(${rotation}deg)`;
-            });
-        </script> -->
-        <img class="bg-img" alt="LandingImage" style="width: 100%; height: auto;" src="/assets/images/LandingImage.png">
-    </div>
-
-    <!-- BG stuff-->
-    <div style="width: 100%; height: 100%; background: var(--Background-Primary, #FBFBFE); overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 50px; display: inline-flex; padding-bottom: 75px;">
-        <div style="width: 1020.80px; border-radius: 12.80px; justify-content: flex; align-items: center; display: inline-flex"></div>
-
-        <!-- About CEC Hero-->
-        <div class="heroContainer">
-            <div class="heroGroup">
-                <h2 class="txSubtitleBlack subtitleBorder">What is CEC About?</h2>
-                <p class="txParagraph1Black">Description of the club and general idea behind it. Description of the club and general idea behind it. Description of the club and general idea behind it. Description of the club and general idea behind it. Description of the club and general idea behind it. Description of the club and general idea behind it. </p>
+    <body>
+        <!-- Navigation Bar-->
+        <div class="navbar">
+            <!-- Left side of Navigation Bar-->
+            <div class="nav-left">
+                <a href="/html/index.html">
+                    <img class='icon' src="/assets/icons/CECGearBlack.svg" alt="CEC Logo">
+                </a>
+                <a href="/html/index.html">Curtin Engineers Club</a>
+                <a href="/html/about.html">About</a>
+                <a href="/html/events/events0.html">Events</a>
+                <a href="/html/sponsor.html">Sponsors</a>
+                <a href="/html/history.html#clubHistory">History</a>
+                <a href="/html/links.html">Links</a>
             </div>
-            <div class="heroGroup">
-                <h2 class="txSubtitleBlack subtitleBorder">Where Can you Find Us?</h2>
-                <img alt="Map location of CEC Office" src="https://placehold.co/450x450" class="imageHero">
+            <!-- Right side of Navigation Bar-->
+            <div class="nav-right">
+                <a href="#dark">
+                    <img class="icon" src="/assets/icons/DARKMODE-Icon.png">
+                </a>
+                <a href="https://curtin-cec.tidyhq.com/public/membership_levels" class="yellowButton">Sign Up!</a>
             </div>
+        </div>  
+
+        <!-- Landing Image -->
+        <div>
+            <div class="gearWrapper">
+                <img class="top-img" alt="CECGear" src="/assets/icons/CECGearWhite.svg" id="CECGearLanding">
+            <script src="/scripts/index.js"></script>
+            </div>
+            <!-- script to make the Landing page Gear rotate as the user scrolls -->
+            <img class="bg-img" alt="LandingImage" style="width: 100%; height: auto;" src="/assets/images/LandingImage.png">
         </div>
 
-        <!-- Sponsorship Banner -->
-        <div style="width: 100%;">
-            <!-- Call to Action -->
-            <div class="heroBar" style="background-color: #5271FF; align-items: center;  gap: 96px;">
-                <div class="footerGroup" style="max-width: max-content;">
-                    <p class="txSubtitleWhite" style="margin-top: 0px;">Want to Become a Sponsor?</p>
-                    <p class="txParagraph1White">Connect with the club and students directly by sponsoring us! Be first in line for networking events and student engagement.</p>
-                    <a href="#sponsors" class="yellowButton" style="padding: 6px 8px;">Find Out More</a>
+        <!-- BG stuff-->
+        <div style="width: 100%; height: 100%; background: var(--Background-Primary, #FBFBFE); overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 50px; display: inline-flex; padding-bottom: 75px;">
+            <div style="width: 1020.80px; border-radius: 12.80px; justify-content: flex; align-items: center; display: inline-flex"></div>
+
+            <!-- About CEC Hero-->
+            <div class="heroContainer">
+                <div class="heroGroup">
+                    <h2 class="txSubtitleBlack subtitleBorder">What is CEC About?</h2>
+                    <p class="txParagraph1Black">Description of the club and general idea behind it. Description of the club and general idea behind it. Description of the club and general idea behind it. Description of the club and general idea behind it. Description of the club and general idea behind it. Description of the club and general idea behind it. </p>
                 </div>
-                <div class="heroGroup" style="max-width: max-content;">
-                    <img alt="Sponsorship Photo" src="https://placehold.co/280x150" class="imageHero" style="border-color: #2C4DAF;">
+                <div class="heroGroup">
+                    <h2 class="txSubtitleBlack subtitleBorder">Where Can you Find Us?</h2>
+                    <img alt="Map location of CEC Office" src="https://placehold.co/450x450" class="imageHero">
                 </div>
             </div>
-            <!-- Sponsor Logo Carosel-->
-            <div class="heroBar" style="background-color: #FBFBFE; gap: 16px;">
-                <div class="sponsorLogo">
-                    <img alt="Sponsor Logo" src="https://placehold.co/210x112">
+
+            <!-- Sponsorship Banner -->
+            <div style="width: 100%;">
+                <!-- Call to Action -->
+                <div class="heroBar" style="background-color: #5271FF; align-items: center;  gap: 96px;">
+                    <div class="footerGroup" style="max-width: max-content;">
+                        <p class="txSubtitleWhite" style="margin-top: 0px;">Want to Become a Sponsor?</p>
+                        <p class="txParagraph1White">Connect with the club and students directly by sponsoring us! Be first in line for networking events and student engagement.</p>
+                        <a href="#sponsors" class="yellowButton" style="padding: 6px 8px;">Find Out More</a>
+                    </div>
+                    <div class="heroGroup" style="max-width: max-content;">
+                        <img alt="Sponsorship Photo" src="https://placehold.co/280x150" class="imageHero" style="border-color: #2C4DAF;">
+                    </div>
                 </div>
-                <div class="sponsorLogo">
-                    <img alt="Sponsor Logo" src="https://placehold.co/210x112">
-                </div>
-                <div class="sponsorLogo">
-                    <img alt="Sponsor Logo" src="https://placehold.co/210x112">
-                </div>
-                <div class="sponsorLogo">
-                    <img alt="Sponsor Logo" src="https://placehold.co/210x112">
-                </div>
-                <div class="sponsorLogo">
-                    <img alt="Sponsor Logo" src="https://placehold.co/210x112">
-                </div>
-                <div class="sponsorLogo">
-                    <img alt="Sponsor Logo" src="https://placehold.co/210x112">
-                </div>
-                <div class="sponsorLogo">
-                    <img alt="Sponsor Logo" src="https://placehold.co/210x112">
+                <!-- Sponsor Logo Carosel-->
+                <div class="heroBar" style="background-color: #FBFBFE; gap: 16px;">
+                    <div class="sponsorLogo">
+                        <img alt="Sponsor Logo" src="https://placehold.co/210x112">
+                    </div>
+                    <div class="sponsorLogo">
+                        <img alt="Sponsor Logo" src="https://placehold.co/210x112">
+                    </div>
+                    <div class="sponsorLogo">
+                        <img alt="Sponsor Logo" src="https://placehold.co/210x112">
+                    </div>
+                    <div class="sponsorLogo">
+                        <img alt="Sponsor Logo" src="https://placehold.co/210x112">
+                    </div>
+                    <div class="sponsorLogo">
+                        <img alt="Sponsor Logo" src="https://placehold.co/210x112">
+                    </div>
+                    <div class="sponsorLogo">
+                        <img alt="Sponsor Logo" src="https://placehold.co/210x112">
+                    </div>
+                    <div class="sponsorLogo">
+                        <img alt="Sponsor Logo" src="https://placehold.co/210x112">
+                    </div>
                 </div>
             </div>
-        </div>
 
-    <!-- Exec Committee-->
-        <p class="txHeaderBlack headingBorder" style="width: max-content; margin-bottom: 0px;"><script>document.write(new Date().getFullYear())</script> Executive Committee</p>
+        <!-- Exec Committee-->
+            <p class="txHeaderBlack headingBorder" style="width: max-content; margin-bottom: 0px;"><script>document.write(new Date().getFullYear())</script> Executive Committee</p>
 
-        <div id="execContainer" class="heroContainerCOL" style="margin-left: 50px"></div>
-        <script>
-            fetch('/data/execData.json')
-            .then(res => res.json())
-            .then(execs => {
-                const container = document.getElementById('execContainer')
-                let rowHTML = '';
-                execs.forEach((exec, i) => {
-                    const random = Math.floor(Math.random() * 2);
-                    const profileHTML = `
-                        <div class="execProfile">
-                            <img class="${random % 2 === 0 ? 'execPhotoBlue' : 'execPhotoYellow'}" src="${exec.image}">
-                            <div class="txColumn">
-                                <p class="txExecProf">${exec.name}</p>
-                                <p class="txExecProf">${exec.role}</p>
+            <div id="execContainer" class="heroContainerCOL" style="margin-left: 50px"></div>
+            <script>
+                fetch('/data/execData.json')
+                .then(res => res.json())
+                .then(execs => {
+                    const container = document.getElementById('execContainer')
+                    let rowHTML = '';
+                    execs.forEach((exec, i) => {
+                        const random = Math.floor(Math.random() * 2);
+                        const profileHTML = `
+                            <div class="execProfile">
+                                <img class="${random % 2 === 0 ? 'execPhotoBlue' : 'execPhotoYellow'}" src="${exec.image}">
+                                <div class="txColumn">
+                                    <p class="txExecProf">${exec.name}</p>
+                                    <p class="txExecProf">${exec.role}</p>
+                                </div>
                             </div>
-                        </div>
-                    `;
-                    if (i % 2 === 0){
-                        rowHTML += `<div class="execRow">`;
-                    }
-                    rowHTML += profileHTML;
-                    if (i % 2 === 1 || i === execs.length - 1) {
-                        rowHTML += `</div>`;
-                    }
+                        `;
+                        if (i % 2 === 0){
+                            rowHTML += `<div class="execRow">`;
+                        }
+                        rowHTML += profileHTML;
+                        if (i % 2 === 1 || i === execs.length - 1) {
+                            rowHTML += `</div>`;
+                        }
+                    });
+                    container.innerHTML = rowHTML;
                 });
-                container.innerHTML = rowHTML;
-            });
-        </script>
-    </div> 
+            </script>
+        </div> 
 
-    <!-- Footer -->
-    <div class="heroBar" style="background-color: #5271FF; align-items: center;">
-        <div class="footerGroup">
-            <p class="txSubtitleWhite" style="text-align: left; margin-bottom: 5px;">Curtin Engineers Club</p>
-            <p class="txParagraph1White" style="margin-bottom: 30px; margin-top: 0px;">(CEC) Est. 1989</p>
-            <a href="https://use.mazemap.com/#v=1&config=curtinuniversity&campusid=296&zlevel=1&center=115.894634,-32.007317&zoom=18&sharepoitype=poi&sharepoi=800206" class="txParagraph3White" style="margin-bottom: 30px;">Engineering Pavilion Room 106 (215:106) <br> Curtin University, Bentley, WA</a>     
-            <a class="txParagraph3White" href="/html/e404.html">Error404</a>       
+        <!-- Footer -->
+        <div class="heroBar" style="background-color: #5271FF; align-items: center;">
+            <div class="footerGroup">
+                <p class="txSubtitleWhite" style="text-align: left; margin-bottom: 5px;">Curtin Engineers Club</p>
+                <p class="txParagraph1White" style="margin-bottom: 30px; margin-top: 0px;">(CEC) Est. 1989</p>
+                <a href="https://use.mazemap.com/#v=1&config=curtinuniversity&campusid=296&zlevel=1&center=115.894634,-32.007317&zoom=18&sharepoitype=poi&sharepoi=800206" class="txParagraph3White" style="margin-bottom: 30px;">Engineering Pavilion Room 106 (215:106) <br> Curtin University, Bentley, WA</a>     
+                <a class="txParagraph3White" href="/html/e404.html">Error404</a>       
+            </div>
+            <div class="footerGroup">
+                <p class="txSubtitleWhite" style="text-align: left; margin-bottom: 5px;">Contact Us:</p>
+                <p class="txParagraph1White" style="margin-bottom: 30px; margin-top: 0px;">contact@cec.curtin.edu.au</p>
+                <a href="https://github.com/RhettDev/CECWebsite" class="txParagraph3White" style="margin-bottom: 30px;">@ CEC 2024 <br> Design and Code by Rhett Bauchop</a>
+            </div>
+            <div class="iconGrid">
+                <a href="https://guild.curtin.edu.au/">
+                    <img src="/assets/icons/CUR-GUILD-Logo-Secondary-WHITE.png" alt="Curtin Guild Logo"> <!-- Curtin Guiild Logo -->
+                </a>
+                <a href="https://www.facebook.com/CurtinEngineersClub">
+                    <img src="/assets/icons/FB-Icon.png" alt="Facebook Logo"> <!-- Facebook Logo -->
+                </a>
+                <a href="https://www.instagram.com/curtinengineersclub/">
+                    <img src="/assets/icons/IG-Icon.png" alt="Instagram Logo"> <!-- Instagram Logo -->
+                </a>
+                <a href="https://au.linkedin.com/company/curtin-engineers-club">
+                    <img src="/assets/icons/INDEED-Icon.png" alt="Linkedin Logo"> <!-- Linkedin Logo -->
+                </a>
+                <a href="https://linktr.ee/Curtin.Engineers.Club">
+                    <img src="/assets/icons/LINKTREE-Icon.png" alt="Linktree Logo"> <!-- Linktree Logo -->
+                </a>
+            </div>
         </div>
-        <div class="footerGroup">
-            <p class="txSubtitleWhite" style="text-align: left; margin-bottom: 5px;">Contact Us:</p>
-            <p class="txParagraph1White" style="margin-bottom: 30px; margin-top: 0px;">contact@cec.curtin.edu.au</p>
-            <a href="https://github.com/RhettDev/CECWebsite" class="txParagraph3White" style="margin-bottom: 30px;">@ CEC 2024 <br> Design and Code by Rhett Bauchop</a>
-        </div>
-        <div class="iconGrid">
-            <a href="https://guild.curtin.edu.au/">
-                <img src="/assets/icons/CUR-GUILD-Logo-Secondary-WHITE.png" alt="Curtin Guild Logo"> <!-- Curtin Guiild Logo -->
-            </a>
-            <a href="https://www.facebook.com/CurtinEngineersClub">
-                <img src="/assets/icons/FB-Icon.png" alt="Facebook Logo"> <!-- Facebook Logo -->
-            </a>
-            <a href="https://www.instagram.com/curtinengineersclub/">
-                <img src="/assets/icons/IG-Icon.png" alt="Instagram Logo"> <!-- Instagram Logo -->
-            </a>
-            <a href="https://au.linkedin.com/company/curtin-engineers-club">
-                <img src="/assets/icons/INDEED-Icon.png" alt="Linkedin Logo"> <!-- Linkedin Logo -->
-            </a>
-            <a href="https://linktr.ee/Curtin.Engineers.Club">
-                <img src="/assets/icons/LINKTREE-Icon.png" alt="Linktree Logo"> <!-- Linktree Logo -->
-            </a>
-        </div>
-    </div>
+    </body>
 </html>
