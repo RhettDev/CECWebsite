@@ -100,12 +100,11 @@
                         const container = document.getElementById('lifeMemberContainer');
                         let html = ''
                         var i, n, m;
-                        for(i = 0; i < lifeMembers.length; i+=3){
-                            n = i;
-                            m = i+3;
-                            lifeMembers.slice(n,m).forEach(lifeObj => {
+                        for(i = 0; i < lifeMembers.length - 1; i+=3){
+                            html += `<div class="historyRow" style="display: flex; justify-content: center;">`;
+                            lifeMembers.slice(i,i+3).forEach(lifeObj => {
                                 html += ` 
-                                    <div class="historyRow">
+                                    <div class="historyRow" style="gap: 0px;">
                                         <div class="historyYearLabel" style="text-align: center;">
                                             <p class="txHistoryYear">${lifeObj.year}</p>
                                         </div>
@@ -115,8 +114,9 @@
                                     </div>
                                 `;
                             });
-                            container.innerHTML = html;
+                            html += `</div>`;
                         }
+                        container.innerHTML = html;
                     });
                 </script>
             </div>
@@ -183,16 +183,6 @@
                 // Run on initial load
                 changeHistoryTab();
             </script>
-
-            <!-- <script>
-                function openHistory(historyPage){
-                    var i;
-                    var x = document.getElementsByClassName("Club History");
-                    for (i = 0; i < x.length; i++){
-                        x[i].style.display = "none";
-                    }
-                }
-            </script> -->
 
         </div> 
         <!-- Footer -->
