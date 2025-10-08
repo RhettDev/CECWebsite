@@ -680,42 +680,43 @@ input,
 }
 
 .overlay:target {
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1;
 }
 
 .popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: #DBDBDB;
-  border-radius: 5px;
-  width: 30%;
-  position: relative;
-  transition: all 0.6s ease-in-out;
+    position: absolute;
+    top: 150px;
+    right: 50px;
+    padding: 20px;
+    background: #5271FF;
+    border-radius: 16px;
+    width: 22.5%;
+    transition: all 0.6s ease-in-out;
 }
 .popup .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #EFEFEF;
 }
 .popup .close:hover {
-  color: #06D85F;
+    color: #5271FF;
 }
 .popup .content {
-  max-height: 30%;
-  overflow: auto;
+    max-height: 30%;
+    overflow: auto;
 }
 
 @media screen and (max-width: 700px){
-  .box{
-    width: 70%;
-  }
-  .popup{
-    width: 70%;
-  }
+    .box{
+        width: 60%;
+    }
+    .popup{
+        width: 60%;
+    }
 }
