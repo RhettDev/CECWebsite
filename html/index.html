@@ -81,27 +81,43 @@
                     <div class="footerGroup" style="max-width: max-content;">
                         <p class="txSubtitleWhite" style="margin-top: 0px;">Want to Become a Sponsor?</p>
                         <p class="txParagraph1White">Connect with the club and students directly by sponsoring us! Be first in line for networking events and student engagement.</p>
-                        <a href="#sponsors" class="yellowButton" style="padding: 6px 8px;">Find Out More</a>
+                        <a href="/html/sponsor.html" class="yellowButton" style="padding: 6px 8px;">Find Out More</a>
                     </div>
                     <div class="heroGroup" style="max-width: max-content;">
                         <img alt="Sponsorship Photo" src="/assets/images/sponsorActionCard.png" class="imageHero" style="border-color: #2C4DAF; width: 300px;">
                     </div>
                 </div>
 
-                <div id="sponsorCarousel" class="heroBar" style="background-color: #DBDBDB; max-height: 150px; padding: 0px"></div>
+                <!-- Sponsor Logo Carousel -->
+                <div id="sponsorCarousel" class="heroBar" style="background-color: #DBDBDB; max-height: 130px; padding: 0px; overflow: hidden;">
+                    <div id="carouselInner" style="display: flex; width: max-content;"></div>
+                </div>
                 <script>
-                    // Simple horizontal scroll animation for the sponsor logos
                     fetch('/data/sponsorData.json')
                     .then(res => res.json())
                     .then(sponsors => {
-                        const container = document.getElementById('sponsorCarousel');
+                        const innerContainer = document.getElementById('carouselInner');
                         let html = ``;
                         sponsors.forEach(sponsorObj => {
                             html += `
                                 <img class="sponsorLogo" alt="${sponsorObj.name}" src="${sponsorObj.blueLogo}">
                             `;
                         });
-                        container.innerHTML = html;
+                        innerContainer.innerHTML = html + html + html + html;
+
+                        const carousel = document.getElementById('sponsorCarousel');
+                        let scroll = 0;
+                        const resetPoint = innerContainer.scrollWidth / 2.14;
+
+                        function animateCarousel() {
+                            scroll += 0.5;
+                            if(scroll >= resetPoint) {
+                                scroll = 0;
+                            }
+                            carousel.scrollLeft = scroll;
+                            requestAnimationFrame(animateCarousel);
+                        }
+                        animateCarousel();
                     });
                 </script>
             </div>

@@ -186,6 +186,7 @@ a {
     max-width: 210px;
     flex-direction: row;
     overflow: hidden;
+    margin: 0 10px;
 }
 
 .iconGrid {
