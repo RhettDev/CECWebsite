@@ -181,10 +181,11 @@ a {
 }
 
 .sponsorLogo {
-    flex: 1;
-    display: block;
+    display: flex;
     background-color: #DBDBDB;
     max-width: 210px;
+    flex-direction: row;
+    overflow: hidden;
 }
 
 .iconGrid {

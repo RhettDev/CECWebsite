@@ -44,7 +44,7 @@
         </div>
 
         <!-- BG stuff-->
-        <div style="width: 100%; height: 100%; background: var(--Background-Primary, #FBFBFE); overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 50px; display: inline-flex; padding-bottom: 75px;">
+        <div style="width: 100%; height: 100%; background-color: #FBFBFE; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 50px; display: inline-flex; padding-bottom: 75px;">
             <div style="width: 1020.80px; border-radius: 12.80px; justify-content: flex; align-items: center; display: inline-flex"></div>
 
             <!-- About CEC Hero-->
@@ -87,30 +87,23 @@
                         <img alt="Sponsorship Photo" src="/assets/images/sponsorActionCard.png" class="imageHero" style="border-color: #2C4DAF; width: 300px;">
                     </div>
                 </div>
-                <!-- Sponsor Logo Carosel-->
-                <div class="heroBar" style="background-color: #FBFBFE; gap: 16px;">
-                    <div class="sponsorLogo">
-                        <img alt="Sponsor Logo" src="https://placehold.co/210x112">
-                    </div>
-                    <div class="sponsorLogo">
-                        <img alt="Sponsor Logo" src="https://placehold.co/210x112">
-                    </div>
-                    <div class="sponsorLogo">
-                        <img alt="Sponsor Logo" src="https://placehold.co/210x112">
-                    </div>
-                    <div class="sponsorLogo">
-                        <img alt="Sponsor Logo" src="https://placehold.co/210x112">
-                    </div>
-                    <div class="sponsorLogo">
-                        <img alt="Sponsor Logo" src="https://placehold.co/210x112">
-                    </div>
-                    <div class="sponsorLogo">
-                        <img alt="Sponsor Logo" src="https://placehold.co/210x112">
-                    </div>
-                    <div class="sponsorLogo">
-                        <img alt="Sponsor Logo" src="https://placehold.co/210x112">
-                    </div>
-                </div>
+
+                <div id="sponsorCarousel" class="heroBar" style="background-color: #DBDBDB; max-height: 150px; padding: 0px"></div>
+                <script>
+                    // Simple horizontal scroll animation for the sponsor logos
+                    fetch('/data/sponsorData.json')
+                    .then(res => res.json())
+                    .then(sponsors => {
+                        const container = document.getElementById('sponsorCarousel');
+                        let html = ``;
+                        sponsors.forEach(sponsorObj => {
+                            html += `
+                                <img class="sponsorLogo" alt="${sponsorObj.name}" src="${sponsorObj.blueLogo}">
+                            `;
+                        });
+                        container.innerHTML = html;
+                    });
+                </script>
             </div>
 
         <!-- Exec Committee-->
