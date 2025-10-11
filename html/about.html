@@ -34,8 +34,7 @@
         </div>
 
         <div style="width: 100%; height: 100%;  overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 50px; display: inline-flex">
-            <div style="width: 1020.80px; border-radius: 12.80px; justify-content: flex-start; align-items: center; display: inline-flex"></div>
-            
+
             <!-- About Heros -->
             <p class="txHeaderBlack headingBorder" style="margin-bottom: 0px;">Who Are We?</p>
             <div class="heroContainer">
@@ -45,14 +44,14 @@
                 </div>
                 <div class="heroGroup">
                     <p class="txSubtitleBlack subtitleBorder">Where Can you Find Us?</p>
-                    <img alt="Map location of CEC Office" src="https://placehold.co/450x450" class="imageHero">
+                    <img alt="Map location of CEC Office" src="https://placehold.co/400x400" class="imageHero">
                 </div>
             </div>
 
             <div class="heroContainer">
                 <div class="heroGroup">
                     <p class="txSubtitleBlack subtitleBorder">Where Can you Find Us?</p>
-                    <img alt="Map location of CEC Office" src="https://placehold.co/450x450" class="imageHero">
+                    <img alt="Map location of CEC Office" src="https://placehold.co/400x400" class="imageHero">
                 </div>
                 <div class="heroGroup">
                     <p class="txSubtitleBlack subtitleBorder">What is CEC About?</p>
@@ -68,14 +67,14 @@
                     <a href="#sponsors" class="yellowButton" style="padding: 6px 8px;">Shop via out TidyHQ</a>
                 </div>
                 <div class="heroGroup" style="max-width: max-content;">
-                    <img alt="Sponsorship Photo" src="/assets/images/merchCardJumpers.png" class="imageHero" style="border-color: #2C4DAF; width: 320px;">
+                    <img alt="Sponsorship Photo" src="/assets/images/merchCardJumpers.png" class="imageHero" style="border-color: #2C4DAF; width: 300px;;">
                 </div>
             </div>
 
 
             <!-- FAQ -->
             <p class="txHeaderBlack headingBorder" style="margin-bottom: 0px;">Frequently Asked Club Questions</p>
-            <div class="faqContainer" style="width: 100%;">
+            <!-- <div class="faqContainer" style="width: 100%;">
                 <div class="faqGroup">
                     <p class="faqQuestion txParagraph3Black" style="text-align: right;">What is this Curtin Engineers Club About?</p>
                     <div class="faqSeparator"></div>
@@ -84,7 +83,7 @@
                 <div class="faqGroup">
                     <p class="faqQuestion txParagraph3Black" style="text-align: right;">Do I need to be an engineering student to join the club?</p>
                     <div class="faqSeparator"></div>
-                    <p class="faqAnswer txParagraph3Black" style="text-align: left;">Not at all! All Curtin students can become a member of the club no matter the discipline they are studying. </p>
+                    <p class="faqAnswer txParagraph3Black" style="text-align: left;">Not at all! All Curtin students can become a member of the club no matter the discipline they are studying.</p>
                 </div>
                 <div class="faqGroup">
                     <p class="faqQuestion txParagraph3Black" style="text-align: right;">Do I need to a Curtin student to join the club?</p>
@@ -121,7 +120,27 @@
                     <div class="faqSeparator"></div>
                     <p class="faqAnswer txParagraph3Black" style="text-align: left;">Events are advertised on our social media, links at the bottom of the page . Additionally posters of events are put up around campus and the Engineering Pavilion.</p>
                 </div>
-            </div> 
+            </div>  -->
+            <div class="faqContainer" id="faqContainer" style="width: 100%;"></div>
+        
+            <script>
+                fetch('/data/faqData.json')
+                .then(res => res.json())
+                .then(questions => {
+                    const container = document.getElementById('faqContainer');
+                    questions.forEach(question => {
+                        container.innerHTML += `
+                        <div class="faqGroup">
+                            <p class="faqQuestion txParagraph2Black" style="text-align: right;">${question.question}</p>
+                            <div class="faqSeparator"></div>
+                            <p class="faqAnswer txParagraph2Black" style="text-align: left;">${question.answer}</p>
+                        </div>
+                        `;
+                    })
+                })
+            </script>
+
+            
         </div>
 
         <!-- Footer -->

@@ -207,23 +207,28 @@ a {
     max-width: 1000px;
     word-wrap: break-word;
     margin-bottom: 16px;
+    align-items: stretch;
 }
 
 .faqQuestion {
+    display: flex;
     width: 300px;
+    min-height: 1em;
 }
 
 .faqAnswer {
+    display: flex;
     width: 700px;
+    min-height: 1em;
 }
 
 .faqSeparator {
     width: 4px;
-    height: 60px;
+    height: 100%;
     background-color: #5271FF;
     margin: 0px 12px;
-    align-self: center;
     border-radius: 2px;
+    align-self: stretch;
 }
 
 
@@ -234,7 +239,7 @@ a {
     color: var(--Text-Primary, #050414);
     text-align: center;
     font-family: Poppins;
-    font-size: 28px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -245,7 +250,7 @@ a {
     color: var(--Text-Primary, #EFEFEF);
     text-align: center;
     font-family: Poppins;
-    font-size: 28px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -257,7 +262,7 @@ a {
     color: var(--Text-Primary, #050414);
     text-align: center;
     font-family: Poppins;
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -266,7 +271,7 @@ a {
 .txSubtitleWhite {
     color: var(--Text-Primary, #EFEFEF);
     font-family: Poppins;
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -278,7 +283,7 @@ a {
     color: var(--Text-Primary, #050414);
     text-align: center;
     font-family: Poppins;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -288,7 +293,7 @@ a {
 .txParagraph1White {
     color: var(--Text-Primary, #EFEFEF);
     font-family: Poppins;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -300,7 +305,7 @@ a {
     color: var(--Text-Primary, #050414);
     text-align: center;
     font-family: Poppins;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -311,7 +316,7 @@ a {
 .txParagraph2White {
     color: var(--Text-Primary, #EFEFEF);
     font-family: Poppins;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -323,7 +328,7 @@ a {
     color: var(--Text-Primary, #050414);
     text-align: center;
     font-family: Poppins;
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -334,7 +339,7 @@ a {
 .txParagraph3White {
     color: var(--Text-Primary, #EFEFEF);
     font-family: Poppins;
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -345,7 +350,7 @@ a {
 .txExecProf {
     color: var(--Text-Primary, #050414);
     font-family: Poppins;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -380,7 +385,7 @@ a {
 .imageHero {
     border: 4px #5271FF solid;
     border-radius: 16px;
-    max-width: 450px;
+    max-width: 400px;
     height: auto;
 }
 
@@ -398,7 +403,7 @@ a {
 }
 
 .top-img {
-    width: 240px;
+    width: 200px;
     height: auto;
     transition: transform 0.1s linear;
 }
@@ -412,10 +417,9 @@ a {
 /* End Image Overlay Classes */
 
 .icon {
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
 }
-
 
 .execProfileOLD {
     display: flex;
