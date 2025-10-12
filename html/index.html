@@ -37,12 +37,34 @@
         <div>
             <div class="gearWrapper">
                 <img class="top-img" alt="CECGear" src="/assets/icons/CECGearWhite.svg" id="CECGearLanding">
-            <script src="/scripts/index.js"></script>
+            <!-- <script src="/scripts/index.js"></script> -->
             </div>
             <!-- script to make the Landing page Gear rotate as the user scrolls -->
             <img class="bg-img" alt="LandingImage" src="/assets/images/botlLandingImage.png">
         </div>
 
+        <!-- Meeting Invite Pop-up-->
+        <button onClick="popupFunc()" class="yellowButton popupLocation" id="meetingPopupButton"><b>!</b></button>  
+
+        <div class="popup" id="meetingPopup" style="display: none;">
+            <p class="txParagraph1White" style="margin-top: 0px;">Come To Our Weekly Meetings!</p>
+            <button onClick="popupFunc()" class="close">&times;</button>
+            <div class="content txParagraph2White"><b>Wednesdays 12pm to 1pm in 215.30</b></div>
+        </div>
+
+        <script>
+            function popupFunc(){
+                var x = document.getElementById("meetingPopup");
+                var y = document.getElementById("meetingPopupButton");
+                if(x.style.display === "none"){
+                    x.style.display = "block";
+                }
+                else{
+                    x.style.display = "none";
+                }
+            }
+        </script>
+        
         <!-- BG stuff-->
         <div style="width: 100%; height: 100%; background-color: #FBFBFE; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 50px; display: inline-flex; padding-bottom: 75px;">
             <div style="width: 1020.80px; border-radius: 12.80px; justify-content: flex; align-items: center; display: inline-flex"></div>
@@ -58,19 +80,6 @@
                 <div class="heroGroup">
                     <h2 class="txSubtitleBlack subtitleBorder">Where Can you Find Us?</h2>
                     <img alt="Map location of CEC Office" src="/assets/images/CECOfficeMap.png" class="imageHero">
-                </div>
-            </div>
-
-            <div>
-                <a href="#popup1" class="yellowButton">Pop-up!</a>
-            </div>
-
-            <!-- Meeting Invite Pop-up-->
-            <div id="popup1" class="overlay">
-                <div class="popup">
-                    <p class="txParagraph1White" style="margin-top: 0px;">Come To Our Weekly Meetings!</p>
-                    <a class="close" href="#">&times;</a>
-                    <div class="content txParagraph2White"><b>Wednesdays 12pm to 1pm in 215.30</b></div>
                 </div>
             </div>
 
