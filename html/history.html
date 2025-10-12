@@ -37,12 +37,6 @@
             <div style="width: 1020.80px; border-radius: 12.80px; justify-content: flex-start; align-items: center; display: inline-flex"></div>
     
             <!-- Buttons -->
-            <!-- <div class="tab" style="gap: 100px; align-items: center;">
-                <button class="txSubtitleBlack" onclick="openHistory('Club History')">Club History</button>
-                <button class="txHeaderBlack" onclick="openHistory('Past Executives')">Past Executive Committees</button>
-                <button class="txSubtitleBlack" onclick="openHistory('Life Members')">Life Members List</button>
-            </div> -->
-
             <div class="heroBar"style="gap: 100px; align-items: center;">
                 <a href="#clubHistory" class="txSubtitleBlack" id="clubHistoryHeading">Club History</a>
                 <a href="#pastExecs" class="txSubtitleBlack" id="pastExecsHeading">Past Executive Committees</a>
@@ -123,57 +117,47 @@
 
             <script>
                 document.getElementById("Club History").style.display = "block";
-                // function showTabFromHash() {
-                //     const hash = location.hash || "#clubHistory"; // default to tab1
-                //     document.querySelectorAll(".tabContent").forEach(tab => {
-                //         tab.classList.remove("active");
-                //     });
-                //     const activeTab = document.querySelector(hash);
-                //     if (activeTab) {
-                //         activeTab.classList.add("active");
-                //     }
-                // }
+                document.getElementById("clubHistoryHeading").classList.add("headingBorder");
 
                 function changeHistoryTab(){
                     const hash = location.hash
+                    var ch = document.getElementById("Club History");
+                    var pe = document.getElementById("Past Executives");
+                    var lm = document.getElementById("Life Members");
+
+                    var chHeading = document.getElementById("clubHistoryHeading");
+                    var peHeading = document.getElementById("pastExecsHeading");
+                    var lmHeading = document.getElementById("lifeMembersHeading");
+
                     if(hash === "#clubHistory"){
-                        document.getElementById("Club History").style.display = "block";
-                        document.getElementById("Past Executives").style.display = "none";
-                        document.getElementById("Life Members").style.display = "none";
+                        ch.style.display = "block";
+                        pe.style.display = "none";
+                        lm.style.display = "none";
 
-                        var current = document.getElementById("clubHistoryHeading");
-                        current.classList.add("headingBorder");
+                        chHeading.classList.add("headingBorder");
 
-                        var current = document.getElementById("pastExecsHeading");
-                        current.classList.remove("headingBorder");
-                        var current = document.getElementById("lifeMembersHeading");
-                        current.classList.remove("headingBorder");
+                        peHeading.classList.remove("headingBorder");
+                        lmHeading.classList.remove("headingBorder");
                     }
                     if(hash === "#pastExecs"){
-                        document.getElementById("Club History").style.display = "none";
-                        document.getElementById("Past Executives").style.display = "block";
-                        document.getElementById("Life Members").style.display = "none";
+                        ch.style.display = "none";
+                        pe.style.display = "block";
+                        lm.style.display = "none";
 
-                        var current = document.getElementById("pastExecsHeading");
-                        current.classList.add("headingBorder");
+                        peHeading.classList.add("headingBorder");
 
-                        var current = document.getElementById("clubHistoryHeading");
-                        current.classList.remove("headingBorder");
-                        var current = document.getElementById("lifeMembersHeading");
-                        current.classList.remove("headingBorder");
+                        chHeading.classList.remove("headingBorder");
+                        lmHeading.classList.remove("headingBorder");
                     }
                     if(hash === "#lifeMembers"){
-                        document.getElementById("Club History").style.display = "none";
-                        document.getElementById("Past Executives").style.display = "none";
-                        document.getElementById("Life Members").style.display = "block";
+                        ch.style.display = "none";
+                        pe.style.display = "none";
+                        lm.style.display = "block";
 
-                        var current = document.getElementById("lifeMembersHeading");
-                        current.classList.add("headingBorder");
+                        lmHeading.classList.add("headingBorder");
 
-                        var current = document.getElementById("pastExecsHeading");
-                        current.classList.remove("headingBorder");
-                        var current = document.getElementById("clubHistoryHeading");
-                        current.classList.remove("headingBorder");
+                        peHeading.classList.remove("headingBorder");
+                        chHeading.classList.remove("headingBorder");
                     }
                 }
 

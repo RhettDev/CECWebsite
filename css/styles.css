@@ -38,6 +38,7 @@ a {
     padding-bottom: 8px;
     box-shadow: 2px 2px 1px #BEBEC0;
     position: sticky;
+    top: 0px;
 }
 
 /* Classes for Left Side Navigation Bar Items */
@@ -48,6 +49,7 @@ a {
 }
 
 .nav-left a {
+    display: block;
     color: #050414;
     text-align: center;
     /* padding: 14px 16px; */
