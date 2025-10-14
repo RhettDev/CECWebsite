@@ -14,7 +14,7 @@
             document.addEventListener("DOMContentLoaded", updateThemeIcons);
         </script>
     </head>
-    <body>
+    <body style="background-color: var(--BG-Primary);">
         <!-- Navigation Bar-->
         <div class="navbar">
             <!-- Left side of Navigation Bar-->
@@ -37,29 +37,6 @@
                 <a href="https://curtin-cec.tidyhq.com/public/membership_levels" class="yellowButton">Sign Up!</a>
             </div>
         </div>
-
-        <script>
-            function changeTheme(){
-                const html = document.documentElement;
-                const toglIcon = document.getElementById("themeToggleIcon");
-                const gearIcon = document.getElementById("CECLogo");
-
-                if (html.classList.contains("lightTheme")){
-                    html.classList.remove('lightTheme');
-                    html.classList.add('darkTheme');
-                    localStorage.setItem("theme", "darkTheme");
-                    toglIcon.src = "/assets/icons/DARKMODE-IconWhite.svg";
-                    gearIcon.src = "/assets/icons/CECGearWhite.svg";
-                    }
-                else {
-                    html.classList.remove('darkTheme');
-                    html.classList.add('lightTheme');
-                    localStorage.setItem("theme", "lightTheme");
-                    toglIcon.src = "/assets/icons/DARKMODE-IconBlack.svg";
-                    gearIcon.src = "/assets/icons/CECGearBlack.svg";
-                }
-            }
-        </script>
 
         <!-- Error Message -->
         <div class="e404Hero">
