@@ -62,7 +62,7 @@ html.darkTheme {
 
 body {
     margin: 0;
-    color: var(--BG-Primary);
+    background-color: var(--BG-Primary);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
