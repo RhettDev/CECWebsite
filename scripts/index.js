@@ -1,4 +1,4 @@
-// index.js - All scripts for index.html
+// index.js - All scripts for index.html (and one for history.html)
 
 window.onscroll = function () {
     scrollRotate();
@@ -12,4 +12,59 @@ function scrollRotate(){
     image.style.transform = "rotate(" + window.pageYOffset/2 + "deg)";
     }
     // image.style.transform = "rotate(" + window.pageYOffset/2 + "deg)";
+}
+
+// Popup Function
+function popupFunc(){
+    var x = document.getElementById("meetingPopup");
+    var y = document.getElementById("meetingPopupButton");
+    if(x.style.display === "none"){
+        x.style.display = "block";
+    }
+    else{
+        x.style.display = "none";
+    }
+}
+
+// History Page Tab Switcher
+function changeHistoryTab(){
+    const hash = location.hash
+    var ch = document.getElementById("Club History");
+    var pe = document.getElementById("Past Executives");
+    var lm = document.getElementById("Life Members");
+
+    var chHeading = document.getElementById("clubHistoryHeading");
+    var peHeading = document.getElementById("pastExecsHeading");
+    var lmHeading = document.getElementById("lifeMembersHeading");
+
+    if(hash === "#clubHistory"){
+        ch.style.display = "block";
+        pe.style.display = "none";
+        lm.style.display = "none";
+
+        chHeading.classList.add("headingBorder");
+
+        peHeading.classList.remove("headingBorder");
+        lmHeading.classList.remove("headingBorder");
+    }
+    if(hash === "#pastExecs"){
+        ch.style.display = "none";
+        pe.style.display = "block";
+        lm.style.display = "none";
+
+        peHeading.classList.add("headingBorder");
+
+        chHeading.classList.remove("headingBorder");
+        lmHeading.classList.remove("headingBorder");
+    }
+    if(hash === "#lifeMembers"){
+        ch.style.display = "none";
+        pe.style.display = "none";
+        lm.style.display = "block";
+
+        lmHeading.classList.add("headingBorder");
+
+        peHeading.classList.remove("headingBorder");
+        chHeading.classList.remove("headingBorder");
+    }
 }
