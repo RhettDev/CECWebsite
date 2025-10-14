@@ -1,13 +1,48 @@
 <!-- Init history.html -->
 <!DOCTYPE html>
-<html lang="en-UK">
+<html lang="en-UK" class="lightTheme">
     <head>
         <meta charset="utf-8" />
         <title>Curtin Engineers Club</title>
         <meta name="viewport" content="width=100%" />
         <link rel="stylesheet" href="/css/styles.css" />
-        <link rel="icon" href="/assets/icons/CECGearWhite.svg">
+        <link rel="icon" href="/assets/icons/CECGearBlack.svg">
         <script src="https://kit.fontawesome.com/4c5395be19.js" crossorigin="anonymous"></script> <!-- Set up to add icons via Font Awesome but currently all Icons are local files--> 
+        <script>
+            function setTheme(){
+                const saved = localStorage.getItem("theme");
+                const html = document.documentElement;
+                const toglIcon = document.getElementById("themeToggleIcon");
+                const gearIcon = document.getElementById("CECLogo");
+                if (saved === "darkTheme"){
+                        html.classList.remove('lightTheme');
+                        html.classList.add('darkTheme');
+                        localStorage.setItem("theme", "darkTheme");
+                    }
+                else {
+                    html.classList.remove('darkTheme');
+                    html.classList.add('lightTheme');
+                    localStorage.setItem("theme", "lightTheme");
+                }
+            }
+            setTheme();
+
+            function updateThemeIcons(){
+                const saved = localStorage.getItem("theme");
+                const toglIcon = document.getElementById("themeToggleIcon");
+                const gearIcon = document.getElementById("CECLogo");
+                if(!toglIcon || !gearIcon) return;
+                if(saved === "darkTheme"){
+                    toglIcon.src = "/assets/icons/DARKMODE-IconWhite.svg";
+                    gearIcon.src = "/assets/icons/CECGearWhite.svg";
+                }
+                else {
+                    toglIcon.src = "/assets/icons/DARKMODE-IconBlack.svg";
+                    gearIcon.src = "/assets/icons/CECGearBlack.svg";
+                }
+            }
+            document.addEventListener("DOMContentLoaded", updateThemeIcons);
+        </script>
     </head>
     <body>
         <!-- Navigation Bar-->
@@ -15,7 +50,7 @@
             <!-- Left side of Navigation Bar-->
             <div class="nav-left">
                 <a href="/html/index.html">
-                    <img class='icon' src="/assets/icons/CECGearBlack.svg" alt="CEC Logo">
+                    <img class='icon' src="/assets/icons/CECGearBlack.svg" id="CECLogo" style="width: 36;">
                 </a>
                 <a href="/html/index.html">Curtin Engineers Club</a>
                 <a href="/html/about.html">About</a>
@@ -26,26 +61,49 @@
             </div>
             <!-- Right side of Navigation Bar-->
             <div class="nav-right">
-                <a href="#dark">
-                    <img class="icon" src="/assets/icons/DARKMODE-Icon.png">
-                </a>
+                <button class="icon" id="themeToggle" onclick="changeTheme()">
+                    <img class="icon" id="themeToggleIcon" src="/assets/icons/DARKMODE-IconBlack.svg">
+                </button>
                 <a href="https://curtin-cec.tidyhq.com/public/membership_levels" class="yellowButton">Sign Up!</a>
             </div>
         </div>
 
-        <div style="width: 100%; height: 100%;  overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 50px; display: inline-flex">
-            <div style="width: 1020.80px; border-radius: 12.80px; justify-content: flex-start; align-items: center; display: inline-flex"></div>
+        <script>
+            function changeTheme(){
+                const html = document.documentElement;
+                const toglIcon = document.getElementById("themeToggleIcon");
+                const gearIcon = document.getElementById("CECLogo");
+
+                if (html.classList.contains("lightTheme")){
+                    html.classList.remove('lightTheme');
+                    html.classList.add('darkTheme');
+                    localStorage.setItem("theme", "darkTheme");
+                    toglIcon.src = "/assets/icons/DARKMODE-IconWhite.svg";
+                    gearIcon.src = "/assets/icons/CECGearWhite.svg";
+                    }
+                else {
+                    html.classList.remove('darkTheme');
+                    html.classList.add('lightTheme');
+                    localStorage.setItem("theme", "lightTheme");
+                    toglIcon.src = "/assets/icons/DARKMODE-IconBlack.svg";
+                    gearIcon.src = "/assets/icons/CECGearBlack.svg";
+                }
+            }
+        </script>
+
+        <div style="background-color: var(--BG-Primary); width: 100%; height: 100%;  overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 50px; display: inline-flex">
+            <!-- <div style="width: 1020.80px; border-radius: 12.80px; justify-content: flex-start; align-items: center; display: inline-flex"></div> -->
     
             <!-- Buttons -->
             <div class="heroBar"style="gap: 100px; align-items: center;">
-                <a href="#clubHistory" class="txSubtitleBlack" id="clubHistoryHeading">Club History</a>
-                <a href="#pastExecs" class="txSubtitleBlack" id="pastExecsHeading">Past Executive Committees</a>
-                <a href="#lifeMembers" class="txSubtitleBlack" id="lifeMembersHeading">Life Members</a>
+                <a href="#clubHistory" class="txSubtitle" id="clubHistoryHeading">Club History</a>
+                <a href="#pastExecs" class="txSubtitle" id="pastExecsHeading">Past Executive Committees</a>
+                <a href="#lifeMembers" class="txSubtitle" id="lifeMembersHeading">Life Members</a>
             </div>
 
             <!-- Club History -->
             <div id="Club History" class="tabContent">
-                <p class="txParagraph1Black"> Club History</p>
+                <p class="txParagraph1"> Club History</p>
             </div>
 
             <!-- Past Execs -->
@@ -103,7 +161,7 @@
                                             <p class="txHistoryYear">${lifeObj.year}</p>
                                         </div>
                                         <div class="historyRoleCard" style="justify-content: center;">
-                                            <p class="txParagraph1Black">${lifeObj.name}</p>
+                                            <p class="txParagraph1">${lifeObj.name}</p>
                                         </div>
                                     </div>
                                 `;

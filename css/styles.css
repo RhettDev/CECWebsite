@@ -6,12 +6,67 @@
     text-decoration: none;
 }
 
+:root {
+    --Brand-blue-primary: #5271FF;
+    --Brand-blue-secondary: #7186EB;
+    --Brand-blue-tertiary: #2C4DAF;
+    --Brand-yellow-tertiary: #F6B33E;
+    --Brand-yellow-primary: #FFEB31;
+    --Brand-yellow-secondary: #FFF16B;
+    --Text-Black: #050414;
+    --Text-Grey: #414141;
+    --Text-White: #EFEFEF;
+
+    /* Light Mode Variables */
+    --L-Text-Primary: #050414;
+    --L-Text-Secondary: #414141;
+    --L-Text-InvertPrimary: #EFEFEF;
+    --L-Text-InvertSecondary: #D0D0D0;
+    --L-BG-Primary: #FBFBFE;
+    --L-BG-Secondary: #DBDBDB;
+    --L-Border-Blue: #5271FF;
+    --L-Border-Yellow: #FFEB31;
+
+    /* Dark Mode Variables */
+    --D-Text-Primary: #EFEFEF;
+    --D-Text-Secondary: #D0D0D0;
+    --D-Text-InvertPrimary: #050414;
+    --D-Text-InvertSecondary: #414141;
+    --D-BG-Primary: #1C1B22;
+    --D-BG-Secondary: #2B2A33;
+    --D-Border-Blue: #2C4DAF;
+    --D-Border-Yellow: #F4E134;
+}
+
+html.lightTheme {
+    --Text-Primary: var(--L-Text-Primary);
+    --Text-Secondary: var(--L-Text-Secondary);
+    --Text-InvertPrimary: var(--L-Text-InvertPrimary);
+    --Text-InvertSecondary: var(--L-Text-InvertSecondary);
+    --BG-Primary: var(--L-BG-Primary);
+    --BG-Secondary: var(--L-BG-Secondary);
+    --Border-Blue: var(--L-Border-Blue);
+    --Border-Yellow: var(--L-Border-Yellow);
+}
+
+html.darkTheme {
+    --Text-Primary: var(--D-Text-Primary);
+    --Text-Secondary: var(--D-Text-Secondary);
+    --Text-InvertPrimary: var(--D-Text-InvertPrimary);
+    --Text-InvertSecondary: var(--D-Text-InvertSecondary);
+    --BG-Primary: var(--D-BG-Primary);
+    --BG-Secondary: var(--D-BG-Secondary);
+    --Border-Blue: var(--D-Border-Blue);
+    --Border-Yellow: var(--D-Border-Yellow);
+}
+
 body {
     margin: 0;
-    color: #FBFBFE;
+    color: var(--BG-Primary);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    color-scheme: light;
 }
 
 a {
@@ -26,7 +81,7 @@ a {
 /* Navigation Bar Classes */
 .navbar {
     width: 100%;
-    background-color: #FBFBFE;
+    background-color: var(--BG-Primary);
     overflow: hidden;
     font-family: Poppins;
     display: flex;
@@ -36,7 +91,7 @@ a {
     padding-right: 16px;
     padding-top: 8px;
     padding-bottom: 8px;
-    box-shadow: 2px 2px 1px #BEBEC0;
+    box-shadow: 2px 2px 1px var(--BG-Secondary);
     position: sticky;
     top: 0px;
 }
@@ -50,7 +105,7 @@ a {
 
 .nav-left a {
     display: block;
-    color: #050414;
+    color: var(--Text-Primary);
     text-align: center;
     /* padding: 14px 16px; */
     text-decoration: none;
@@ -58,13 +113,13 @@ a {
 }
 
 .nav-left a.hover {
-    background-color: #FBFBFE;
-    color: black;
+    background-color: var(--BG-Primary);
+    color: var(--Text-Black);
 }
 
 .nav-left a.active {
-    background-color: #DBDBDB;
-    color: white;
+    background-color:  var(--BG-Secondary);
+    color: var(--Text-White);
 }
 
 .nav-left img {
@@ -89,9 +144,9 @@ a {
 
 /* Button Classes */
 .yellowButton {
-    background-color: #FFEB31; /* Brand Yellow */
+    background-color: var(--Brand-yellow-primary); /* Brand Yellow */
     border: none;
-    color: #050414; /* Text Primary */
+    color: var(--Text-Black); /* Text Primary */
     padding: 2px 6px;
     text-align: center;
     display: inline-block;
@@ -102,14 +157,14 @@ a {
 }
 
 .yellowButton:hover {
-    background-color: #F6B33E; /* Brand Yellow Secondary*/
-    color: #050414; /* Text Primary */
+    background-color: var(--Brand-yellow-tertiary); /* Brand Yellow Secondary*/
+    color: var(--Text-Black); /* Text Primary */
 }
 
 .blueButton {
-    background-color: #5271FF; /* Brand Yellow */
+    background-color: var(--Brand-blue-primary); /* Brand Yellow */
     border: none;
-    color: #EFEFEF; /* Text Primary */
+    color: var(--Text-White); /* Text Primary */
     padding: 2px 6px;
     text-align: center;
     display: inline-block;
@@ -120,8 +175,8 @@ a {
 }
 
 .blueButton:hover {
-    background-color: #2C4DAF; /* Brand Yellow Secondary*/
-    color: #EFEFEF; /* Text Primary */
+    background-color: var(--Brand-blue-primary); /* Brand Yellow Secondary*/
+    color: var(--Text-White); /* Text Primary */
 }
 
 .heroContainer {
@@ -184,7 +239,7 @@ a {
 
 .sponsorLogo {
     display: flex;
-    background-color: #DBDBDB;
+    background-color: var(--BG-Secondary);
     max-width: 210px;
     flex-direction: row;
     overflow: hidden;
@@ -219,7 +274,7 @@ a {
     width: 300px;
     min-height: 1em;
     text-align: right;
-    color: var(--Text-Primary, #050414);
+    color: var(--Text-Primary);
     font-family: Poppins;
     font-size: 14px;
     font-style: normal;
@@ -232,7 +287,7 @@ a {
     width: 700px;
     min-height: 1em;
     text-align: left;
-    color: var(--Text-Primary, #050414);
+    color: var(--Text-Primary);
     font-family: Poppins;
     font-size: 14px;
     font-style: normal;
@@ -243,7 +298,7 @@ a {
 .faqSeparator {
     width: 4px;
     min-height: 100%;
-    background-color: #5271FF;
+    background-color: var(--Brand-blue-primary);
     margin: 14px 10px;
     border-radius: 2px;
     align-self: stretch;
@@ -254,7 +309,7 @@ a {
 
 /* Headers */
 .txHeaderBlack {
-    color: var(--Text-Primary, #050414);
+    color: var(--Text-Black);
     text-align: center;
     font-family: Poppins;
     font-size: 24px;
@@ -265,7 +320,18 @@ a {
 }
 
 .txHeaderWhite {
-    color: var(--Text-Primary, #EFEFEF);
+    color: var(--Text-White);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-weight: bolder;
+}
+
+.txHeader{
+    color: var(--Text-Primary);
     text-align: center;
     font-family: Poppins;
     font-size: 24px;
@@ -277,7 +343,7 @@ a {
 
 /* Subtitles */
 .txSubtitleBlack {
-    color: var(--Text-Primary, #050414);
+    color: var(--Text-Black);
     text-align: center;
     font-family: Poppins;
     font-size: 18px;
@@ -287,7 +353,17 @@ a {
 }
 
 .txSubtitleWhite {
-    color: var(--Text-Primary, #EFEFEF);
+    color: var(--Text-White);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: left;
+}
+
+.txSubtitle {
+    color: var(--Text-Primary);
     font-family: Poppins;
     font-size: 18px;
     font-style: normal;
@@ -298,18 +374,29 @@ a {
 
 /* Paragraph Text */
 .txParagraph1Black {
-    color: var(--Text-Primary, #050414);
+    color: var(--Text-Black);
     text-align: center;
     font-family: Poppins;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    max-width: 500px;
+    max-width: 400px;
 }
 
 .txParagraph1White {
-    color: var(--Text-Primary, #EFEFEF);
+    color: var(--Text-White);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    max-width: 400px;
+}
+
+.txParagraph1 {
+    color: var(--Text-Primary);
     font-family: Poppins;
     font-size: 16px;
     font-style: normal;
@@ -320,7 +407,7 @@ a {
 }
 
 .txParagraph2Black {
-    color: var(--Text-Primary, #050414);
+    color: var(--Text-Black);
     text-align: center;
     font-family: Poppins;
     font-size: 14px;
@@ -332,7 +419,18 @@ a {
 }
 
 .txParagraph2White {
-    color: var(--Text-Primary, #EFEFEF);
+    color: var(--Text-White);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    max-width: 400px;
+}
+
+.txParagraph2 {
+    color: var(--Text-Primary);
     font-family: Poppins;
     font-size: 14px;
     font-style: normal;
@@ -343,7 +441,7 @@ a {
 }
 
 .txParagraph3Black {
-    color: var(--Text-Primary, #050414);
+    color: var(--Text-Black);
     text-align: center;
     font-family: Poppins;
     font-size: 12px;
@@ -355,7 +453,18 @@ a {
 }
 
 .txParagraph3White {
-    color: var(--Text-Primary, #EFEFEF);
+    color: var(--Text-White);
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    max-width: 400px;
+}
+
+.txParagraph3 {
+    color: var(--Text-Primary);
     font-family: Poppins;
     font-size: 12px;
     font-style: normal;
@@ -366,7 +475,7 @@ a {
 }
 
 .txExecProf {
-    color: var(--Text-Primary, #050414);
+    color: var(--Text-Primary);
     font-family: Poppins;
     font-size: 16px;
     font-style: normal;
@@ -390,18 +499,18 @@ a {
     width: 134px;
     height: auto;
     border-radius: 72px;
-    border: 4px #5271FF solid;
+    border: 4px var(--Brand-blue-primary) solid;
 }
 
 .execPhotoYellow {
     width: 134px;
     height: auto;
     border-radius: 72px;
-    border: 4px #FFEB31 solid;
+    border: 4px var(--Brand-yellow-primary) solid;
 }
 
 .imageHero {
-    border: 4px #5271FF solid;
+    border: 4px var(--Brand-blue-primary) solid;
     border-radius: 16px;
     max-width: 400px;
     height: auto;
@@ -437,6 +546,10 @@ a {
 .icon {
     width: 32px;
     height: 32px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
 
 .execProfileOLD {
@@ -473,7 +586,7 @@ a {
 
 .headingBorder{
     display: inline-block;
-    border-bottom: 4px solid #5271FF;
+    border-bottom: 4px var(--Border-Blue) solid;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 2px;
@@ -481,7 +594,7 @@ a {
 
 .subtitleBorder{
     display: inline-block;
-    border-bottom: 3px solid #5271FF;
+    border-bottom: 3px var(--Border-Blue) solid;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 2px;
@@ -497,7 +610,7 @@ a {
 
 input,
 .contactEntry {
-    border: #2C4DAF 2px solid;
+    border: var(--Brand-blue-tertiary) 2px solid;
     border-radius: 4px;
     width: 100%;
     height: 40px;
@@ -511,7 +624,7 @@ input,
 }
 
 .sponsorHighlightPlat {
-    border:4px solid #5271FF;
+    border:4px solid var(--Brand-blue-primary);
     border-radius: 8px;
     width: 230px;
     height: auto;
@@ -519,7 +632,7 @@ input,
 }
 
 .sponsorHighlightGold {
-    border:4px solid #5271FF;
+    border:4px solid var(--Brand-blue-primary);
     border-radius: 8px;
     width: 200px;
     height: auto;
@@ -527,7 +640,7 @@ input,
 }
 
 .sponsorHighlightSilv {
-    border:4px solid #5271FF;
+    border:4px solid var(--Brand-blue-primary);
     border-radius: 8px;
     width: 180px;
     height: auto;
@@ -544,7 +657,7 @@ input,
 
 .eventCard {
     display: flex;
-    background-color: #5271FF;
+    background-color: var(--Brand-blue-primary);
     border-radius: 12px;
     max-width: 100%;
     height: auto;
@@ -555,7 +668,7 @@ input,
 .eventImg{
     display: block;
     flex: 1;
-    border-color: #2C4DAF;
+    border-color: var(--Brand-blue-tertiary);
     border-width: 4px;
     border-radius: 10px;
     width: 400px;
@@ -583,7 +696,7 @@ input,
 }
 
 .pagination a{
-    color: #5271FF;
+    color: var(--Brand-blue-primary);
     float: left;
     padding: 8px 16px;
     text-decoration: none;
@@ -592,31 +705,31 @@ input,
 }
 
 .pagination a.active{
-    background-color: #DBDBDB;
-    color: #2C4DAF;
+    background-color: var(--Text-InvertPrimary);
+    color: var(--Brand-blue-tertiary);
     border-radius: 8px;
 }
 
-.pagination a:hover:not(.active) {background-color: #DBDBDB;}
+.pagination a:hover:not(.active) {background-color: var(--Text-InvertSecondary);}
 
 .txHistoryYear{
     font-family: Poppins;
     font-size: 20px;
     font-weight: bold;
-    color: var(--Text-Primary, #050414);
+    color: var(--Text-Primary);;
 }
 
 .txHistoryName{
     font-family: Poppins;
     font-size: 16px;
-    color: var(--Text-Primary, #050414);
+    color: var(--Text-Primary);
     margin-bottom: 0px;
 }
 
 .txHistoryRole{
     font-family: Poppins;
     font-size: 14px;
-    color: var(--Text-Secondary, #414141);
+    color: var(--Text-Secondary);
     margin-top: 0px;
     
 }
@@ -661,7 +774,7 @@ input,
 
 .tab{
     overflow: hidden;
-    background-color: #EFEFEF;
+    background-color: var(--Text-InvertPrimary);
     border: none;
 }
 
@@ -671,12 +784,12 @@ input,
 }
 
 .tab button:hover{
-    background-color: #DBDBDB;
+    background-color: var(--Text-InvertPrimary);
 }
 
 .tab button.active{
     display: inline-block;
-    border-bottom: 4px solid #5271FF;
+    border-bottom: 4px solid var(--Brand-blue-primary);
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 2px;
@@ -711,7 +824,7 @@ input,
     top: 150px;
     right: 50px;
     padding: 20px;
-    background: #5271FF;
+    background: var(--Brand-blue-primary);
     border-radius: 16px;
     width: 22.5%;
     transition: all 0.6s ease-in-out;
@@ -734,12 +847,12 @@ input,
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
-    color: #EFEFEF;
+    color: var(--L-Text-InvertPrimary);
     background-color: transparent;
     border: none;
 }
 .popup .close:hover {
-    color: #D0D0D0;
+    color: var(--L-Text-InvertSecondary);
 }
 
 /* @media screen and (max-width: 700px){

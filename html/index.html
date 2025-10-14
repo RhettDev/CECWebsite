@@ -1,13 +1,46 @@
 <!-- Init index.html -->
 <!DOCTYPE html>
-<html lang="en-UK">
+<html lang="en-UK" class="lightTheme">
     <head>
         <meta charset="utf-8" />
         <title>Curtin Engineers Club</title>
         <meta name="viewport" content="width=100%" />
         <link rel="stylesheet" href="/css/styles.css" />
-        <link rel="icon" href="/assets/icons/CECGearWhite.svg">
+        <link rel="icon" id="tabIcon" href="/assets/icons/CECGearBlack.svg">
         <script src="https://kit.fontawesome.com/4c5395be19.js" crossorigin="anonymous"></script> <!-- Set up to add icons via Font Awesome but currently all Icons are local files--> 
+        <script>
+            function setTheme(){
+                const saved = localStorage.getItem("theme");
+                const html = document.documentElement;
+                if (saved === "darkTheme"){
+                    html.classList.remove('lightTheme');
+                    html.classList.add('darkTheme');
+                    localStorage.setItem("theme", "darkTheme");
+                    }
+                else {
+                    html.classList.remove('darkTheme');
+                    html.classList.add('lightTheme');
+                    localStorage.setItem("theme", "lightTheme");
+                }
+            }
+            setTheme();
+
+            function updateThemeIcons(){
+                const saved = localStorage.getItem("theme");
+                const toglIcon = document.getElementById("themeToggleIcon");
+                const gearIcon = document.getElementById("CECLogo");
+                if(!toglIcon || !gearIcon) return;
+                if(saved === "darkTheme"){
+                    toglIcon.src = "/assets/icons/DARKMODE-IconWhite.svg";
+                    gearIcon.src = "/assets/icons/CECGearWhite.svg";
+                }
+                else {
+                    toglIcon.src = "/assets/icons/DARKMODE-IconBlack.svg";
+                    gearIcon.src = "/assets/icons/CECGearBlack.svg";
+                }
+            }
+            document.addEventListener("DOMContentLoaded", updateThemeIcons);
+        </script>
     </head>
     <body>
         <!-- Navigation Bar-->
@@ -15,7 +48,7 @@
             <!-- Left side of Navigation Bar-->
             <div class="nav-left">
                 <a href="/html/index.html">
-                    <img class='icon' src="/assets/icons/CECGearBlack.svg" alt="CEC Logo" style="width: 36;">
+                    <img class='icon' src="/assets/icons/CECGearBlack.svg" id="CECLogo" style="width: 36;">
                 </a>
                 <a href="/html/index.html">Curtin Engineers Club</a>
                 <a href="/html/about.html">About</a>
@@ -26,20 +59,41 @@
             </div>
             <!-- Right side of Navigation Bar-->
             <div class="nav-right">
-                <a href="#dark">
-                    <img class="icon" src="/assets/icons/DARKMODE-Icon.png">
-                </a>
+                <button class="icon" id="themeToggle" onclick="changeTheme()">
+                    <img class="icon" id="themeToggleIcon" src="/assets/icons/DARKMODE-IconBlack.svg">
+                </button>
                 <a href="https://curtin-cec.tidyhq.com/public/membership_levels" class="yellowButton">Sign Up!</a>
             </div>
-        </div>  
+        </div>
+
+        <script>
+            function changeTheme(){
+                const html = document.documentElement;
+                const toglIcon = document.getElementById("themeToggleIcon");
+                const gearIcon = document.getElementById("CECLogo");
+
+                if (html.classList.contains("lightTheme")){
+                    html.classList.remove('lightTheme');
+                    html.classList.add('darkTheme');
+                    localStorage.setItem("theme", "darkTheme");
+                    toglIcon.src = "/assets/icons/DARKMODE-IconWhite.svg";
+                    gearIcon.src = "/assets/icons/CECGearWhite.svg";
+                    }
+                else {
+                    html.classList.remove('darkTheme');
+                    html.classList.add('lightTheme');
+                    localStorage.setItem("theme", "lightTheme");
+                    toglIcon.src = "/assets/icons/DARKMODE-IconBlack.svg";
+                    gearIcon.src = "/assets/icons/CECGearBlack.svg";
+                }
+            }
+        </script>
 
         <!-- Landing Image -->
         <div>
             <div class="gearWrapper">
                 <img class="top-img" alt="CECGear" src="/assets/icons/CECGearWhite.svg" id="CECGearLanding">
-            <!-- <script src="/scripts/index.js"></script> -->
             </div>
-            <!-- script to make the Landing page Gear rotate as the user scrolls -->
             <img class="bg-img" alt="LandingImage" src="/assets/images/botlLandingImage.png">
         </div>
 
@@ -66,19 +120,19 @@
         </script>
         
         <!-- BG stuff-->
-        <div style="width: 100%; height: 100%; background-color: #FBFBFE; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 50px; display: inline-flex; padding-bottom: 75px;">
+        <div style="width: 100%; height: 100%; background-color: var(--BG-Primary); overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 50px; display: inline-flex; padding-bottom: 75px;">
             <div style="width: 1020.80px; border-radius: 12.80px; justify-content: flex; align-items: center; display: inline-flex"></div>
 
             <!-- About CEC Hero-->
             <div class="heroContainer">
                 <div class="heroGroup">
-                    <h2 class="txSubtitleBlack subtitleBorder">What is CEC About?</h2>
-                    <p class="txParagraph1Black" style="text-align: justify;">Curtin Engineers Club (CEC) is a multi-disciplinary engineering club that holds numerous social and professional events, helps students connect with each other and provides resources to its members. Being a social club, CEC welcomes all students, not just engineering students, with events such as BOTL or Pubcrawl purely for socialising. 
+                    <h2 class="txSubtitle subtitleBorder">What is CEC About?</h2>
+                    <p class="txParagraph1" style="text-align: justify;">Curtin Engineers Club (CEC) is a multi-disciplinary engineering club that holds numerous social and professional events, helps students connect with each other and provides resources to its members. Being a social club, CEC welcomes all students, not just engineering students, with events such as BOTL or Pubcrawl purely for socialising. 
 <br>CEC can also support those looking to further their career with our networking nights and skill based workshops. These are more tailored to engineering students, with professional events hosting industry representatives for you to establish relations with and learn about the workforce from.<br><br>Come find us in the Engineering Pavilion, room 106!
 </p>
                 </div>
                 <div class="heroGroup">
-                    <h2 class="txSubtitleBlack subtitleBorder">Where Can you Find Us?</h2>
+                    <h2 class="txSubtitle subtitleBorder">Where Can you Find Us?</h2>
                     <a href="https://use.mazemap.com/#v=1&config=curtinuniversity&campusid=296&zlevel=1&center=115.894634,-32.007317&zoom=18&sharepoitype=poi&sharepoi=800206">
                         <img alt="Map location of CEC Office" src="/assets/images/CECOfficeMap.png" class="imageHero">
                     </a> 
@@ -88,7 +142,7 @@
             <!-- Sponsorship Banner -->
             <div style="width: 100%;">
                 <!-- Call to Action -->
-                <div class="heroBar" style="background-color: #5271FF; align-items: center;  gap: 96px;">
+                <div class="heroBar" style="background-color: var(--Brand-blue-primary); align-items: center;  gap: 96px;">
                     <div class="footerGroup" style="max-width: max-content;">
                         <p class="txSubtitleWhite" style="margin-top: 0px;">Want to Become a Sponsor?</p>
                         <p class="txParagraph1White">Connect with the club and students directly by sponsoring us! Be first in line for networking events and student engagement.</p>
@@ -100,7 +154,7 @@
                 </div>
 
                 <!-- Sponsor Logo Carousel -->
-                <div id="sponsorCarousel" class="heroBar" style="background-color: #DBDBDB; max-height: 130px; padding: 0px; overflow: hidden;">
+                <div id="sponsorCarousel" class="heroBar" style="background-color: var(--BG-Secondary); max-height: 130px; padding: 0px; overflow: hidden;">
                     <div id="carouselInner" style="display: flex; width: max-content;"></div>
                 </div>
                 <script>
@@ -134,7 +188,7 @@
             </div>
 
         <!-- Exec Committee-->
-            <p class="txHeaderBlack headingBorder" style="width: max-content; margin-bottom: 0px;"><script>document.write(new Date().getFullYear())</script> Executive Committee</p>
+            <p class="txHeader headingBorder" style="width: max-content; margin-bottom: 0px;"><script>document.write(new Date().getFullYear())</script> Executive Committee</p>
 
             <div id="execContainer" class="heroContainerCOL" style="margin-left: 50px"></div>
             <script>
