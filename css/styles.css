@@ -240,7 +240,7 @@ a {
 .sponsorLogo {
     display: flex;
     background-color: var(--BG-Secondary);
-    max-width: 210px;
+    max-width: 150px;
     flex-direction: row;
     overflow: hidden;
     margin: 0 10px;
@@ -863,3 +863,38 @@ input,
         width: 60%;
     }
 } */
+
+
+/* Sponsor Carousel Styles */
+
+.sponsorCarousel{
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--BG-Secondary);
+}
+
+.sponsorBar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    max-height: 150px;
+    display: flex;
+    width: max-content;
+    white-space: nowrap;
+    animation: bannermove 25s linear infinite;
+}
+
+.sponsorBar img {
+    margin: 0 10px;
+}
+
+@keyframes bannermove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-50%, 0);
+    }
+}
