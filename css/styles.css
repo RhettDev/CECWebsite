@@ -91,9 +91,10 @@ a {
     padding-right: 16px;
     padding-top: 8px;
     padding-bottom: 8px;
-    box-shadow: 2px 2px 1px var(--L-Text-InvertSecondary);
+    box-shadow: 2px 2px 1px var(--BG-Secondary);
     position: sticky;
     top: 0px;
+    z-index: 10;
 }
 
 /* Classes for Left Side Navigation Bar Items */
@@ -532,7 +533,8 @@ a {
 .top-img {
     width: 200px;
     height: auto;
-    transition: transform 0.1s linear;
+    /* transition: transform 0.1s linear; */
+    z-index: 1;
 }
 
 .gearWrapper {
@@ -632,27 +634,39 @@ input,
 }
 
 .sponsorHighlightPlat {
-    border:4px solid var(--Brand-blue-primary);
+    border: 4px solid var(--Brand-blue-primary);
     border-radius: 8px;
     width: 230px;
     height: auto;
-    margin: 16px
+    margin: 16px;
+    background-color: var(--BG-Secondary);
 }
 
 .sponsorHighlightGold {
-    border:4px solid var(--Brand-blue-primary);
+    border: 4px solid var(--Brand-blue-primary);
     border-radius: 8px;
     width: 200px;
     height: auto;
-    margin: 16px
+    margin: 16px;
+    background-color: var(--BG-Secondary);
 }
 
 .sponsorHighlightSilv {
-    border:4px solid var(--Brand-blue-primary);
+    border: 4px solid var(--Brand-blue-primary);
     border-radius: 8px;
     width: 180px;
     height: auto;
-    margin: 16px
+    margin: 16px;
+    background-color: var(--BG-Secondary);
+}
+
+.sponsorHighlightOthe {
+    border: 4px solid var(--Brand-blue-primary);
+    border-radius: 8px;
+    width: 160px;
+    height: auto;
+    margin: 16px;
+    background-color: var(--BG-Secondary);
 }
 
 .eventColumn{

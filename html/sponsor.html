@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=100%"/>
         <link rel="stylesheet" href="/css/styles.css"/>
         <script src="/scripts/theme.js"></script>
+        <script src="/scripts/sponsor.js"></script>
         <link rel="icon" href="/assets/icons/CECGearBlack.svg">
         <script src="https://kit.fontawesome.com/4c5395be19.js" crossorigin="anonymous"></script> <!-- Set up to add icons via Font Awesome but currently all Icons are local files--> 
         <script>
@@ -45,41 +46,37 @@
 
             <!-- <p class="txHeader" style="font-size: 48px">Coming Soon!</p> -->
 
-            <div class="heroContainer" style="flex-direction: column;">
+            <div class="heroContainer" style="flex-direction: column;" id="sponsorListContainer">
                 <div class="heroGroup">
                     <p class="txSubtitle subtitleBorder">Platnium Sponsors</p>
-                    <div class="sponsorGroup">
-                        <img alt="Sponsor Logo" src="https://placehold.co/230x120" class="sponsorHighlightPlat" style="border-color: #5271FF;">
-                        <img alt="Sponsor Logo" src="https://placehold.co/230x120" class="sponsorHighlightPlat" style="border-color: #5271FF;">
-                        <img alt="Sponsor Logo" src="https://placehold.co/230x120" class="sponsorHighlightPlat" style="border-color: #FFEB31;">
+                    <div class="sponsorGroup" id="platGroup">
+                        <script>
+                            getSponsors('platinum', 'platGroup');
+                        </script>
                     </div>
                 </div>
                 <div class="heroGroup">
                     <p class="txSubtitle subtitleBorder">Gold Sponsors</p>
-                    <div class="sponsorGroup">
-                        <img alt="Sponsor Logo" src="https://placehold.co/200x110" class="sponsorHighlightGold" style="border-color: #5271FF;">
-                        <img alt="Sponsor Logo" src="https://placehold.co/200x110" class="sponsorHighlightGold" style="border-color: #FFEB31;">
-                        <img alt="Sponsor Logo" src="https://placehold.co/200x110" class="sponsorHighlightGold" style="border-color: #FFEB31;">
-                        <img alt="Sponsor Logo" src="https://placehold.co/200x110" class="sponsorHighlightGold" style="border-color: #5271FF;">
+                    <div class="sponsorGroup" id="goldGroup">
+                        <script>
+                            getSponsors('gold', 'goldGroup');
+                        </script>
                     </div>
                 </div>
                 <div class="heroGroup">
                     <p class="txSubtitle subtitleBorder">Silver Sponsors</p>
-                    <div class="sponsorGroup">
-                        <img alt="Sponsor Logo" src="https://placehold.co/180x100" class="sponsorHighlightSilv" style="border-color: #5271FF;">
-                        <img alt="Sponsor Logo" src="https://placehold.co/180x100" class="sponsorHighlightSilv" style="border-color: #FFEB31;">
-                        <img alt="Sponsor Logo" src="https://placehold.co/180x100" class="sponsorHighlightSilv" style="border-color: #5271FF;">
-                        <img alt="Sponsor Logo" src="https://placehold.co/180x100" class="sponsorHighlightSilv" style="border-color: #5271FF;">
-                        <img alt="Sponsor Logo" src="https://placehold.co/180x100" class="sponsorHighlightSilv" style="border-color: #FFEB31;">
-                        <img alt="Sponsor Logo" src="https://placehold.co/180x100" class="sponsorHighlightSilv" style="border-color: #5271FF;">
+                    <div class="sponsorGroup" id="silvGroup">
+                        <script>
+                            getSponsors('silver', 'silvGroup');
+                        </script>
                     </div>
                 </div>
                 <div class="heroGroup">
                     <p class="txSubtitle subtitleBorder">Additional Sponsors</p>
-                    <div class="sponsorGroup">
-                        <img alt="Sponsor Logo" src="https://placehold.co/180x100" class="sponsorHighlightSilv" style="border-color: #5271FF;">
-                        <img alt="Sponsor Logo" src="https://placehold.co/180x100" class="sponsorHighlightSilv" style="border-color: #FFEB31;">
-                        <img alt="Sponsor Logo" src="https://placehold.co/180x100" class="sponsorHighlightSilv" style="border-color: #5271FF;">
+                    <div class="sponsorGroup" id="otheGroup">
+                        <script>
+                            getSponsors('other', 'otheGroup');
+                        </script>
                     </div>
                 </div>
             </div>
@@ -87,8 +84,8 @@
             <!-- Why Sponsor Us Hero Bar-->
             <div class="heroBar" style="background-color: #5271FF; align-items: center;  gap: 96px; width: 100%;">
                 <div class="heroGroup" style="max-width: max-content;">
-                    <p class="txSubtitle" style="margin-top: 0px;">Why Sponsor Us?</p>
-                    <p class="txParagraph2" style="text-align: center;">With a membership base of over 700 students, Curtin Engineers Club can reach students of all engineering majors and even students from other disciplines. Whilst our social events garner great interest, our professional events allow students to extend their skills, learn about the industry and gain connections. Sponsoring us would allow your company to be one of those industry connections to our memberbase. Across the sponsorship levels there are many benefits such as; personalised events, sponsored emails and social media posts and your logo on our merchandise. Being a non-profit, our club relies on your sponsorships to create amazing events and bring people together within the engineering community.</p>
+                    <p class="txSubtitleWhite" style="margin-top: 0px;">Why Sponsor Us?</p>
+                    <p class="txParagraph2White" style="text-align: center;">With a membership base of over 700 students, Curtin Engineers Club can reach students of all engineering majors and even students from other disciplines. Whilst our social events garner great interest, our professional events allow students to extend their skills, learn about the industry and gain connections. Sponsoring us would allow your company to be one of those industry connections to our memberbase. Across the sponsorship levels there are many benefits such as; personalised events, sponsored emails and social media posts and your logo on our merchandise. Being a non-profit, our club relies on your sponsorships to create amazing events and bring people together within the engineering community.</p>
                 </div>
                 <div class="heroGroup" style="max-width: max-content;">
                     <img alt="Sponsorship Photo" src="/assets/images/sponsorReason.jpg" class="imageHero" style="border-color: #2C4DAF;">
@@ -135,6 +132,7 @@
                     <p class="txParagraph3Black" style="margin: 0px; text-align: left;">contact@cec.curtin.edu.au</p>
                 </div>
             </div> -->
+
         </div>
         <!-- Footer -->
         <div class="heroBar" style="background-color: #5271FF; align-items: center;">

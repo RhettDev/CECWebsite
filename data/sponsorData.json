@@ -1,13 +1,13 @@
 [
     {
-        "name": "stantec",
+        "name": "Stantec",
         "blueLogo": "/assets/sponsors/StantecBlue.svg",
         "whiteLogo": "/assets/sponsors/StantecWhite.svg",
         "blackLogo": "/assets/sponsors/StantecBlack.svg",
         "level": "silver"
     },
     {
-        "name": "pacific energy",
+        "name": "Pacific Energy",
         "blueLogo": "/assets/sponsors/PacificEBlue.svg",
         "whiteLogo": "/assets/sponsors/PacificEWhite.svg",
         "blackLogo": "/assets/sponsors/PacificEBlack.svg",
@@ -21,35 +21,35 @@
         "level": "silver"
     },
     {
-        "name": "PIP",
+        "name": "Partnets In Performance",
         "blueLogo": "/assets/sponsors/PIPBlue.svg",
         "whiteLogo": "/assets/sponsors/PIPWhite.svg",
         "blackLogo": "/assets/sponsors/PIPBlack.svg",
         "level": "silver"
     },
     {
-        "name": "fortescue",
+        "name": "Fortescue",
         "blueLogo": "/assets/sponsors/FortescueBlue.svg",
         "whiteLogo": "/assets/sponsors/FortescueWhite.svg",
         "blackLogo": "/assets/sponsors/FortescueBlack.svg",
         "level": "silver"
     },
     {
-        "name": "partum",
+        "name": "Partum",
         "blueLogo": "/assets/sponsors/PartumBlue.svg",
         "whiteLogo": "/assets/sponsors/PartumWhite.svg",
         "blackLogo": "/assets/sponsors/PartumBlack.svg",
         "level": "silver"
     },
     {
-        "name": "deloitte",
+        "name": "Deloitte",
         "blueLogo": "/assets/sponsors/DeloitteBlue.svg",
         "whiteLogo": "/assets/sponsors/DeloitteWhite.svg",
         "blackLogo": "/assets/sponsors/DeloitteBlack.svg",
         "level": "other"
     },
     {
-        "name": "prok",
+        "name": "PROK",
         "blueLogo": "/assets/sponsors/prokBlue.svg",
         "whiteLogo": "/assets/sponsors/ProkWhite.svg",
         "blackLogo": "/assets/sponsors/ProkBlack.svg",
