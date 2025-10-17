@@ -23,7 +23,7 @@
     --L-Text-InvertPrimary: #EFEFEF;
     --L-Text-InvertSecondary: #D0D0D0;
     --L-BG-Primary: #FBFBFE;
-    --L-BG-Secondary: #DBDBDB;
+    --L-BG-Secondary: #dddddd;
     --L-Border-Blue: #5271FF;
     --L-Border-Yellow: #FFEB31;
 
@@ -91,7 +91,7 @@ a {
     padding-right: 16px;
     padding-top: 8px;
     padding-bottom: 8px;
-    box-shadow: 2px 2px 1px var(--BG-Secondary);
+    box-shadow: 2px 2px 1px var(--L-Text-InvertSecondary);
     position: sticky;
     top: 0px;
 }
@@ -496,14 +496,14 @@ a {
 
 /* Image and Image Border Classes */
 .execPhotoBlue {
-    width: 134px;
+    width: 120px;
     height: auto;
     border-radius: 72px;
     border: 4px var(--Brand-blue-primary) solid;
 }
 
 .execPhotoYellow {
-    width: 134px;
+    width: 120px;
     height: auto;
     border-radius: 72px;
     border: 4px var(--Brand-yellow-primary) solid;
@@ -537,10 +537,18 @@ a {
 
 .gearWrapper {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 45%;
+    /* transform: translate(-50%, -50%); */
+    /* animation: rotateGear 5s linear infinite; */
 }
+
+@keyframes rotateGear {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* End Image Overlay Classes */
 
 .icon {
@@ -560,8 +568,8 @@ a {
     justify-content: left;
     align-items: center;
     margin-bottom: 18px;
-    min-width: 400px;
-    max-width: 450px;
+    min-width: 370px;
+    max-width: 400px;
     flex-direction: row;
 }
 
@@ -883,7 +891,7 @@ input,
     display: flex;
     width: max-content;
     white-space: nowrap;
-    animation: bannermove 25s linear infinite;
+    animation: bannermove 30s linear infinite;
 }
 
 .sponsorBar img {

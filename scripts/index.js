@@ -6,12 +6,9 @@ window.onscroll = function () {
 
 function scrollRotate(){ 
     let image = document.getElementById('CECGearLanding');
-    if (gear) {
-        const rotation = window.scrollY / 5; // Adjust divisor for speed
-        // gear.style.transform = `rotate(${rotation}deg)`;
-    image.style.transform = "rotate(" + window.pageYOffset/2 + "deg)";
+    if (image) {
+        image.style.transform = "rotate(" + window.pageYOffset/3 + "deg)";
     }
-    // image.style.transform = "rotate(" + window.pageYOffset/2 + "deg)";
 }
 
 // Popup Function
