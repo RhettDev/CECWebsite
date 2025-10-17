@@ -4,7 +4,7 @@
         "blueLogo": "/assets/sponsors/StantecBlue.svg",
         "whiteLogo": "/assets/sponsors/StantecWhite.svg",
         "blackLogo": "/assets/sponsors/StantecBlack.svg",
-        "level": "platinum"
+        "level": "silver"
     },
     {
         "name": "pacific energy",
@@ -21,66 +21,66 @@
         "level": "silver"
     },
     {
-        "name": "stantec",
-        "blueLogo": "/assets/sponsors/StantecBlue.svg",
-        "whiteLogo": "/assets/sponsors/StantecWhite.svg",
-        "blackLogo": "/assets/sponsors/StantecBlack.svg",
-        "level": "platinum"
-    },
-    {
-        "name": "pacific energy",
-        "blueLogo": "/assets/sponsors/PacificEBlue.svg",
-        "whiteLogo": "/assets/sponsors/PacificEWhite.svg",
-        "blackLogo": "/assets/sponsors/PacificEBlack.svg",
-        "level": "gold"
-    },
-    {
-        "name": "civmec",
-        "blueLogo": "/assets/sponsors/CivmecBlue.svg",
-        "whiteLogo": "/assets/sponsors/CivmecWhite.svg",
-        "blackLogo": "/assets/sponsors/CivmecBlack.svg",
+        "name": "PIP",
+        "blueLogo": "/assets/sponsors/PIPBlue.svg",
+        "whiteLogo": "/assets/sponsors/PIPWhite.svg",
+        "blackLogo": "/assets/sponsors/PIPBlack.svg",
         "level": "silver"
     },
     {
-        "name": "stantec",
-        "blueLogo": "/assets/sponsors/StantecBlue.svg",
-        "whiteLogo": "/assets/sponsors/StantecWhite.svg",
-        "blackLogo": "/assets/sponsors/StantecBlack.svg",
-        "level": "platinum"
-    },
-    {
-        "name": "pacific energy",
-        "blueLogo": "/assets/sponsors/PacificEBlue.svg",
-        "whiteLogo": "/assets/sponsors/PacificEWhite.svg",
-        "blackLogo": "/assets/sponsors/PacificEBlack.svg",
-        "level": "gold"
-    },
-    {
-        "name": "civmec",
-        "blueLogo": "/assets/sponsors/CivmecBlue.svg",
-        "whiteLogo": "/assets/sponsors/CivmecWhite.svg",
-        "blackLogo": "/assets/sponsors/CivmecBlack.svg",
+        "name": "fortescue",
+        "blueLogo": "/assets/sponsors/FortescueBlue.svg",
+        "whiteLogo": "/assets/sponsors/FortescueWhite.svg",
+        "blackLogo": "/assets/sponsors/FortescueBlack.svg",
         "level": "silver"
     },
     {
-        "name": "stantec",
-        "blueLogo": "/assets/sponsors/StantecBlue.svg",
-        "whiteLogo": "/assets/sponsors/StantecWhite.svg",
-        "blackLogo": "/assets/sponsors/StantecBlack.svg",
-        "level": "platinum"
+        "name": "partum",
+        "blueLogo": "/assets/sponsors/PartumBlue.svg",
+        "whiteLogo": "/assets/sponsors/PartumWhite.svg",
+        "blackLogo": "/assets/sponsors/PartumBlack.svg",
+        "level": "silver"
     },
     {
-        "name": "pacific energy",
-        "blueLogo": "/assets/sponsors/PacificEBlue.svg",
-        "whiteLogo": "/assets/sponsors/PacificEWhite.svg",
-        "blackLogo": "/assets/sponsors/PacificEBlack.svg",
+        "name": "deloitte",
+        "blueLogo": "/assets/sponsors/DeloitteBlue.svg",
+        "whiteLogo": "/assets/sponsors/DeloitteWhite.svg",
+        "blackLogo": "/assets/sponsors/DeloitteBlack.svg",
+        "level": "other"
+    },
+    {
+        "name": "prok",
+        "blueLogo": "/assets/sponsors/prokBlue.svg",
+        "whiteLogo": "/assets/sponsors/ProkWhite.svg",
+        "blackLogo": "/assets/sponsors/ProkBlack.svg",
+        "level": "silver"
+    },
+    {
+        "name": "GHD",
+        "blueLogo": "/assets/sponsors/GHDBlue.svg",
+        "whiteLogo": "/assets/sponsors/GHDWhite.svg",
+        "blackLogo": "/assets/sponsors/GHDBlack.svg",
+        "level": "other"
+    },
+    {
+        "name": "SLB",
+        "blueLogo": "/assets/sponsors/SLBBlue.svg",
+        "whiteLogo": "/assets/sponsors/SLBWhite.svg",
+        "blackLogo": "/assets/sponsors/SLBBlack.svg",
+        "level": "silver"
+    },
+    {
+        "name": "WGA",
+        "blueLogo": "/assets/sponsors/WGABlue.svg",
+        "whiteLogo": "/assets/sponsors/WGAWhite.svg",
+        "blackLogo": "/assets/sponsors/WGABlack.svg",
         "level": "gold"
     },
     {
-        "name": "civmec",
-        "blueLogo": "/assets/sponsors/CivmecBlue.svg",
-        "whiteLogo": "/assets/sponsors/CivmecWhite.svg",
-        "blackLogo": "/assets/sponsors/CivmecBlack.svg",
+        "name": "Yarra",
+        "blueLogo": "/assets/sponsors/YarraBlue.svg",
+        "whiteLogo": "/assets/sponsors/YarraWhite.svg",
+        "blackLogo": "/assets/sponsors/YarraBlack.svg",
         "level": "silver"
     }
 ]

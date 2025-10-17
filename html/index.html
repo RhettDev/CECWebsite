@@ -90,7 +90,7 @@
 
                 <!-- Sponsor Logo Carousel -->
                 <div id="sponsorCarousel" class="heroBar" style="background-color: var(--BG-Secondary); max-height: 130px; padding: 0px; overflow: hidden;">
-                    <div id="carouselInner" style="display: flex; width: max-content;"></div>
+                    <div id="carouselInner" style="display: flex; width: max-content"></div>
                 </div>
                 <script>
                     fetch('/data/sponsorData.json')
@@ -103,11 +103,11 @@
                                 <img class="sponsorLogo" alt="${sponsorObj.name}" src="${sponsorObj.blueLogo}">
                             `;
                         });
-                        innerContainer.innerHTML = html + html + html + html;
+                        innerContainer.innerHTML = html + html + html;
 
                         const carousel = document.getElementById('sponsorCarousel');
                         let scroll = 0;
-                        const resetPoint = innerContainer.scrollWidth / 2.14;
+                        const resetPoint = innerContainer.scrollWidth / 0.54;
 
                         function animateCarousel() {
                             scroll += 0.5;
