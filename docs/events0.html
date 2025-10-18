@@ -24,7 +24,7 @@
                 </a>
                 <a href="index.html">Curtin Engineers Club</a>
                 <a href="about.html">About</a>
-                <a href="events/events0.html">Events</a>
+                <a href="events0.html">Events</a>
                 <a href="sponsor.html">Sponsors</a>
                 <a href="history.html#clubHistory">History</a>
                 <a href="links.html">Links</a>
@@ -45,7 +45,7 @@
         <p class="txHeader headingBorder" style="margin-bottom: 0px;">Upcoming Events</p>
             <div id="upcomingEventsContainer" style="display: flex; flex-direction: column; width: 1100px; height: auto; gap: 32px;"></div>
             <script>
-                fetch('/data/upcomingEvents.json')
+                fetch('data/upcomingEvents.json')
                 .then(res => res.json())
                 .then(events => {
                     const container = document.getElementById('upcomingEventsContainer');
@@ -78,7 +78,7 @@
                 
             <div id="pastEventsContainer" style="display: flex; flex-direction: column; width: 1100px; height: auto; gap: 32px;"></div>
             <script>
-                fetch('/data/pastEvents.json')
+                fetch('data/pastEvents.json')
                 .then(res => res.json())
                 .then(events => {
                     const container = document.getElementById('pastEventsContainer');
@@ -102,8 +102,8 @@
 
             <!-- Page Numbers -->
             <div class="pagination">
-                <a class="active" href="/html/events/events0.html">1</a>
-                <a href="/html/events/events1.html">2</a>
+                <a class="active" href="events0.html">1</a>
+                <a href="events1.html">2</a>
             </div>
         </div>
 
