@@ -4,7 +4,7 @@ let _sponsorCache = null;
 
 function fetchSponsors(){
     if(_sponsorCache) return Promise.resolve(_sponsorCache);
-    return fetch('../data/sponsorData.json')
+    return fetch('data/sponsorData.json')
         .then(res => {
             if(!res.ok) throw new Error('failed to fetch sponsorData.json: ' + res.status);
             return res.json();
