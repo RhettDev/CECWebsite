@@ -1,38 +1,5 @@
 [
     {
-        "year": 2026,
-        "roles": [
-            {
-                "name": ["Rhett Bauchop"],
-                "role": ["President"]
-            },
-            {
-                "name": ["Callum Mackay"],
-                "role": ["Vice President"]
-            },
-            {
-                "name": ["Jen Allison"],
-                "role": ["Treasurer"]
-            },
-            {
-                "name": ["Meg Atwill"],
-                "role": ["Secretary"]
-            },
-            {
-                "name": ["Freda Rule"],
-                "role": ["Industry Coordinator"]
-            },
-            {
-                "name": ["Jiyona Jipson"],
-                "role": ["Social Events Coordinator"]
-            },
-            {
-                "name": ["Alyssa Unwin"],
-                "role": ["Marketing and Merchandise"]
-            }
-        ]
-    },
-    {
         "year": 2025,
         "roles": [
             {

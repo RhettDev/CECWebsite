@@ -182,7 +182,7 @@ a {
 
 .heroContainer {
     display: flex;
-    gap: 32px;
+    gap: 64px;
     justify-content: center;
     margin-bottom: 36px;
 }
@@ -190,7 +190,7 @@ a {
 .heroContainerCOL {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 64px;
     justify-content: center;
     margin-bottom: 36px;
 }
@@ -228,7 +228,7 @@ a {
 
 .e404Hero {
     display: flex;
-    gap: 32px;
+    gap: 64px;
     justify-content: center;
     margin-bottom: 36px;
     align-items: center; 
