@@ -850,6 +850,7 @@ input,
     border-radius: 16px;
     width: 22.5%;
     transition: all 0.6s ease-in-out;
+    z-index: 9;
 }
 
 .popupLocation{
