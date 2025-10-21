@@ -50,7 +50,7 @@
     },
     {
         "name": "PROK",
-        "blueLogo": "assets/sponsors/prokBlue.svg",
+        "blueLogo": "assets/sponsors/ProkBlue.svg",
         "whiteLogo": "assets/sponsors/ProkWhite.svg",
         "blackLogo": "assets/sponsors/ProkBlack.svg",
         "level": "silver"
