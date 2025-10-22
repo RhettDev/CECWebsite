@@ -185,6 +185,7 @@ a {
     gap: 64px;
     justify-content: center;
     margin-bottom: 36px;
+    width: 70%;
 }
 
 .heroContainerCOL {
@@ -672,16 +673,17 @@ input,
 .eventColumn{
     display: flex;
     flex-direction: column;
-    width: 1100px;
-    height: auto;
+    width: 45%;
+    height: 100%;
     gap: 32px;
+    justify-content: space-between;
 }
 
 .eventCard {
     display: flex;
     background-color: var(--Brand-blue-primary);
     border-radius: 12px;
-    max-width: 100%;
+    width: 100%;
     height: auto;
     align-items: center;
     padding: 16px;
@@ -693,8 +695,8 @@ input,
     border-color: var(--Brand-blue-tertiary);
     border-width: 4px;
     border-radius: 10px;
-    width: 400px;
-    height: 250px;
+    max-width: 400px;
+    height: auto;
 }
 
 .eventDetails{
@@ -706,8 +708,8 @@ input,
 .eventInfo{
     display: block;
     flex: 2;
-    padding: 16px;
-    border-radius: 10px;
+    padding-left: 16px;
+    height: 100%;
 }
 
 .pagination{
@@ -920,4 +922,60 @@ input,
     100% {
         transform: translate(-50%, 0);
     }
+}
+
+.clubHistoryContainer{
+    display: flex;
+    width: 100%;
+    gap: 32px;
+    flex-direction: column;
+    margin-bottom: 32px;
+    justify-content: end;
+}
+
+.clubHistoryYear{
+    border-color: var(--Brand-blue-tertiary);
+    border-radius: 4px;
+    border-width: 2px;
+    font-size: 20px;
+    color: var(--Text-Secondary);
+    background-color: var(--BG-Secondary);
+    width: fit-content;
+    padding: 8px 16px;
+    font-family: Poppins;
+    height: fit-content;
+    text-align: center;
+}
+
+.clubHistoryEntry{
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    gap: 16px;
+    align-items: center;
+    min-height: 100%;
+}
+
+.clubHistoryEntry .eventCard{
+    flex: 1 1 auto;
+    width: auto;
+}
+
+.clubHistoryLabel{
+    width: 10%;
+    min-width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.clubHistorySeparator{
+    width: 4px;
+    height: 100%;
+    background-color: var(--Brand-blue-primary);
+    border-radius: 2px;
+    min-height: 60px;
+    margin: 0;
+    align-self: center;
 }

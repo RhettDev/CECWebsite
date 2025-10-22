@@ -43,15 +43,47 @@
             <!-- <div style="width: 1020.80px; border-radius: 12.80px; justify-content: flex-start; align-items: center; display: inline-flex"></div> -->
     
             <!-- Buttons -->
-            <div class="heroBar"style="gap: 100px; align-items: center;">
+            <div class="heroBar"style="gap: 100px; align-items: center; padding-bottom: 0;">
                 <a href="#clubHistory" class="txSubtitle" id="clubHistoryHeading">Club History</a>
                 <a href="#pastExecs" class="txSubtitle" id="pastExecsHeading">Past Executive Committees</a>
                 <a href="#lifeMembers" class="txSubtitle" id="lifeMembersHeading">Life Members</a>
             </div>
 
             <!-- Club History -->
-            <div id="Club History" class="tabContent">
-                <p class="txParagraph1"> Club History</p>
+            <div id="Club History" class="tabContent" style="width: 60%;">
+                <div id="clubHistoryContainer" class="clubHistoryContainer"></div>
+                <script>
+                    fetch('data/clubHistory.json')
+                    .then(res => res.json())
+                    .then(clubHistory => {
+                        const container = document.getElementById("clubHistoryContainer");
+                        let cardHTML = '';
+                        var prevYear = "1988";
+                        clubHistory.forEach(historyObj => {
+                            cardHTML += `
+                            <div class="clubHistoryEntry">
+                                <div class="clubHistoryLabel">
+                                    ${historyObj.year != prevYear ?
+                                        `<div class="clubHistoryYear">${historyObj.year}</div>` :
+                                        '<div class="clubHistorySeparator"></div>'}
+                                </div>
+                                <div class="eventCard" style="width: 90%;">
+                                    <img class="eventImg" src="${historyObj.image}" alt="${historyObj.title}">
+                                    <div class="eventInfo">
+                                        <div class="eventDetails">
+                                            <p class="txParagraph1White" style="margin-top: 0px;">${historyObj.title}</p>
+                                            <p class="txParagraph2White" style="text-align: right; margin-top: 0px;">${historyObj.month}-${historyObj.year}</p>
+                                        </div>
+                                        <p class="txParagraph2White" style="max-width: none; margin-bottom: 0px;">${historyObj.description}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            `;
+                            prevYear = historyObj.year;
+                        });
+                        container.innerHTML = cardHTML;
+                    });
+                </script>
             </div>
 
             <!-- Past Execs -->
@@ -60,17 +92,17 @@
                 <script>
                     fetch('data/execHistory.json')
                     .then(res => res.json())
-                    .then(history => {
+                    .then(pastExecs => {
                         const container = document.getElementById('execHistoryContainer');
                         let html = '';
-                        history.forEach(yearObj => {
+                        pastExecs.forEach(yearObj => {
                             html += `
                             <div class=historyYearRow style="align-items: center">
                                 <div class="historyYearLabel">
                                     <p class="txHistoryYear">${yearObj.year}</p>
                                 </div>
                             <div class="historyRolesRow">
-                                    `;
+                            `;
                             yearObj.roles.forEach(roleObj => {
                                 // Each roleObj has a name array and a role array
                                 html += `
@@ -92,7 +124,7 @@
 
             <!-- Life Members -->
             <div id="Life Members" class="tabContent">
-                <div id="lifeMemberContainer" class="heroContainerCOL"></div>
+                <div id="lifeMemberContainer" class="heroContainerCOL" style="gap: 16px;"></div>
                 <script>
                     fetch('data/lifeMembers.json')
                     .then(res =>res.json())
