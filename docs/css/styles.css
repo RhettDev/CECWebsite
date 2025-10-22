@@ -979,3 +979,14 @@ input,
     margin: 0;
     align-self: center;
 }
+
+.wipLabel{
+    font-family: Poppins;
+    font-size: 12px;
+    color: var(--Text-Secondary);
+    background-color: var(--Brand-blue-primary);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    width: 100%;
+}
