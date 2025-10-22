@@ -43,7 +43,7 @@
     
         <!-- Upcoming Events -->
         <p class="txHeader headingBorder" style="margin-bottom: 0px;">Upcoming Events</p>
-            <div id="upcomingEventsContainer" style="display: flex; flex-direction: column; width: 45%; height: auto; gap: 32px;"></div>
+            <div id="upcomingEventsContainer" style="display: flex; flex-direction: column; width: 60%; height: auto; gap: 32px;"></div>
             <script>
                 fetch('data/upcomingEvents.json')
                 .then(res => res.json())
@@ -72,11 +72,10 @@
                 })
             </script>
             
-
             <!-- Past Events -->
             <p class="txHeader headingBorder" style="margin-bottom: 0px;">Past Events</p>
                 
-            <div id="pastEventsContainer" style="display: flex; flex-direction: column; width: 1100px; height: auto; gap: 32px;"></div>
+            <div id="pastEventsContainer" style="display: flex; flex-direction: column; width: 60%; height: auto; gap: 32px;"></div>
             <script>
                 fetch('data/pastEvents.json')
                 .then(res => res.json())

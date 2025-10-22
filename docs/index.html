@@ -92,7 +92,7 @@
                 <div id="sponsorCarousel" class="sponsorCarousel">
                     <div id="sponsorBar" class="sponsorBar">
                         <script>
-                            fetch('data/sponsorData.json')
+                            fetch('data/currentSponsors.json')
                             .then(res => res.json())
                             .then(sponsors => {
                                 const innerContainer = document.getElementById('sponsorBar');
@@ -115,7 +115,7 @@
 
             <div id="execContainer" class="heroContainerCOL" style="margin-left: 50px"></div>
             <script>
-                fetch('data/execData.json')
+                fetch('data/currentExecs.json')
                 .then(res => res.json())
                 .then(execs => {
                     const container = document.getElementById('execContainer')
