@@ -19,12 +19,12 @@ function updateThemeIcons(){
     const gearIcon = document.getElementById("CECLogo");
     if(!toglIcon || !gearIcon) return;
     if(saved === "darkTheme"){
-        toglIcon.src = "../assets/icons/DARKMODE-IconWhite.svg";
-        gearIcon.src = "../assets/icons/CECGearWhite.svg";
+        toglIcon.src = "assets/icons/DARKMODE-IconWhite.svg";
+        gearIcon.src = "assets/icons/CECGearWhite.svg";
     }
     else {
-        toglIcon.src = "../assets/icons/DARKMODE-IconBlack.svg";
-        gearIcon.src = "../assets/icons/CECGearBlack.svg";
+        toglIcon.src = "assets/icons/DARKMODE-IconBlack.svg";
+        gearIcon.src = "assets/icons/CECGearBlack.svg";
     }
 }
 
@@ -37,14 +37,14 @@ function changeTheme(){
         html.classList.remove('lightTheme');
         html.classList.add('darkTheme');
         localStorage.setItem("theme", "darkTheme");
-        toglIcon.src = "../assets/icons/DARKMODE-IconWhite.svg";
-        gearIcon.src = "../assets/icons/CECGearWhite.svg";
+        toglIcon.src = "assets/icons/DARKMODE-IconWhite.svg";
+        gearIcon.src = "assets/icons/CECGearWhite.svg";
         }
     else {
         html.classList.remove('darkTheme');
         html.classList.add('lightTheme');
         localStorage.setItem("theme", "lightTheme");
-        toglIcon.src = "../assets/icons/DARKMODE-IconBlack.svg";
-        gearIcon.src = "../assets/icons/CECGearBlack.svg";
+        toglIcon.src = "assets/icons/DARKMODE-IconBlack.svg";
+        gearIcon.src = "assets/icons/CECGearBlack.svg";
     }
 }
