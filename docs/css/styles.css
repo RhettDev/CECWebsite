@@ -983,7 +983,7 @@ input,
 .wipLabel{
     font-family: Poppins;
     font-size: 12px;
-    color: var(--Text-Secondary);
+    color: var(--Text-White);
     background-color: var(--Brand-blue-primary);
     margin-top: 0px;
     margin-bottom: 0px;
