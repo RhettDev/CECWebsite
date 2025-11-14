@@ -1,12 +1,13 @@
-<!-- Init history.html -->
+<!-- Init events.html -->
 <!DOCTYPE html>
-<html lang="en-UK" class="lightTheme">
+<html lang="en-UK" class ="lightTheme">
     <head>
         <meta charset="utf-8" />
         <title>Curtin Engineers Club</title>
         <meta name="viewport" content="width=100%" />
         <link rel="stylesheet" href="css/styles.css" />
         <script src="scripts/theme.js"></script>
+        <script src="scripts/events.js"></script>
         <link rel="icon" href="assets/icons/CECGearBlack.svg">
         <script src="https://kit.fontawesome.com/4c5395be19.js" crossorigin="anonymous"></script> <!-- Set up to add icons via Font Awesome but currently all Icons are local files--> 
         <script>
@@ -38,19 +39,53 @@
                 <a href="https://curtin-cec.tidyhq.com/public/membership_levels" class="yellowButton">Sign Up!</a>
             </div>
         </div>
+
+        
         <div style="background-color: var(--BG-Primary); width: 100%; height: 100%;  overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 50px; display: inline-flex">
             <div style="width: 1020.80px; border-radius: 12.80px; justify-content: flex-start; align-items: center; display: inline-flex"></div>
-        
-        <!-- Past Events -->
+
+            <!-- Upcoming Events will be loaded here -->
+            <p class="txHeader headingBorder" style="margin-bottom: 0px;">Upcoming Events</p>
+            
+            <div id="upcomingEventsContainer" style="display: flex; flex-direction: column; width: 60%; height: auto; gap: 32px;"></div>
+            <script>
+                fetch('data/upcomingEvents.json')
+                .then(res => res.json())
+                .then(events => {
+                    const container = document.getElementById('upcomingEventsContainer');
+                    if (events.length === 0) {
+                        container.innerHTML = '<p class="txSubtitle" style="text-align: center;">No upcoming events at this time. Please check back later!</p>';
+                    }
+                    else {
+                        events.forEach(event => {
+                            container.innerHTML += `
+                            <div class="eventCard">
+                                <img class="eventImg" src="${event.image}" alt="Event Image">
+                                <div class="eventInfo">
+                                    <div class="eventDetails">
+                                        <p class="txParagraph1White">${event.title}</p>
+                                        <p class="txParagraph2White" style="text-align: right;">${event.date}<br>${event.time}</p>
+                                    </div>
+                                    <p class="txParagraph3White" style="max-width: none;">${event.description}</p>
+                                    <a href="${event.link}" class="yellowButton" style="padding: 6px 8px;">Find Out More!</a>
+                                </div>
+                            </div>
+                            `;
+                        })
+                    }
+                })
+            </script>
+
+            <!-- Past Events -->
             <p class="txHeader headingBorder" style="margin-bottom: 0px;">Past Events</p>
                 
-            <div id="pastEventsContainer" style="display: flex; flex-direction: column; width: 1100px; height: auto; gap: 32px;"></div>
+            <div id="pastEventsContainer" style="display: flex; flex-direction: column; width: 60%; height: auto; gap: 32px;"></div>
             <script>
                 fetch('data/pastEvents.json')
                 .then(res => res.json())
                 .then(events => {
                     const container = document.getElementById('pastEventsContainer');
-                    events.slice(8,18).forEach(event => {
+                    events.slice(firstIndex,lastIndex).forEach(event => {
                         container.innerHTML += `
                         <div class="eventCard">
                             <img class="eventImg" src="${event.image}" alt="Event Image">
@@ -68,15 +103,35 @@
                 })
             </script>
 
-            <!-- Page Numbers -->
-            <div class="pagination">
-                <a href="events0.html"><</a>
-                <a href="events0.html">1</a>
-                <a class="active" href="events1.html">2</a>
-                <!-- <a href="">></a> -->
+            <div id="paginationContainer" class="pagination">
+                <script>
+                    fetch('data/pastEvents.json')
+                    .then(res => res.json())
+                    .then(events => {
+                        const pages = Math.ceil(events.length / 10);
+                        const container = document.getElementById('paginationContainer');
+                        let html = '';
+                        html+= `<a id="prevPage" href=""><</a>`;
+                        for (let i = 1; i <= pages; i++) {
+                            html += `<a id="pageNumber${i}" href="#${i}">${i}</a>`;
+                        }
+                        html+= `<a id="nextPage" href="#">></a>`;
+
+                        container.innerHTML = html;
+                    });
+                </script>
             </div>
-            
-        </div>
+
+            <script>
+                // document.getElementById("pageNumber1").classList.add("active");
+
+                // Run when hash changes
+                window.addEventListener("hashchange", updateIndexes);
+
+                // Run on initial load
+                updateIndexes();
+            </script>
+        </div>  
 
         <!-- Footer -->
         <div class="heroBar" style="background-color: #5271FF; align-items: center;">

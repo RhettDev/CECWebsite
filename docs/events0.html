@@ -42,8 +42,8 @@
         <div style="background-color: var(--BG-Primary); width: 100%; height: 100%;  overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 50px; display: inline-flex">
             <div style="width: 1020.80px; border-radius: 12.80px; justify-content: flex-start; align-items: center; display: inline-flex"></div>
     
-        <!-- Upcoming Events -->
-        <p class="txHeader headingBorder" style="margin-bottom: 0px;">Upcoming Events</p>
+            <!-- Upcoming Events -->
+            <p class="txHeader headingBorder" style="margin-bottom: 0px;">Upcoming Events</p>
             <div id="upcomingEventsContainer" style="display: flex; flex-direction: column; width: 60%; height: auto; gap: 32px;"></div>
             <script>
                 fetch('data/upcomingEvents.json')
@@ -102,8 +102,10 @@
 
             <!-- Page Numbers -->
             <div class="pagination">
+                <!-- <a href=""><</a> -->
                 <a class="active" href="events0.html">1</a>
                 <a href="events1.html">2</a>
+                <a href="events1.html">></a>
             </div>
         </div>
 
