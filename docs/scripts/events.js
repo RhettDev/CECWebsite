@@ -1,41 +1,80 @@
 let firstIndex = 0;
 let lastIndex = 10;
+let pages = 0;
+const PER_PAGE = 10;
 
-function updateEvents() {
-    fetch('data/eventData.json')
-        .then(res => res.json())
-        .then(events => {
-            const container = document.getElementById('pastEventsContainer');
-            container.innerHTML = '';
-            events.slice(upStart, upLast).forEach(event => {
-            });
-        });
-}
-
-function paginateEvents() {
-
-}
 
 function updatePagination() {
+    const hash = location.hash.slice(1);
 
+    var prev = document.getElementById("prevPage");
+    var next = document.getElementById("nextPage");
+
+    fetch('data/pastEvents.json')
+    .then(res => res.json())
+    .then(events => {
+        pages = Math.ceil(events.length / 10);
+        let currentPage = parseInt(hash) || 1;
+
+        if (hash == 1){
+            prev.style.visibility = "hidden";
+            next.style.visibility = "visible";
+            next.href = "#2"; // could change this to currentPage + 1 but there will always be a page 2
+        }
+        if (hash ==  pages){
+            next.style.visibility = "hidden";
+            prev.style.visibility = "visible";
+            prev.href = "#" + (currentPage - 1);
+        }
+        if (hash > 1 && hash < pages){
+            prev.style.visibility = "visible";
+            next.style.visibility = "visible";
+
+            next.href = "#" + (currentPage + 1);
+            prev.href = "#" + (currentPage - 1);
+        }
+    });
 }
 
 function updateIndexes() {
     const hash = location.hash.slice(1);
     const pageNum = parseInt(hash) || 1;
-    console.log(pageNum);
 
     fetch('data/pastEvents.json')
     .then(res => res.json())
     .then(events => {
         const pages = Math.ceil(events.length / 10);
+
         for (let i = 1; i <= pages; i++){
             document.getElementById("pageNumber" + i).classList.remove("active");
         }
+        var currentPage = document.getElementById("pageNumber" + pageNum);
+        console.log(currentPage);
+        currentPage.classList.add("active");
     });
+}
 
-    var currentPage = document.getElementById("pageNumber" + pageNum);
-    console.log("pageNumber" + pageNum);
-    currentPage.classList.add("active");
-    
+function updateEvents() {
+    const hash = location.hash
+
+    var upContainter = document.getElementById("upcomingEventsContainer");
+    var upHeading = document.getElementById("upcomingEventsHeader");
+
+    if(hash == "#1"){
+        upContainter.style.display = "flex";
+        upHeading.style.display = "flex";
+    }
+    else {
+        upContainter.style.display = "none";
+        upHeading.style.display = "none";
+    }
+}
+
+function updateSlices() {
+    const hash = location.hash.slice(1);
+    const pageNum = parseInt(hash) || 1;
+
+    firstIndex = (pageNum - 1) * PER_PAGE;
+    lastIndex = firstIndex + PER_PAGE;
+
 }

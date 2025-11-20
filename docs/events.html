@@ -45,7 +45,7 @@
             <div style="width: 1020.80px; border-radius: 12.80px; justify-content: flex-start; align-items: center; display: inline-flex"></div>
 
             <!-- Upcoming Events will be loaded here -->
-            <p class="txHeader headingBorder" style="margin-bottom: 0px;">Upcoming Events</p>
+            <p id="upcomingEventsHeader" class="txHeader headingBorder" style="margin-bottom: 0px;">Upcoming Events</p>
             
             <div id="upcomingEventsContainer" style="display: flex; flex-direction: column; width: 60%; height: auto; gap: 32px;"></div>
             <script>
@@ -74,6 +74,7 @@
                         })
                     }
                 })
+                updateEvents();
             </script>
 
             <!-- Past Events -->
@@ -81,6 +82,7 @@
                 
             <div id="pastEventsContainer" style="display: flex; flex-direction: column; width: 60%; height: auto; gap: 32px;"></div>
             <script>
+                updateSlices();
                 fetch('data/pastEvents.json')
                 .then(res => res.json())
                 .then(events => {
@@ -101,6 +103,7 @@
                         `;
                     })
                 })
+                updateSlices();
             </script>
 
             <div id="paginationContainer" class="pagination">
@@ -111,22 +114,27 @@
                         const pages = Math.ceil(events.length / 10);
                         const container = document.getElementById('paginationContainer');
                         let html = '';
-                        html+= `<a id="prevPage" href=""><</a>`;
-                        for (let i = 1; i <= pages; i++) {
+
+                        html += `<a id="prevPage" href=""><</a>`;
+                        for (i = 1; i <= pages; i++) {
                             html += `<a id="pageNumber${i}" href="#${i}">${i}</a>`;
                         }
-                        html+= `<a id="nextPage" href="#">></a>`;
+                        html += `<a id="nextPage" href="">></a>`;
 
                         container.innerHTML = html;
+                        var prev = document.getElementById("prevPage");
+                        prev.style.visibility = "hidden";
                     });
+                    updateIndexes();
                 </script>
             </div>
 
             <script>
-                // document.getElementById("pageNumber1").classList.add("active");
-
                 // Run when hash changes
                 window.addEventListener("hashchange", updateIndexes);
+                window.addEventListener("hashchange", updateEvents);
+                window.addEventListener("hashchange", updatePagination);
+                window.addEventListener("hashchange", updateslices);
 
                 // Run on initial load
                 updateIndexes();

@@ -10,3 +10,6 @@
 * History Page - Make line stretch to the entire page through the year timeline
 * History Page - Fill History Entries and Images
 * Links Page - Entire Page
+* Events - Fix Slicing past event data with indexes, based on hash, current issue is the indexs not loading when hash is updated
+    * Events - Once Events.html is done then replace events0/1.html
+
