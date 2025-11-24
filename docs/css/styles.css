@@ -629,9 +629,11 @@ input,
 }
 
 .sponsorGroup {
-    display: block;
+    display: flex;
     flex: 1;
     padding: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .sponsorHighlightPlat {
