@@ -74,7 +74,7 @@
                         })
                     }
                 })
-                updateEvents();
+                updateUpcomingEvents();
             </script>
 
             <!-- Past Events -->
@@ -82,28 +82,7 @@
                 
             <div id="pastEventsContainer" style="display: flex; flex-direction: column; width: 60%; height: auto; gap: 32px;"></div>
             <script>
-                updateSlices();
-                fetch('data/pastEvents.json')
-                .then(res => res.json())
-                .then(events => {
-                    const container = document.getElementById('pastEventsContainer');
-                    events.slice(firstIndex,lastIndex).forEach(event => {
-                        container.innerHTML += `
-                        <div class="eventCard">
-                            <img class="eventImg" src="${event.image}" alt="Event Image">
-                            <div class="eventInfo">
-                                <div class="eventDetails">
-                                    <p class="txParagraph1White">${event.title}</p>
-                                    <p class="txParagraph2White" style="text-align: right;">${event.date}<br>${event.time}</p>
-                                </div>
-                                <p class="txParagraph2White" style="max-width: none;">${event.description}</p>
-                                <a href="${event.link}" class="yellowButton" style="padding: 6px 8px;">Find Out More!</a>
-                            </div>
-                        </div>
-                        `;
-                    })
-                })
-                updateSlices();
+                updatePastEvents();
             </script>
 
             <div id="paginationContainer" class="pagination">
@@ -132,9 +111,10 @@
             <script>
                 // Run when hash changes
                 window.addEventListener("hashchange", updateIndexes);
-                window.addEventListener("hashchange", updateEvents);
+                window.addEventListener("hashchange", updateUpcomingEvents);
+                window.addEventListener("hashchange", updatePastEvents);
                 window.addEventListener("hashchange", updatePagination);
-                window.addEventListener("hashchange", updateslices);
+                window.addEventListener("hashchange", updateSlices);
 
                 // Run on initial load
                 updateIndexes();

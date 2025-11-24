@@ -1,6 +1,3 @@
-let firstIndex = 0;
-let lastIndex = 10;
-let pages = 0;
 const PER_PAGE = 10;
 
 
@@ -54,7 +51,7 @@ function updateIndexes() {
     });
 }
 
-function updateEvents() {
+function updateUpcomingEvents() {
     const hash = location.hash
 
     var upContainter = document.getElementById("upcomingEventsContainer");
@@ -70,11 +67,33 @@ function updateEvents() {
     }
 }
 
-function updateSlices() {
+function updatePastEvents() {
     const hash = location.hash.slice(1);
     const pageNum = parseInt(hash) || 1;
 
     firstIndex = (pageNum - 1) * PER_PAGE;
     lastIndex = firstIndex + PER_PAGE;
 
+    fetch('data/pastEvents.json')
+    .then(res => res.json())
+    .then(events => {
+        const container = document.getElementById('pastEventsContainer');
+        let html = ``;
+        events.slice(firstIndex,lastIndex).forEach(event => {
+            html += `
+            <div class="eventCard">
+                <img class="eventImg" src="${event.image}" alt="Event Image">
+                <div class="eventInfo">
+                    <div class="eventDetails">
+                        <p class="txParagraph1White">${event.title}</p>
+                        <p class="txParagraph2White" style="text-align: right;">${event.date}<br>${event.time}</p>
+                    </div>
+                    <p class="txParagraph2White" style="max-width: none;">${event.description}</p>
+                    <a href="${event.link}" class="yellowButton" style="padding: 6px 8px;">Find Out More!</a>
+                </div>
+            </div>
+            `;
+        })
+        container.innerHTML = html;
+    })
 }
