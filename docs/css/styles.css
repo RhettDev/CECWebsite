@@ -235,7 +235,6 @@ a {
     align-items: center; 
     margin-top: 36px; 
     padding: 36px; 
-    gap: 128px; 
     flex: 1;
 }
 
@@ -1001,19 +1000,20 @@ input,
     column-gap: 12px;
 }
 
+.linkGrid > :nth-child(1){grid-column: 1 / span 1;}
 .linkGrid > :nth-child(2){grid-column: 2 / span 2;}
+.linkGrid > :nth-child(3){grid-column: 4 /span 4;}
 
 .linkGrid > :nth-child(4){
     grid-column: 1 / span 2;
 }
 .linkGrid > :nth-child(5){
-    grid-column: 3 / span 4;
+    grid-column: 3 / span 5;
 }
 
 .linkItem{
     border: 4px var(--Border-Blue);
     border-radius: 8px;
-    text-align: left end;
     background-color: var(--BG-Secondary);
     position: relative;
     max-height: 250px;

@@ -40,10 +40,8 @@
         </div>
 
         <!-- BG stuff-->
-        <div style="width: 100%; height: 100%; background-color: var(--BG-Primary); overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 50px; display: inline-flex; padding-bottom: 75px;">
-            <div style="width: 1020.80px; border-radius: 12.80px; justify-content: flex; align-items: center; display: inline-flex"></div>
-
-
+        
+        <div class="e404Hero" style="margin-top: 0px; margin-bottom: 0px;">
             <div class="linkGrid" id="linksContainer" style="width: 60%; justify-content: center;">
                 <script>
                     fetch('data/linksData.json')
@@ -60,8 +58,7 @@
                             `;
                         });
                         container.innerHTML = gridHTML;
-                    })
-
+                    });
                 </script>
             </div>
         </div>
