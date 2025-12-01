@@ -82,13 +82,13 @@ function updatePastEvents() {
         events.slice(firstIndex,lastIndex).forEach(event => {
             html += `
             <div class="eventCard">
-                <img class="eventImg" src="${event.image}" alt="Event Image">
+                <img class="eventImg" src="${event.image}" alt="${event.title}">
                 <div class="eventInfo">
                     <div class="eventDetails">
                         <p class="txParagraph1White">${event.title}</p>
                         <p class="txParagraph2White" style="text-align: right;">${event.date}<br>${event.time}</p>
                     </div>
-                    <p class="txParagraph2White" style="max-width: none;">${event.description}</p>
+                    <p class="txParagraph3White" style="max-width: none;">${event.description}</p>
                     <a href="${event.link}" class="yellowButton" style="padding: 6px 8px;">Find Out More!</a>
                 </div>
             </div>
