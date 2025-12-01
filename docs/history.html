@@ -40,8 +40,7 @@
             </div>
         </div>
 
-        <div style="background-color: var(--BG-Primary); width: 100%; height: 100%;  overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 50px; display: inline-flex">
-            <!-- <div style="width: 1020.80px; border-radius: 12.80px; justify-content: flex-start; align-items: center; display: inline-flex"></div> -->
+        <div class="main">
     
             <!-- Buttons -->
             <div class="heroBar"style="gap: 100px; align-items: center; padding-bottom: 0;">
@@ -53,6 +52,15 @@
             <!-- Club History -->
             <div id="Club History" class="tabContent" style="width: 60%;">
                 <div id="clubHistoryContainer" class="clubHistoryContainer"></div>
+
+                <!-- Coming soon Hero-->
+                <!-- <div class="e404Hero">
+                    <div class="heroGroup.center">
+                        <img src="assets/images/LegomanCoffeeWOutlineLarge.png" alt="Lego Man Coffee White Outline" style="width: 300px; height: auto;">
+                    </div>
+                    <div class="txHeader headingBorder">History Page Coming Soon!</div>
+                </div> -->
+
                 <script>
                     fetch('data/clubHistory.json')
                     .then(res => res.json())

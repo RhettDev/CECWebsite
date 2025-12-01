@@ -4,12 +4,7 @@
 * updated sponosr logos for more high rez ones
 * About Page - Fill out About sections
 * FAQ - finish final question answer
-* Events - Add next and prev page in pagination
-* Sponsor Page - Fix Alignment and get rid of space in platnium space
-* sponosr page - set Professional events text to center or justify
 * History Page - Make line stretch to the entire page through the year timeline
 * History Page - Fill History Entries and Images
-* Links Page - Entire Page
-* Events - Fix Slicing past event data with indexes, based on hash, current issue is the indexs not loading when hash is updated
-    * Events - Once Events.html is done then replace events0/1.html
-
+* Links Page - Update photos
+* Links Page - add zoom effect to grid items

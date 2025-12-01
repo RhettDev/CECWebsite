@@ -97,3 +97,7 @@ function updatePastEvents() {
         container.innerHTML = html;
     })
 }
+
+function resetScroll() {
+    window.scrollTo(0, 0);
+}
