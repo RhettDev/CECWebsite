@@ -524,6 +524,7 @@ a {
     border-radius: 16px;
     max-width: 400px;
     height: auto;
+    width: 100%;
 }
 
 
@@ -533,25 +534,25 @@ a {
     display: inline-block;
 }
 
-.bg-img {
+
+.landingContainer {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.landingImage {
     display: block;
     width: 100%;
     height: auto;
 }
 
-.top-img {
-    width: 200px;
-    height: auto;
-    /* transition: transform 0.1s linear; */
-    z-index: 1;
-}
-
-.gearWrapper {
+.landingGear {
     position: absolute;
     top: 40%;
     left: 45%;
-    /* transform: translate(-50%, -50%); */
-    /* animation: rotateGear 5s linear infinite; */
+    z-index: 1;
+    width: 12%;
 }
 
 @keyframes rotateGear {
@@ -569,19 +570,6 @@ a {
     border: none;
     padding: 0;
     cursor: pointer;
-}
-
-.execProfileOLD {
-    display: flex;
-    flex: 1 1 0;
-    align-items: flex-start;
-    gap: 24px;
-    justify-content: left;
-    align-items: center;
-    margin-bottom: 18px;
-    min-width: 370px;
-    max-width: 400px;
-    flex-direction: row;
 }
 
 .execRow {
@@ -617,23 +605,6 @@ a {
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 2px;
-}
-
-.contactField{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    width: 100%;
-    margin-bottom: 6px;
-}
-
-input,
-.contactEntry {
-    border: var(--Brand-blue-tertiary) 2px solid;
-    border-radius: 4px;
-    width: 100%;
-    height: 40px;
-    align-items: start;
 }
 
 .sponsorGroup {
@@ -805,8 +776,6 @@ input,
     align-items: flex-start;
 }
 
-
-
 .tab{
     overflow: hidden;
     background-color: var(--Text-InvertPrimary);
@@ -890,16 +859,6 @@ input,
 .popup .close:hover {
     color: var(--L-Text-InvertSecondary);
 }
-
-/* @media screen and (max-width: 700px){
-    .box{
-        width: 60%;
-    }
-    .popup{
-        width: 60%;
-    }
-} */
-
 
 /* Sponsor Carousel Styles */
 
