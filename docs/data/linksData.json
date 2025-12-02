@@ -1,6 +1,6 @@
 [
     {
-        "link": "https://drive.google.com/drive/folders/14uwTZfgZEqmHS3xCAc-_Q4gKGHp68YF7",
+        "link": "https://drive.google.com/drive/folders/14uwTZfgZEqmHS3xCAc-_Q4gKGHp68YF7?usp=drive_link",
         "title": "Meeting Minutes",
         "image": "assets/images/sponsoredEvent.png",
         "alt": "Meeting Minutes",
@@ -14,7 +14,7 @@
         "weight": 2
     },    
     {
-        "link": "https://curtin-cec.tidyhq.com/public/shop/products/shower-bike-lockers-semester-1-2026",
+        "link": "https://curtin-cec.tidyhq.com/public/shop/products/lockers-semester-1-2026",
         "title": "Locker Hire",
         "image": "assets/images/locker1.png",
         "alt": "Locker Hire",
@@ -30,7 +30,7 @@
     {
         "link": "https://curtinphotographyclub.pixieset.com/igniteball2025/hugh/?fbclid=IwY2xjawNIO79leHRuA2FlbQIxMQABHgbxC5bg3-k2Uw8wzdUVN7sexQ1JUgGSziAVuRIh_-wjhumm03Lr2rCDV9nz_aem_cO7pZP1M0oEWA-SEnrwQtA",
         "title": "2026 Ignite Ball Photos",
-        "image": "assets/images/igniteball.jpg",
+        "image": "assets/images/IgnitePhoto.jpg",
         "alt": "2026 Ignite Ball Photos",
         "weight": 2
     }

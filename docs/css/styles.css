@@ -721,7 +721,6 @@ input,
     display: block;
     flex: 2;
     padding-left: 16px;
-    height: 100%;
 }
 
 .pagination{
@@ -1023,9 +1022,8 @@ input,
 }
 
 .linkItem{
-    border: 4px var(--Border-Blue);
-    border-radius: 8px;
-    background-color: var(--BG-Secondary);
+    border: 2px solid var(--Border-Blue);
+    border-radius: 12px;
     position: relative;
     max-height: 250px;
     overflow: hidden;
