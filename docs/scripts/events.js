@@ -89,7 +89,7 @@ function updatePastEvents() {
                         <p class="txParagraph2White" style="text-align: right;">${event.date}<br>${event.time}</p>
                     </div>
                     <p class="txParagraph3White" style="max-width: none;">${event.description}</p>
-                    <a href="${event.link}" class="yellowButton" style="padding: 6px 8px;">Find Out More!</a>
+                    <a href="${event.link}" class="yellowButton" style="padding: 6px 8px;" target="_blank" rel="noopener noreferrer">Find Out More!</a>
                 </div>
             </div>
             `;
