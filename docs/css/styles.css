@@ -617,6 +617,23 @@ a {
     align-items: center;
 }
 
+@media screen and (max-width: 750px) {
+    #execContainerLandscape {
+        display: none;
+    }
+    #execContainerPortrait {
+        display: block;
+    }
+}
+@media screen and (min-width: 750px) {
+    #execContainerLandscape {
+        display: block;
+    }
+    #execContainerPortrait {
+        display: none;
+    }
+}
+
 
 .headingBorder{
     display: inline-block;
