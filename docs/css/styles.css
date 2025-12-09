@@ -63,10 +63,11 @@ html.darkTheme {
 body {
     margin: 0;
     background-color: var(--BG-Primary);
+    grid-template-columns: repeat(5, 1fr);
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     color-scheme: light;
+    align-items: center;
 }
 
 a {
@@ -78,14 +79,14 @@ a {
     src: url(../assets/fonts/Poppins-Regular.ttf);
 }
 
-.main{
+/* .main{
     display: flex;
     flex-direction: column;
     align-items: center;
     flex: 1;
     width: 100%;
     gap: 50px;
-}
+} */
 
 /* Navigation Bar Classes */
 .navbar {
@@ -104,6 +105,8 @@ a {
     position: sticky;
     top: 0px;
     z-index: 10;
+    grid-column: span 5;
+    
 }
 
 /* Classes for Left Side Navigation Bar Items */
@@ -195,6 +198,7 @@ a {
     justify-content: center;
     margin-bottom: 24px;
     width: 70%;
+    grid-column: 2 / span 4;
 }
 
 .heroContainerCOL {
@@ -228,10 +232,11 @@ a {
 }
 
 .heroBar {
-    display: flex;
+    display: grid;
     width: 100%;
     padding: 36px;
     justify-content: center;
+    grid-column: span 5;
 }
 
 @media (max-width: 750px) {
@@ -247,7 +252,7 @@ a {
     .footerBar .footerGroup {
         width: 100%;
         max-width: 480px;
-        margin: 0 auto;
+        margin-bottom: 30px;
     }
 
     .footerBar .iconGrid {
@@ -261,6 +266,13 @@ a {
     }
 }
 
+.sponsorCall {
+    display: grid;
+    width: 100%; 
+    background-color: var(--Brand-blue-primary); 
+    justify-content: center;
+    grid-column: span 5;
+}
 
 
 .e404Hero {
@@ -272,6 +284,7 @@ a {
     margin-top: 36px; 
     padding: 36px; 
     flex: 1;
+    grid-column: span 5;
 }
 
 .sponsorLogo {
@@ -566,6 +579,7 @@ a {
     position: relative;
     display: inline-block;
     width: 100%;
+    grid-column: span 5;
 }
 
 .landingImage {
@@ -986,6 +1000,7 @@ a {
     margin-bottom: 0px;
     text-align: center;
     width: 100%;
+    grid-column: span 5;
 }
 
 .linkGrid{
