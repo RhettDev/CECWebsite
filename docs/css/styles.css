@@ -1,5 +1,32 @@
 /* init style.css */
 
+/* Media Queries */
+
+/* Mobile */
+@media screen and (max-width: 750px) {
+    #hamLinks {
+        display: none;
+    }
+    #gearWOUT {
+        display: none;
+    }
+    #gearWITH {
+        display: flex;
+    }
+    #meetingPopupButton {
+        display: none;
+    }
+}
+/* Desktop */
+@media screen and (min-width: 750px) {
+    #gearWOUT {
+        display: flex;
+    }
+    #gearWITH {
+        display: none;
+    }
+}
+
 /* Global styles */
 * {
     box-sizing: border-box;
@@ -91,102 +118,11 @@ a {
     gap: 50px;
 }
 
-/* Navigation Bar Classes */
-.navbar {
-    width: 100%;
-    background-color: var(--BG-Primary);
-    overflow: hidden;
-    font-family: Poppins;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    box-shadow: 2px 2px 1px var(--BG-Secondary);
-    position: sticky;
-    top: 0px;
-    z-index: 10;
-    flex-wrap: nowrap;
-}
-
-/* Classes for Left Side Navigation Bar Items */
-.nav-left {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex: 1 1 auto;
-    min-width: 0;
-}
-
-.nav-left a {
-    display: inline-block;
-    color: var(--Text-Primary);
-    text-align: center;
-    /* padding: 14px 16px; */
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.nav-left a.hover {
-    background-color: var(--BG-Primary);
-    color: var(--Text-Black);
-}
-
-.nav-left a.active {
-    background-color:  var(--BG-Secondary);
-    color: var(--Text-White);
-}
-
-.nav-left img,
-.nav-right a {
-    float: none;
-}
-
-.nav-left #links {
-    display: none;
-}
-
-/* Classes for Right Side Navigation Bar Items */
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex: 0 0 auto;
-}
-
-.nav-right a {
-    float: right;
-    display: flex;
-    align-items: center;
-    padding: 12px 14px;
-}
-
-@media screen and (max-width: 750px) {
-    #navbarLandscape {
-        display: none;
-    }
-    #navbarPortrait {
-        display: block;
-    }
-}
-@media screen and (min-width: 750px) {
-    #navbarLandscape {
-        display: block;
-    }
-    #navbarPortrait {
-        display: none;
-    }
-}
-
-/* End of Navigation Bar Classes */
-
 /* Button Classes */
 .yellowButton {
     background-color: var(--Brand-yellow-primary); /* Brand Yellow */
     border: none;
-    color: var(--Text-Black); /* Text Primary */
+    color: var(--Text-Black) !important; /* Text Primary */
     padding: 2px 6px;
     text-align: center;
     display: inline-block;
@@ -225,14 +161,6 @@ a {
     justify-content: center;
     margin-bottom: 24px;
     width: 70%;
-}
-
-.heroContainerCOL {
-    display: flex;
-    flex-direction: column;
-    gap: 64px;
-    justify-content: center;
-    margin-bottom: 36px;
 }
 
 .heroGroup {
@@ -289,9 +217,23 @@ a {
         max-width: 480px;
         margin: 0 auto;
     }
+
+    .heroContainerCOL {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        justify-content: center;
+        margin-bottom: 36px;
+    }
+
+    .heroBarCOL {
+        display: flex;
+        flex: 1;
+        text-align: center;
+        flex-direction: column;
+        gap: 12px !important;
+    }
 }
-
-
 
 .e404Hero {
     display: flex;
@@ -609,7 +551,7 @@ a {
     top: 40%;
     left: 45%;
     z-index: 1;
-    width: 12%;
+    max-width: 12%;
 }
 
 @keyframes rotateGear {
@@ -1124,31 +1066,7 @@ a {
     gap: 20px;
 }
 
-@media screen and (max-width: 750px) {
-    #hamLinks {
-        display: none;
-    }
-    #gearWOUT {
-        display: none;
-    }
-    #gearWITH {
-        display: flex;
-    }
-}
-@media screen and (min-width: 750px) {
-    #hamLinks {
-        display: flex;
-    }
-    #hamburgerList{
-        display: fixed;
-    }
-    #gearWOUT {
-        display: flex;
-    }
-    #gearWITH {
-        display: none;
-    }
-}
+
 
 .hamburgerList{
     display: none;

@@ -72,7 +72,7 @@
         <div class="main">
 
             <!-- About CEC Hero-->
-            <div class="heroContainer">
+            <div class="heroContainer heroContainerCOL" id="aboutLandscape">
                 <div class="heroGroup">
                     <h2 class="txSubtitle subtitleBorder">What is CEC About?</h2>
                     <p class="txParagraph1" style="text-align: justify;">Curtin Engineers Club (CEC) is a multi-disciplinary engineering club that holds numerous social and professional events, helps students connect with each other and provides resources to its members. Being a social club, CEC welcomes all students, not just engineering students, with events such as BOTL or Pubcrawl purely for socialising. 
@@ -90,8 +90,8 @@
             <!-- Sponsorship Banner -->
             <div style="display: flex; width: 100%; background-color: var(--Brand-blue-primary); justify-content: center;">
                 <!-- Call to Action -->
-                <div class="heroBar" style="width: 60%; align-items: center; gap: 96px;">
-                    <div class="footerGroup" style="width: 60%; max-width: max-content;">
+                <div class="heroBar heroBarCOL" style="width: 60%; align-items: center; gap: 96px;">
+                    <div class="footerGroup footerBar" style="width: 60%; max-width: max-content;">
                         <p class="txSubtitleWhite" style="margin-top: 0px;">Want to Become a Sponsor?</p>
                         <p class="txParagraph1White">Connect with the club and students directly by sponsoring us! Be first in line for networking events and student engagement.</p>
                         <a href="sponsor.html" class="yellowButton" style="padding: 6px 8px;">Find Out More</a>
@@ -109,7 +109,6 @@
                             .then(res => res.json())
                             .then(sponsors => {
                                 const innerContainer = document.getElementById('sponsorBar');
-
                                 let html = ``;
                                 sponsors.forEach(sponsorObj => {
                                     html += `
@@ -126,7 +125,7 @@
             <!-- Exec Committee-->
             <p class="txHeader headingBorder" style="width: max-content; margin-bottom: 0px;"><script>document.write(new Date().getFullYear())</script> Executive Committee</p>
 
-            <div id="execContainerLandscape" class="heroContainerCOL" style="margin-left: 50px"></div>
+            <div id="execContainerLandscape" class="heroContainerCOL" style="margin-left: 50px; margin-bottom: 30px;"></div>
             <script>
                 fetch('data/currentExecs.json')
                 .then(res => res.json())
