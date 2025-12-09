@@ -1,14 +1,14 @@
-<!-- Init e404.html -->
+<!-- Init index.html -->
 <!DOCTYPE html>
 <html lang="en-UK" class="lightTheme">
     <head>
         <meta charset="utf-8" />
         <title>Curtin Engineers Club</title>
-        <meta name="viewport" content="width=100%" />
-        <link rel="stylesheet" href="css/styles.css" />
-        <script src="scripts/theme.js"></script>
+        <meta name="viewport" content="width=device-width, inital-scale=1.0"/>
+        <link rel="stylesheet" href="css/styles.css"/>
+        <script src="scripts/theme.js" ></script>
         <script src="scripts/index.js" ></script>
-        <link rel="icon" href="assets/icons/CECGearBlack.svg">
+        <link rel="icon" id="tabIcon" href="assets/icons/CECGearBlack.svg">
         <script src="https://kit.fontawesome.com/4c5395be19.js" crossorigin="anonymous"></script> <!-- Set up to add icons via Font Awesome but currently all Icons are local files--> 
         <script>
             setTheme();
@@ -20,15 +20,14 @@
         <!-- Navigation Bar-->
         <div class="navigationBar" id="navbar">
             <div class="navLeft" id="navLeft">
-                <a href="index.htmljavascript:void(0);" id="gearWOUT">
+                <a href="javascript:void(0);" id="gearWOUT">
                     <img class='icon' src="assets/icons/CECGearBlack.svg" id="CECLogoWOTH" style="width: 36;">
                 </a>
                 <a href="javascript:void(0);" onclick="hamLinks()" id="gearWITH">
                     <img class='icon' src="assets/icons/CECGearBlack.svg" id="CECLogoWITH" style="width: 36;">
                 </a>
-                <a href="index.html">Curtin Engineers Club</a>
+                <a href="">Curtin Engineers Club</a>
                 <div class="navLinks" id="hamLinks">
-                    <a href="index.html">Home</a>
                     <a href="about.html">About</a>
                     <a href="events.html#1">Events</a>
                     <a href="sponsor.html">Sponsors</a>
@@ -46,7 +45,6 @@
         <div class="backdrop" id="hamburgerBackdrop"></div>
         <script>document.getElementById('hamburgerBackdrop').addEventListener('click', hamLinks);</script>
         <div class="hamburgerList" id="hamburgerList">
-            <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="events.html#1">Events</a>
             <a href="sponsor.html">Sponsors</a>
@@ -54,21 +52,82 @@
             <a href="links.html">Links</a>
         </div>
 
-        <!-- Error Message -->
-        <div class="e404Hero">
-            <div class="heroGroup.center">
-                <img src="assets/images/LegomanCoffeeWOutlineLarge.png" alt="Lego Man Coffee White Outline" style="width: 300px; height: auto;">
-            </div>
-            <div class="footerGroup">
-                <p class="txHeader" style="text-align: left; width: max-content;">ERROR 404</p>
-                <p class="txParagraph2" style="text-align: left;">Our Engineer could not find the page you were looking for!</p>
-                <p class="txParagraph2" style="text-align: left;">This could because <br> - The address you searched is incorrect <br> - The address has been changed or removed</p>
-                <a href="index.html" class="blueButton" style="padding: 12px 14px;">Return Home</a>
-            </div>
+        <!-- Landing Image -->
+        <div class="landingContainer">
+            <img class="landingGear" alt="CECGear" src="assets/icons/CECGearWhite.svg" id="CECGearLanding">
+            <img class="landingImage" alt="landingImage" src="assets/images/botlLandingImage.png">
         </div>
 
+        <!-- Meeting Invite Pop-up-->
+        <button onClick="popupFunc()" class="yellowButton popupLocation" id="meetingPopupButton"><b>!</b></button>  
+
+        <div class="popup" id="meetingPopup" style="display: none;">
+            <p class="txParagraph1White" style="margin-top: 0px;">Come To Our Weekly Meetings!</p>
+            <button onClick="popupFunc()" class="close">&times;</button>
+            <div class="content txParagraph2White"><b>Wednesdays 12pm to 1pm in 215.30</b></div>
+        </div>
+        
+        <!-- BG stuff-->
+        <div class="main">
+            <!-- Exec Committee-->
+            <p class="txHeader headingBorder" style="width: max-content; margin-bottom: 0px;"><script>document.write(new Date().getFullYear())</script> Executive Committee</p>
+
+            <div id="execContainerLandscape" class="heroContainerCOL" style="margin-left: 50px"></div>
+            <script>
+                fetch('data/currentExecs.json')
+                .then(res => res.json())
+                .then(execs => {
+                    const container = document.getElementById('execContainerLandscape')
+                    let rowHTML = '';
+                    execs.forEach((exec, i) => {
+                        const random = Math.floor(Math.random() * 2);
+                        const profileHTML = `
+                            <div class="execProfile">
+                                <img class="${random % 2 === 0 ? 'execPhotoBlue' : 'execPhotoYellow'}" src="${exec.image}">
+                                <div class="txColumn">
+                                    <p class="txExecProf">${exec.name}</p>
+                                    <p class="txExecProf">${exec.role}</p>
+                                </div>
+                            </div>
+                        `;
+                        if (i % 2 === 0){
+                            rowHTML += `<div class="execRow">`;
+                        }
+                        rowHTML += profileHTML;
+                        if (i % 2 === 1 || i === execs.length - 1) {
+                            rowHTML += `</div>`;
+                        }
+                    });
+                    container.innerHTML = rowHTML;
+                });
+            </script>
+
+            <div id="execContainerPortrait" class="heroContainerCOL" style="margin-left: 50px;"></div>
+            <script>
+                fetch('data/currentExecs.json')
+                .then(res => res.json())
+                .then(execs => {
+                    const container = document.getElementById('execContainerPortrait')
+                    let profileHTML = '';
+                    execs.forEach(exec => {
+                        const random = Math.floor(Math.random() * 2);
+                        profileHTML += `
+                            <div class="execProfile" style="margin-bottom: 16px; max-width: 100%">
+                                <img class="${random % 2 === 0 ? 'execPhotoBlue' : 'execPhotoYellow'}" src="${exec.image}">
+                                <div class="txColumn">
+                                    <p class="txExecProf">${exec.name}</p>
+                                    <p class="txExecProf">${exec.role}</p>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    container.innerHTML = profileHTML;
+                });
+            </script>
+
+        </div>
         <!-- Footer -->
-        <div class="heroBar" style="background-color: #5271FF; align-items: center;">
+        <div class="heroBar footerBar" style="background-color: #5271FF; align-items: center;">
             <div class="footerGroup">
                 <p class="txSubtitleWhite" style="text-align: left; margin-bottom: 5px;">Curtin Engineers Club</p>
                 <p class="txParagraph1White" style="margin-bottom: 30px; margin-top: 0px;">(CEC) Est. 1989</p>
@@ -93,8 +152,8 @@
                 <a href="https://au.linkedin.com/company/curtin-engineers-club" target="_blank" rel="noopener noreferrer">
                     <img src="assets/icons/INDEED-Icon.png" alt="Linkedin Logo"> <!-- Linkedin Logo -->
                 </a>
-                <!-- <a href="https://linktr.ee/Curtin.Engineers.Club" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/icons/LINKTREE-Icon.png" alt="Linktree Logo"> 
+                <!-- <a href="https://linktr.ee/Curtin.Engineers.Club">
+                    <img src="assets/icons/LINKTREE-Icon.png" alt="Linktree Logo">
                 </a> -->
             </div>
         </div>

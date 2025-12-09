@@ -18,26 +18,39 @@
     <body>
         <div class="wipLabel">W.I.P - Come Back Semester 1!</div>
         <!-- Navigation Bar-->
-        <div class="navbar">
-            <!-- Left side of Navigation Bar-->
-            <div class="nav-left">
-                <a href="">
-                    <img class='icon' src="assets/icons/CECGearBlack.svg" id="CECLogo" style="width: 36;">
+        <div class="navigationBar" id="navbar">
+            <div class="navLeft" id="navLeft">
+                <a href="javascript:void(0);" id="gearWOUT">
+                    <img class='icon' src="assets/icons/CECGearBlack.svg" id="CECLogoWOTH" style="width: 36;">
+                </a>
+                <a href="javascript:void(0);" onclick="hamLinks()" id="gearWITH">
+                    <img class='icon' src="assets/icons/CECGearBlack.svg" id="CECLogoWITH" style="width: 36;">
                 </a>
                 <a href="">Curtin Engineers Club</a>
-                <a href="about.html">About</a>
-                <a href="events.html#1">Events</a>
-                <a href="sponsor.html">Sponsors</a>
-                <a href="history.html#clubHistory">History</a>
-                <a href="links.html">Links</a>
+                <div class="navLinks" id="hamLinks">
+                    <a href="about.html">About</a>
+                    <a href="events.html#1">Events</a>
+                    <a href="sponsor.html">Sponsors</a>
+                    <a href="history.html#clubHistory">History</a>
+                    <a href="links.html">Links</a>
+                </div>
             </div>
-            <!-- Right side of Navigation Bar-->
-            <div class="nav-right">
+            <div class="navRight" id="navRight">
                 <button class="icon" id="themeToggle" onclick="changeTheme()">
                     <img class="icon" id="themeToggleIcon" src="assets/icons/DARKMODE-IconBlack.svg">
                 </button>
                 <a href="https://curtin-cec.tidyhq.com/public/membership_levels" class="yellowButton" target="_blank" rel="noopener noreferrer">Sign Up!</a>
             </div>
+        </div>
+        <div class="backdrop" id="hamburgerBackdrop"></div>
+        <script>document.getElementById('hamburgerBackdrop').addEventListener('click', hamLinks);</script>
+        <div class="hamburgerList" id="hamburgerList">
+            <a href="javascript:void(0);" onclick="hamLinks()"class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="events.html#1">Events</a>
+            <a href="sponsor.html">Sponsors</a>
+            <a href="history.html#clubHistory">History</a>
+            <a href="links.html">Links</a>
         </div>
 
         <!-- Landing Image -->
@@ -110,7 +123,7 @@
                 </div>
             </div>
 
-        <!-- Exec Committee-->
+            <!-- Exec Committee-->
             <p class="txHeader headingBorder" style="width: max-content; margin-bottom: 0px;"><script>document.write(new Date().getFullYear())</script> Executive Committee</p>
 
             <div id="execContainerLandscape" class="heroContainerCOL" style="margin-left: 50px"></div>

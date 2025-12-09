@@ -65,3 +65,15 @@ function changeHistoryTab(){
         chHeading.classList.remove("headingBorder");
     }
 }
+
+function hamLinks(){
+    var linkList = document.getElementById("hamburgerList");
+    if (linkList.style.display === "flex"){
+        linkList.style.display = "none";
+        document.getElementById('hamburgerBackdrop').classList.remove('show');
+    }
+    else {
+        linkList.style.display = "flex";
+        document.getElementById('hamburgerBackdrop').classList.add('show');
+    }
+}
