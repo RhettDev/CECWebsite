@@ -54,9 +54,8 @@
         </div>
 
         <div class="main">
-
             <!-- About Heros -->
-            <p class="txHeader headingBorder" style="margin-bottom: 0px;">Who Are We?</p>
+            <!-- <p class="txHeader headingBorder" style="margin-bottom: 0px;">Who Are We?</p> -->
             <div class="heroContainer heroContainerCOL">
                 <div class="heroGroup">
                     <p class="txSubtitle subtitleBorder">Why Join the Club?</p>
@@ -81,9 +80,9 @@
 
             <!-- Merch Hero Bar-->
             <div class="heroBar heroBarCOL" style="background-color: #5271FF; align-items: center;  gap: 96px; width: 100%;">
-                <div class="footerGroup " style="max-width: max-content;">
-                    <p class="txSubtitleWhite" style="margin-top: 0px;">Want Curtin Engineers Club Mercandise?</p>
-                    <p class="txParagraph1White">Represent the club by purchasing some of our merch. Ranging from hoodies, polo shirts and hats!.</p>
+                <div class="footerGroup footerBar" style="max-width: max-content;">
+                    <p class="txSubtitleWhite textMobile" style="margin-top: 0px;">Want Curtin Engineers Club Mercandise?</p>
+                    <p class="txParagraph1White textMobile">Represent the club by purchasing some of our merch. Ranging from hoodies, polo shirts and hats!.</p>
                     <a href="https://curtin-cec.tidyhq.com/public/shop/products" class="yellowButton" style="padding: 6px 8px;" target="_blank" rel="noopener noreferrer">Shop via our TidyHQ</a>
                 </div>
                 <div class="heroGroup" style="max-width: max-content;">
@@ -94,13 +93,14 @@
 
             <!-- FAQ -->
             <p class="txHeader headingBorder" style="margin-bottom: 0px;">Frequently Asked Club Questions</p>
-            <div class="faqContainer" id="faqContainer" style="width: 100%; margin-bottom: 50px;"></div>
-        
+            
+            <!-- Landscape -->
+            <div class="faqContainer" id="faqContainerLandscape" style="width: 100%; margin-bottom: 50px;"></div>
             <script>
                 fetch('data/faqData.json')
                 .then(res => res.json())
                 .then(questions => {
-                    const container = document.getElementById('faqContainer');
+                    const container = document.getElementById('faqContainerLandscape');
                     questions.forEach(question => {
                         container.innerHTML += `
                         <div class="faqGroup">
@@ -111,7 +111,26 @@
                         `;
                     })
                 })
-            </script>          
+            </script>
+
+            <!-- Mobile -->
+            <div class="faqContainer" id="faqContainerMobile" style="width: 100%; margin-bottom: 50px;"></div>
+            <script>
+                fetch('data/faqData.json')
+                .then(res => res.json())
+                .then(questions => {
+                    const container = document.getElementById('faqContainerMobile');
+                    questions.forEach(question => {
+                        container.innerHTML += `
+                        <div class="faqGroup" style="flex-direction: column;">
+                            <p class="faqQuestion">${question.question}</p>
+                            <div class="faqSeparator"></div>
+                            <p class="faqAnswer">${question.answer}</p>
+                        </div>
+                        `;
+                    })
+                })
+            </script>
         </div>
 
         <!-- Footer -->
