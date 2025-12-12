@@ -264,6 +264,14 @@ a {
     margin-top: 36px; 
     padding: 36px; 
     flex: 1;
+    text-align: left;
+}
+
+@media screen and (max-width: 750px) {
+    .e404Hero {
+        flex-direction: column;
+        gap: 24px;
+    }
 }
 
 .sponsorLogo {
@@ -348,7 +356,7 @@ a {
         width: 100%;
         text-align: center;
         max-width: 100%;
-        font-size: 15px;
+        font-size: 16px;
     }
     .faqAnswer {
         width: 100%;
