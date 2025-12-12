@@ -6,3 +6,4 @@
 * History Page - Fill History Entries and Images
 * Links Page - Update Meeting minutes photo
 * Links Page - add zoom effect to grid items
+* replace nav bar CEC title with hamburger icon and set that to the drop down function
