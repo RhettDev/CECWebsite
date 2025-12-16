@@ -56,12 +56,32 @@
         <!-- BG stuff-->
         
         <div class="e404Hero" style="margin-top: 0px; margin-bottom: 0px;">
-            <div class="linkGrid" id="linksContainer" style="width: 60%; justify-content: center;">
+            <div class="linkGrid" id="linksContainerLandscape" style="width: 60%; justify-content: center;">
                 <script>
                     fetch('data/linksData.json')
                     .then(res => res.json())
                     .then(links => {
-                        const container = document.getElementById('linksContainer')
+                        const container = document.getElementById('linksContainerLandscape')
+                        let gridHTML = '';
+                        links.forEach(link => {
+                            gridHTML += `
+                                <a class="linkItem" href="${link.link}" target="_blank" rel="noopener noreferrer">
+                                    <img alt="${link.alt}" src="${link.image}">
+                                    <div class="linkLabel">${link.title}</div>
+                                </a>
+                            `;
+                        });
+                        container.innerHTML = gridHTML;
+                    });
+                </script>
+            </div>
+
+            <div class="heroContainerCOL" style="margin-top: 0px; align-items: center; width: 70%;" id="linksContainerMobile">
+                <script>
+                    fetch('data/linksData.json')
+                    .then(res => res.json())
+                    .then(links => {
+                        const container = document.getElementById('linksContainerMobile')
                         let gridHTML = '';
                         links.forEach(link => {
                             gridHTML += `

@@ -781,8 +781,6 @@ a {
     }
 }
 
-
-
 .eventColumn{
     display: flex;
     flex-direction: column;
@@ -1154,6 +1152,23 @@ a {
     background-color: rgb(43 42 51 / 0.3);
     border-radius: 8px;
     padding: 4px 8px;
+}
+
+@media screen and (max-width: 750px) {
+    #linksContainerLandscape {
+        display: none;
+    }
+    #linksContainerMobile {
+        display: flex;
+    }
+}
+@media screen and (min-width: 750px) {
+    #linksContainerLandscape {
+        display: grid;
+    }
+    #linksContainerMobile {
+        display: none;
+    }
 }
 
 .navigationBar {
