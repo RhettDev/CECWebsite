@@ -341,7 +341,7 @@ a {
 .faqSeparator {
     width: 4px;
     min-height: 100%;
-    background-color: var(--Brand-blue-primary);
+    background-color: var(--Border-Blue);
     margin: 14px 10px;
     border-radius: 2px;
     align-self: stretch;
@@ -385,17 +385,6 @@ a {
 /* Text Styles */
 
 /* Headers */
-.txHeaderBlack {
-    color: var(--Text-Black);
-    text-align: center;
-    font-family: Poppins;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    font-weight: bolder;
-}
-
 .txHeaderWhite {
     color: var(--Text-White);
     text-align: center;
@@ -419,16 +408,6 @@ a {
 }
 
 /* Subtitles */
-.txSubtitleBlack {
-    color: var(--Text-Black);
-    text-align: center;
-    font-family: Poppins;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
-
 .txSubtitleWhite {
     color: var(--Text-White);
     font-family: Poppins;
@@ -450,17 +429,6 @@ a {
 }
 
 /* Paragraph Text */
-.txParagraph1Black {
-    color: var(--Text-Black);
-    text-align: center;
-    font-family: Poppins;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    max-width: 400px;
-}
-
 .txParagraph1White {
     color: var(--Text-White);
     font-family: Poppins;
@@ -483,18 +451,6 @@ a {
     max-width: 400px;
 }
 
-.txParagraph2Black {
-    color: var(--Text-Black);
-    text-align: center;
-    font-family: Poppins;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    max-width: 500px;
-    
-}
-
 .txParagraph2White {
     color: var(--Text-White);
     font-family: Poppins;
@@ -515,18 +471,6 @@ a {
     line-height: normal;
     text-align: left;
     max-width: 400px;
-}
-
-.txParagraph3Black {
-    color: var(--Text-Black);
-    text-align: center;
-    font-family: Poppins;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    max-width: 500px;
-    
 }
 
 .txParagraph3White {
@@ -568,6 +512,13 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+@media screen and (max-width: 750px) {
+    .txHeader {
+        font-size: 22px;
+        text-wrap-mode: wrap;
+    }
 }
 
 
@@ -1154,7 +1105,7 @@ a {
 .clubHistorySeparator{
     width: 4px;
     height: 100%;
-    background-color: var(--Brand-blue-primary);
+    background-color: var(--Border-Blue);
     border-radius: 2px;
     min-height: 60px;
     margin: 0;
