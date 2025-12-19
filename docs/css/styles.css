@@ -302,9 +302,6 @@ a {
     align-items: center;
 }
 
-
-
-
 .faqGroup {
     display: flex;
     flex-direction: row;
@@ -1071,6 +1068,16 @@ a {
     position: relative;
     overflow: hidden;
     background-color: var(--BG-Secondary);
+}
+
+@media screen and (max-width: 750px) {
+    .sponsorCarousel{
+        height: 100px;
+
+    }
+    .sponsorLogo {
+        max-width: 100px;
+    }
 }
 
 .sponsorBar {
