@@ -57,10 +57,10 @@
         <div class="main">
     
             <!-- Buttons -->
-            <div class="heroBar"style="gap: 100px; align-items: center; padding-bottom: 0; background-color: transparent;">
-                <a href="#clubHistory" class="txSubtitle" id="clubHistoryHeading">Club History</a>
-                <a href="#pastExecs" class="txSubtitle" id="pastExecsHeading">Past Executive Committees</a>
-                <a href="#lifeMembers" class="txSubtitle" id="lifeMembersHeading">Life Members</a>
+            <div class="historyTabs">
+                <a href="#clubHistory" class="txSubtitle textMobile" id="clubHistoryHeading">Club History</a>
+                <a href="#pastExecs" class="txSubtitle textMobile" id="pastExecsHeading">Past Executive Committees</a>
+                <a href="#lifeMembers" class="txSubtitle textMobile" id="lifeMembersHeading">Life Members</a>
             </div>
 
             <!-- Club History -->
@@ -68,14 +68,14 @@
                 <div id="clubHistoryContainer" class="clubHistoryContainer"></div>
 
                 <!-- Coming soon Hero-->
-                <!-- <div class="e404Hero">
+                <div class="e404Hero">
                     <div class="heroGroup.center">
                         <img src="assets/images/LegomanCoffeeWOutlineLarge.png" alt="Lego Man Coffee White Outline" style="width: 300px; height: auto;">
                     </div>
-                    <div class="txHeader headingBorder">History Page Coming Soon!</div>
-                </div> -->
-
-                <script>
+                    <div class="txHeader headingBorder textMobile">History Page Coming Soon!</div>
+                </div>
+                <!-- Current History Script -->
+                <!-- <script>
                     fetch('data/clubHistory.json')
                     .then(res => res.json())
                     .then(clubHistory => {
@@ -106,17 +106,17 @@
                         });
                         container.innerHTML = cardHTML;
                     });
-                </script>
+                </script> -->
             </div>
 
             <!-- Past Execs -->
             <div id="Past Executives"  class="tabContent">
-                <div id="execHistoryContainer" class="heroContainerCOL"></div>
+                <div id="execHistoryContainerLandscape" class="heroContainerCOL"></div>
                 <script>
                     fetch('data/execHistory.json')
                     .then(res => res.json())
                     .then(pastExecs => {
-                        const container = document.getElementById('execHistoryContainer');
+                        const container = document.getElementById('execHistoryContainerLandscape');
                         let html = '';
                         pastExecs.forEach(yearObj => {
                             html += `
@@ -143,18 +143,67 @@
                         container.innerHTML = html;
                     });
                 </script>
+                
+                <div id="execHistoryContainerMobile" class="heroContainerCOL" style="margin-top: 0px;"></div>
+                <script>
+                    fetch('data/execHistory.json')
+                    .then(res => res.json())
+                    .then(pastExecs => {
+                        const container = document.getElementById("execHistoryContainerMobile");
+                        let html = ``;
+                        let cardIndex = 0;
+                        pastExecs.forEach(yearObj => {
+                            html += `
+                            <div class=historyYearRow style="align-items: center">
+                                <div class="historyYearLabel">
+                                    <p class="txHistoryYear">${yearObj.year}</p>
+                                </div>
+                            </div>
+                            `;
+                            for(let i = 0; i < yearObj.roles.length; i+=2){
+                                cardIndex = 0;
+                                html += `<div class="historyRolesRow">`;
+                                yearObj.roles.slice(i, i+2).forEach(roleObj => {
+                                    if(i === yearObj.roles.length - 1){
+                                        html += `
+                                        <div class="historyRoleCard" style="align-items: center;">
+                                            <p class="txHistoryName">${roleObj.name[0]}</p>
+                                            <p class="txHistoryRole">${roleObj.role.join(', ')}</p>
+                                        </div>
+                                        `;
+                                    }
+                                    else{
+                                        const alignment = (cardIndex % 2 === 0) ? 'end' : 'start';
+                                        html += `
+                                        <div class="historyRoleCard" style="align-items: ${alignment};">
+                                            <p class="txHistoryName">${roleObj.name[0]}</p>
+                                            <p class="txHistoryRole">${roleObj.role.join(', ')}</p>
+                                        </div>
+                                        `;
+                                        cardIndex++;
+                                    }
+                                    
+                                });
+                                html += `
+                                </div>
+                                `;
+                            }
+                        });
+                        container.innerHTML = html;
+                    })
+                </script>
             </div>
 
             <!-- Life Members -->
             <div id="Life Members" class="tabContent">
-                <div id="lifeMemberContainer" class="heroContainerCOL" style="gap: 16px;"></div>
+                <div id="lifeMemberContainerLandscape" class="heroContainerCOL" style="gap: 16px;"></div>
                 <script>
                     fetch('data/lifeMembers.json')
                     .then(res =>res.json())
                     .then(lifeMembers => {
-                        const container = document.getElementById('lifeMemberContainer');
+                        const container = document.getElementById('lifeMemberContainerLandscape');
                         let html = ''
-                        var i, n, m;
+                        var i;
                         for(i = 0; i < lifeMembers.length - 1; i+=3){
                             html += `<div class="historyRow" style="display: flex; justify-content: center;">`;
                             lifeMembers.slice(i,i+3).forEach(lifeObj => {
@@ -171,6 +220,31 @@
                             });
                             html += `</div>`;
                         }
+                        container.innerHTML = html;
+                    });
+                </script>
+
+                <div id="lifeMemberContainerMobile" class="heroContainerCOL" style="gap: 16px;"></div>
+                <script>
+                    fetch('data/lifeMembers.json')
+                    .then(res =>res.json())
+                    .then(lifeMembers => {
+                        const container = document.getElementById('lifeMemberContainerMobile');
+                        let html = ''
+                        var i, n, m;
+                        lifeMembers.forEach(lifeObj => {
+                            html += ` 
+                                <div class="historyRow" style="gap: 0px;">
+                                    <div class="historyYearLabel" style="text-align: center;">
+                                        <p class="txHistoryYear">${lifeObj.year}</p>
+                                    </div>
+                                    <div class="historyRoleCard" style="justify-content: center;">
+                                        <p class="txParagraph1">${lifeObj.name}</p>
+                                    </div>
+                                </div>
+                            `;
+                        });
+                        html += `</div>`;
                         container.innerHTML = html;
                     });
                 </script>

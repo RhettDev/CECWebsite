@@ -236,7 +236,7 @@ a {
     .heroContainerCOL {
         display: flex;
         flex-direction: column;
-        gap: 32px;
+        gap: 16px;
         justify-content: center;
         margin-bottom: 36px;
         margin-top: 36px;
@@ -848,6 +848,18 @@ a {
 
 .pagination a:hover:not(.active) {background-color: var(--Text-InvertSecondary);}
 
+.historyTabs {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 36px 0px;
+}
+
+
+
+
+
 .txHistoryYear{
     font-family: Poppins;
     font-size: 20px;
@@ -904,6 +916,37 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+
+
+@media screen and (max-width: 750px) {
+    .historyTabs {
+        width: 90%;
+        padding: 20px 0px;
+    }
+    #execHistoryContainerMobile {
+        display: flex;
+    }
+    #execHistoryContainerLandscape {
+        display: none;
+    }
+    #lifeMemberContainerMobile {
+        display: flex;
+    }
+    #lifeMemberContainerLandscape {
+        display: none;
+    }
+    .historyRolesRow {
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+    }
+    .historyYearRow {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0px;
+    }
 }
 
 .tab{
