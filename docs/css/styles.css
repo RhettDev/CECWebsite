@@ -130,6 +130,12 @@ a {
     gap: 48px;
 }
 
+@media screen and (max-width: 750px) {
+    .main{
+        gap: 24px;
+    }
+}
+
 /* Button Classes */
 .yellowButton {
     background-color: var(--Brand-yellow-primary); /* Brand Yellow */
@@ -923,7 +929,8 @@ a {
 @media screen and (max-width: 750px) {
     .historyTabs {
         width: 90%;
-        padding: 20px 0px;
+        padding: 0px;
+        padding-top: 20px;
     }
     #execHistoryContainerMobile {
         display: flex;
@@ -946,6 +953,12 @@ a {
         flex-direction: column;
         align-items: center;
         margin-bottom: 0px;
+    }
+    .txHistoryName{
+        font-size: 14px;
+    }
+    .txHistoryRole{
+        font-size: 14px;
     }
 }
 
