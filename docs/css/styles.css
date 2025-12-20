@@ -910,6 +910,21 @@ a {
     }
 }
 
+@media screen and (min-width: 750px) {
+    #execHistoryContainerMobile {
+        display: none;
+    }
+    #execHistoryContainerLandscape {
+        display: block;
+    }
+    #lifeMemberContainerMobile {
+        display: none;
+    }
+    #lifeMemberContainerLandscape {
+        display: block;
+    }
+}
+
 .tab{
     overflow: hidden;
     background-color: var(--Text-InvertPrimary);
