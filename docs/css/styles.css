@@ -708,6 +708,47 @@ a {
     background-color: var(--BG-Secondary);
 }
 
+.sponsorSwipe{
+    position: relative;
+    overflow: visible;
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+}
+
+/* .sponsorSwipe
+    .sponsorHighlightPlat,
+    .sponsorHighlightGold,
+    .sponsorHighlightSilv,
+    .sponsorHighlightOthe{
+        width: 25%;
+        max-width: 300px;
+        margin: 8px;
+} */
+
+.swipeIndicator {
+    width: 50%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.swipeDash {
+    background-color: var(--Brand-blue-secondary);
+    height: 15px;
+    width: 30px;
+    border-radius: 25%;
+    display: inline-block;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.swipeDash.active{
+    color: var(--Brand-blue-primary);
+}
+
 @media screen and (max-width: 750px) {
     .sponsorHighlightPlat,
     .sponsorHighlightGold,
@@ -724,6 +765,12 @@ a {
     #sponsorMobile {
         display: flex;
     }
+    #sponsorSwipe {
+        display: flex;
+    }
+    #swipeIndicator {
+        display: flex;
+    }
 }
 
 @media screen and (min-width: 750px) {
@@ -731,6 +778,12 @@ a {
         display: flex;
     }
     #sponsorMobile {
+        display: none;
+    }
+    #sponsorSwipe {
+        display: none;
+    }
+    #swipeIndicator {
         display: none;
     }
 }

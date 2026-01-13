@@ -72,7 +72,7 @@
                     <p class="txSubtitle subtitleBorder">Gold Sponsors</p>
                     <div class="sponsorGroup" id="goldGroupLand">
                         <script>
-                            getSponsors('gold', 'goldGroupLand');
+                            getSponsors('gold', 'goldGroupLand', 'data/currentSponsors.json');
                         </script>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                     <p class="txSubtitle subtitleBorder">Silver Sponsors</p>
                     <div class="sponsorGroup" id="silvGroupLand">
                         <script>
-                            getSponsors('silver', 'silvGroupLand');
+                            getSponsors('silver', 'silvGroupLand', 'data/currentSponsors.json');
                         </script>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
                     <p class="txSubtitle subtitleBorder">Additional Sponsors</p>
                     <div class="sponsorGroup" id="otheGroupLand">
                         <script>
-                            getSponsors('other', 'otheGroupLand');
+                            getSponsors('other', 'otheGroupLand', 'data/currentSponsors.json');
                         </script>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                     <p class="txSubtitle subtitleBorder">Gold Sponsors</p>
                     <div class="sponsorGroup" id="goldGroupMobi">
                         <script>
-                            getSponsors('gold', 'goldGroupMobi');
+                            getSponsors('gold', 'goldGroupMobi', 'data/currentSponsors.json');
                         </script>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                     <p class="txSubtitle subtitleBorder">Silver Sponsors</p>
                     <div class="sponsorGroup" id="silvGroupMobi">
                         <script>
-                            getSponsors('silver', 'silvGroupMobi');
+                            getSponsors('silver', 'silvGroupMobi', 'data/currentSponsors.json');
                         </script>
                     </div>
                 </div>
@@ -116,7 +116,7 @@
                     <p class="txSubtitle subtitleBorder">Additional Sponsors</p>
                     <div class="sponsorGroup" id="otheGroupMobi">
                         <script>
-                            getSponsors('other', 'otheGroupMobi');
+                            getSponsors('other', 'otheGroupMobi', 'data/currentSponsors.json');
                         </script>
                     </div>
                 </div>
@@ -132,6 +132,65 @@
                     <img alt="Sponsorship Photo" src="assets/images/sponsorReason.jpg" class="imageHero" style="border-color: #2C4DAF;">
                 </div>
             </div>
+
+            <!-- Test Sponsor Swipe Display -->
+            <!-- <div id="sponsorSwipe" class="sponsorSwipe">
+                <div id="goldSwipe" class="heroGroup">
+                    <p class="txSubtitle subtitleBorder">Gold Sponsors</p>
+                    <div class="sponsorGroup" id="goldGroupSwipe">
+                        <script>
+                            getSponsors('gold', 'goldGroupSwipe', 'data/currentSponsors.json');
+                        </script>
+                    </div>
+                </div>
+                <div id="silvSwipe" class="heroGroup">
+                    <p class="txSubtitle subtitleBorder">Silver Sponsors</p>
+                    <div class="sponsorGroup" id="silvGroupSwipe">
+                        <script>
+                            getSponsors('silver', 'silvGroupSwipe', 'data/currentSponsors.json');
+                        </script>
+                    </div>
+                </div>
+                <div id="otheSwipe" class="heroGroup">
+                    <p class="txSubtitle subtitleBorder">Additional Sponsors</p>
+                    <div class="sponsorGroup" id="otheGroupSwipe">
+                        <script>
+                            getSponsors('other', 'otheGroupSwipe', 'data/currentSponsors.json');
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+            <div id="swipeIndicator">
+                <span class="swipeDash" data-index="0"></span>
+                <span class="swipeDash" data-index="1"></span>
+                <span class="swipeDash" data-index="2"></span>
+            </div> -->
+
+            <!-- Past Sponsors Header -->
+            <p class="txHeader headingBorder" style="margin: 0px; margin-top: 24px;">Our Past Sponsors</p>
+
+            <!-- Landscape -->
+            <div class="heroContainer" style="flex-direction: column; gap: 0px" id="sponsorLandscape">
+                <div class="heroGroup">
+                    <div class="sponsorGroup" id="pastLand">
+                        <script>
+                            getSponsors('other', 'pastLand', 'data/pastSponsors.json');
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile -->
+            <div id="sponsorMobile" class="heroContainerCOL" style="width: 80%; margin-top: 0px;">
+                <div class="heroGroup">
+                    <div class="sponsorGroup" id="pastMobi">
+                        <script>
+                            getSponsors('other', 'pastMobi', 'data/pastSponsors.json');
+                        </script>
+                    </div>
+                </div>
+            </div>  
 
             <!-- Previous Professional Events-->
             <div class="heroContainer heroContainerCOL" style="margin-bottom: 64px;">
