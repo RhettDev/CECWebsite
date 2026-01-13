@@ -162,7 +162,7 @@
                             `;
                             for(let i = 0; i < yearObj.roles.length; i+=2){
                                 cardIndex = 0;
-                                html += `<div class="historyRolesRow">`;
+                                html += `<div class="historyRolesRow" style="padding: 0px 8px;">`;
                                 yearObj.roles.slice(i, i+2).forEach(roleObj => {
                                     if(i === yearObj.roles.length - 1){
                                         html += `
@@ -175,7 +175,7 @@
                                     else{
                                         const alignment = (cardIndex % 2 === 0) ? 'end' : 'start';
                                         html += `
-                                        <div class="historyRoleCard" style="align-items: ${alignment};">
+                                        <div class="historyRoleCard" style="text-align: ${alignment};">
                                             <p class="txHistoryName">${roleObj.name[0]}</p>
                                             <p class="txHistoryRole">${roleObj.role.join(', ')}</p>
                                         </div>

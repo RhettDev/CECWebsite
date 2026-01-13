@@ -212,7 +212,7 @@ a {
     background-color: var(--Brand-blue-primary);
 }
 
-@media (max-width: 750px) {
+@media screen and (max-width: 750px) {
     .footerBar {
         flex-direction: column;
         align-items: start;
@@ -922,7 +922,6 @@ a {
 .historyRoleCard {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
 
 
@@ -946,7 +945,6 @@ a {
         display: none;
     }
     .historyRolesRow {
-        /* flex-direction: column; */
         align-items: center;
         justify-content: center;
     }
@@ -975,6 +973,9 @@ a {
     }
     #lifeMemberContainerLandscape {
         display: block;
+    }
+    .historyRoleCard {
+        align-items: flex-start;
     }
 }
 
@@ -1214,8 +1215,8 @@ a {
     border: 2px solid var(--Border-Blue);
     border-radius: 12px;
     position: relative;
-    max-height: 250px;
     overflow: hidden;
+    display: flex;
 }
 
 .linkItem img{
@@ -1242,6 +1243,9 @@ a {
     }
     #linksContainerMobile {
         display: flex;
+    }
+    .linkItem{
+        aspect-ratio: 1.3;
     }
 }
 @media screen and (min-width: 750px) {
@@ -1305,6 +1309,7 @@ a {
     background-color: var(--BG-Secondary);
     border-radius: 16px;
     min-width: max-content;
+    max-height: 85vh;
     padding: 20px;
     padding-bottom: 10px;
     font-family: Poppins;
@@ -1315,6 +1320,7 @@ a {
     flex-direction: column;
     gap: 16px;
     font-size: large;
+    overflow: auto;
 }
 
 .hamburgerList a {
