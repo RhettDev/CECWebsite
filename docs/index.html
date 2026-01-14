@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Curtin Engineers Club</title>
-        <meta name="viewport" content="width=device-width, inital-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="css/styles.css" />
         <script src="scripts/theme.js" ></script>
         <script src="scripts/index.js" ></script>
@@ -18,32 +18,49 @@
     <body>
         <div class="wipLabel">W.I.P - Come Back Semester 1!</div>
         <!-- Navigation Bar-->
-        <div class="navbar">
-            <!-- Left side of Navigation Bar-->
-            <div class="nav-left">
-                <a href="">
-                    <img class='icon' src="assets/icons/CECGearBlack.svg" id="CECLogo" style="width: 36;">
+        <div class="navigationBar" id="navbar">
+            <div class="navLeft" id="navLeft">
+                <a href="javascript:void(0);" onclick="hamLinks()" id="hamIcon">
+                    <img class='icon' src="assets/icons/hamburgerIconBlack.svg" id="hamburgerIcon" style="width: 36;">
                 </a>
-                <a href="">Curtin Engineers Club</a>
-                <a href="about.html">About</a>
-                <a href="events.html#1">Events</a>
-                <a href="sponsor.html">Sponsors</a>
-                <a href="history.html#clubHistory">History</a>
-                <a href="links.html">Links</a>
+                <a href="javascript:void(0);" id="gearIcon" class="icon" style="width: 36px; height: 36px;">
+                    <img class='icon' src="assets/icons/CECGearBlack.svg" id="CECLogo" style="width: 36px; height: 36px;">
+                </a>
+                <a id="cecTitle" href="">Curtin Engineers Club</a>
+                <div class="navLinks" id="hamLinks">
+                    <a href="about.html">About</a>
+                    <a href="events.html#1">Events</a>
+                    <a href="sponsor.html">Sponsors</a>
+                    <a href="history.html#clubHistory">History</a>
+                    <a href="links.html">Links</a>
+                </div>
             </div>
-            <!-- Right side of Navigation Bar-->
-            <div class="nav-right">
+            <div class="navRight" id="navRight">
                 <button class="icon" id="themeToggle" onclick="changeTheme()">
                     <img class="icon" id="themeToggleIcon" src="assets/icons/DARKMODE-IconBlack.svg">
                 </button>
                 <a href="https://curtin-cec.tidyhq.com/public/membership_levels" class="yellowButton" target="_blank" rel="noopener noreferrer">Sign Up!</a>
             </div>
         </div>
+        <div class="backdrop" id="hamburgerBackdrop"></div>
+        <script>document.getElementById('hamburgerBackdrop').addEventListener('click', hamLinks);</script>
+        <div class="hamburgerList" id="hamburgerList">
+            <a href="javascript:void(0);" onclick="hamLinks()"class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="events.html#1">Events</a>
+            <a href="sponsor.html">Sponsors</a>
+            <a href="history.html#clubHistory">History</a>
+            <a href="links.html">Links</a>
+        </div>
 
         <!-- Landing Image -->
         <div class="landingContainer">
             <img class="landingGear" alt="CECGear" src="assets/icons/CECGearWhite.svg" id="CECGearLanding">
-            <img class="landingImage" alt="landingImage" src="assets/images/botlLandingImage.png">
+            <picture>
+                <source media="(max-width: 750px)" srcset="assets/images/LandingMobile.png">
+                <source media="(min-width: 750px)" srcset="assets/images/botlLandingImage.png">
+                <img class="landingImage" alt="landingImage" src="assets/images/botlLandingImage.png">
+            </picture>
         </div>
 
         <!-- Meeting Invite Pop-up-->
@@ -59,7 +76,7 @@
         <div class="main">
 
             <!-- About CEC Hero-->
-            <div class="heroContainer">
+            <div class="heroContainer heroContainerCOL" id="aboutLandscape">
                 <div class="heroGroup">
                     <h2 class="txSubtitle subtitleBorder">What is CEC About?</h2>
                     <p class="txParagraph1" style="text-align: justify;">Curtin Engineers Club (CEC) is a multi-disciplinary engineering club that holds numerous social and professional events, helps students connect with each other and provides resources to its members. Being a social club, CEC welcomes all students, not just engineering students, with events such as BOTL or Pubcrawl purely for socialising. 
@@ -75,12 +92,12 @@
             </div>
 
             <!-- Sponsorship Banner -->
-            <div style="display: flex; width: 100%; background-color: var(--Brand-blue-primary); justify-content: center;">
+            <div class="sponsorContainer">
                 <!-- Call to Action -->
-                <div class="heroBar" style="width: 60%; align-items: center; gap: 96px;">
-                    <div class="footerGroup" style="width: 60%; max-width: max-content;">
-                        <p class="txSubtitleWhite" style="margin-top: 0px;">Want to Become a Sponsor?</p>
-                        <p class="txParagraph1White">Connect with the club and students directly by sponsoring us! Be first in line for networking events and student engagement.</p>
+                <div class="heroBar heroBarCOL">
+                    <div class="footerGroup footerBar">
+                        <p class="txSubtitleWhite textMobile" style="margin-top: 0px;">Want to Become a Sponsor?</p>
+                        <p class="txParagraph1White textMobile">Connect with the club and students directly by sponsoring us! Be first in line for networking events and student engagement.</p>
                         <a href="sponsor.html" class="yellowButton" style="padding: 6px 8px;">Find Out More</a>
                     </div>
                     <div class="heroGroup" style="max-width: max-content;">
@@ -96,7 +113,6 @@
                             .then(res => res.json())
                             .then(sponsors => {
                                 const innerContainer = document.getElementById('sponsorBar');
-
                                 let html = ``;
                                 sponsors.forEach(sponsorObj => {
                                     html += `
@@ -110,15 +126,16 @@
                 </div>
             </div>
 
-        <!-- Exec Committee-->
+            <!-- Exec Committee-->
             <p class="txHeader headingBorder" style="width: max-content; margin-bottom: 0px;"><script>document.write(new Date().getFullYear())</script> Executive Committee</p>
 
-            <div id="execContainer" class="heroContainerCOL" style="margin-left: 50px"></div>
+            <!-- Landscape -->
+            <div id="execContainerLandscape" class="heroContainerCOL" style="margin-left: 50px; margin-bottom: 30px;"></div>
             <script>
                 fetch('data/currentExecs.json')
                 .then(res => res.json())
                 .then(execs => {
-                    const container = document.getElementById('execContainer')
+                    const container = document.getElementById('execContainerLandscape')
                     let rowHTML = '';
                     execs.forEach((exec, i) => {
                         const random = Math.floor(Math.random() * 2);
@@ -140,6 +157,30 @@
                         }
                     });
                     container.innerHTML = rowHTML;
+                });
+            </script>
+
+            <!-- Mobile -->
+            <div id="execContainerPortrait" class="heroContainerCOL" style="margin-left: 50px;"></div>
+            <script>
+                fetch('data/currentExecs.json')
+                .then(res => res.json())
+                .then(execs => {
+                    const container = document.getElementById('execContainerPortrait')
+                    let profileHTML = '';
+                    execs.forEach(exec => {
+                        const random = Math.floor(Math.random() * 2);
+                        profileHTML += `
+                            <div class="execProfile" style="margin-bottom: 16px; max-width: 100%; padding: 8px">
+                                <img class="${random % 2 === 0 ? 'execPhotoBlue' : 'execPhotoYellow'}" src="${exec.image}">
+                                <div class="txColumn">
+                                    <p class="txExecProf">${exec.name}</p>
+                                    <p class="txExecProf">${exec.role}</p>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    container.innerHTML = profileHTML;
                 });
             </script>
         </div> 
@@ -170,9 +211,6 @@
                 <a href="https://au.linkedin.com/company/curtin-engineers-club" target="_blank" rel="noopener noreferrer">
                     <img src="assets/icons/INDEED-Icon.png" alt="Linkedin Logo"> <!-- Linkedin Logo -->
                 </a>
-                <!-- <a href="https://linktr.ee/Curtin.Engineers.Club">
-                    <img src="assets/icons/LINKTREE-Icon.png" alt="Linktree Logo">
-                </a> -->
             </div>
         </div>
     </body>

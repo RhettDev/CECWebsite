@@ -67,7 +67,7 @@ function updateUpcomingEvents() {
     }
 }
 
-function updatePastEvents() {
+function updatePastEvents(containerID) {
     const hash = location.hash.slice(1);
     const pageNum = parseInt(hash) || 1;
 
@@ -77,7 +77,7 @@ function updatePastEvents() {
     fetch('data/pastEvents.json')
     .then(res => res.json())
     .then(events => {
-        const container = document.getElementById('pastEventsContainer');
+        const container = document.getElementById(containerID);
         let html = ``;
         events.slice(firstIndex,lastIndex).forEach(event => {
             html += `
@@ -86,13 +86,18 @@ function updatePastEvents() {
                 <div class="eventInfo">
                     <div class="eventDetails">
                         <p class="txParagraph1White">${event.title}</p>
-                        <p class="txParagraph2White" style="text-align: right;">${event.date}<br>${event.time}</p>
+                        <p class="txParagraph2White">${event.date}<br>${event.time}</p>
                     </div>
                     <p class="txParagraph3White" style="max-width: none;">${event.description}</p>
                     <a href="${event.link}" class="yellowButton" style="padding: 6px 8px;" target="_blank" rel="noopener noreferrer">Find Out More!</a>
                 </div>
             </div>
             `;
+            // html += `
+            // <div class="eventCard">
+
+            // </div>
+            // `;
         })
         container.innerHTML = html;
     })

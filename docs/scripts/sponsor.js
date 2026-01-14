@@ -2,9 +2,9 @@
 
 let _sponsorCache = null;
 
-function fetchSponsors(){
+function fetchSponsors(filePath){
     if(_sponsorCache) return Promise.resolve(_sponsorCache);
-    return fetch('data/currentSponsors.json')
+    return fetch(filePath || '.data/currentSponsors.json')
         .then(res => {
             if(!res.ok) throw new Error('failed to fetch sponsorData.json: ' + res.status);
             return res.json();
@@ -12,6 +12,7 @@ function fetchSponsors(){
         .then(data => {_sponsorCache = data; return data;})
         .catch(err => {console.error(err); throw err;})
 }
+
 
 function sponsorLevel(level){
     switch((level||'').toLowerCase()){
@@ -23,8 +24,8 @@ function sponsorLevel(level){
     }
 }
 
-function getSponsors(level, groupID){
-    fetchSponsors().then(sponsor => {
+function getSponsors(level, groupID, filePath){
+    fetchSponsors(filePath).then(sponsor => {
         const container = document.getElementById(groupID);
         
         if(!Array.isArray(sponsor) || sponsor.length === 0){
@@ -35,15 +36,23 @@ function getSponsors(level, groupID){
         const parent = container.parentElement;
         const heading = parent ? parent.querySelector('.txSubtitle') : null;
 
-        const filtered = Array.isArray(sponsor) ? sponsor.filter(s => (s.level || '').toLowerCase() === (level || '').toLowerCase()) : [];
-
+        
+        let filtered;
+        let cssClass;
+        if (filePath && filePath.includes('pastSponsors.json')) {
+            filtered = sponsor;
+            cssClass = 'sponsorHighlightOthe';
+        } else {
+            filtered = Array.isArray(sponsor) ? sponsor.filter(s => (s.level || '').toLowerCase() === (level || '').toLowerCase()) : [];
+            cssClass = sponsorLevel(level);
+        }
+        
         if(!filtered.length){
             if (heading) heading.remove();
             container.innerHTML = `<!-- no ${level} sponsors -->`
             return;
         }
 
-        const cssClass = sponsorLevel(level);
         const html = filtered.map(s => {
             const name = s.name ? String(s.name).replace(/"/g, '&quot;') : '';
             const logo = s.blueLogo ? String(s.blueLogo).replace(/"/g, '&quot;') : '';

@@ -4,10 +4,11 @@
     <head>
         <meta charset="utf-8" />
         <title>Curtin Engineers Club</title>
-        <meta name="viewport" content="width=100%" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/styles.css" />
         <script src="scripts/theme.js"></script>
-        <link rel="icon" href="assets/icons/CECGearBlack.svg">
+        <script src="scripts/index.js" ></script>
+        <link rel="icon"  id="tabIcon" href="assets/icons/CECGearBlack.svg">
         <script src="https://kit.fontawesome.com/4c5395be19.js" crossorigin="anonymous"></script> <!-- Set up to add icons via Font Awesome but currently all Icons are local files--> 
         <script>
             setTheme();
@@ -17,33 +18,45 @@
     <body>
         <div class="wipLabel">W.I.P - Come Back Semester 1!</div>
         <!-- Navigation Bar-->
-        <div class="navbar">
-            <!-- Left side of Navigation Bar-->
-            <div class="nav-left">
-                <a href="index.html">
-                    <img class='icon' src="assets/icons/CECGearBlack.svg" id="CECLogo" style="width: 36;">
+        <div class="navigationBar" id="navbar">
+            <div class="navLeft" id="navLeft">
+                <a href="javascript:void(0);" onclick="hamLinks()" id="hamIcon">
+                    <img class='icon' src="assets/icons/hamburgerIconBlack.svg" id="hamburgerIcon" style="width: 36;">
                 </a>
-                <a href="index.html">Curtin Engineers Club</a>
-                <a href="">About</a>
-                <a href="events.html#1">Events</a>
-                <a href="sponsor.html">Sponsors</a>
-                <a href="history.html#clubHistory">History</a>
-                <a href="links.html">Links</a>
+                <a href="index.html" id="gearIcon" class="icon" style="width: 36px; height: 36px;">
+                    <img class='icon' src="assets/icons/CECGearBlack.svg" id="CECLogo" style="width: 36px; height: 36px;">
+                </a>
+                <a id="cecTitle" href="index.html">Curtin Engineers Club</a>
+                <div class="navLinks" id="hamLinks">
+                    <a href="about.html" class="active">About</a>
+                    <a href="events.html#1">Events</a>
+                    <a href="sponsor.html">Sponsors</a>
+                    <a href="history.html#clubHistory">History</a>
+                    <a href="links.html">Links</a>
+                </div>
             </div>
-            <!-- Right side of Navigation Bar-->
-            <div class="nav-right">
+            <div class="navRight" id="navRight">
                 <button class="icon" id="themeToggle" onclick="changeTheme()">
                     <img class="icon" id="themeToggleIcon" src="assets/icons/DARKMODE-IconBlack.svg">
                 </button>
                 <a href="https://curtin-cec.tidyhq.com/public/membership_levels" class="yellowButton" target="_blank" rel="noopener noreferrer">Sign Up!</a>
             </div>
         </div>
+        <div class="backdrop" id="hamburgerBackdrop"></div>
+        <script>document.getElementById('hamburgerBackdrop').addEventListener('click', hamLinks);</script>
+        <div class="hamburgerList" id="hamburgerList">
+            <a href="index.html">Home</a>
+            <a href="javascript:void(0);" onclick="hamLinks()"class="active">About</a>
+            <a href="events.html#1">Events</a>
+            <a href="sponsor.html">Sponsors</a>
+            <a href="history.html#clubHistory">History</a>
+            <a href="links.html">Links</a>
+        </div>
 
         <div class="main">
-
             <!-- About Heros -->
-            <p class="txHeader headingBorder" style="margin-bottom: 0px;">Who Are We?</p>
-            <div class="heroContainer">
+            <!-- <p class="txHeader headingBorder" style="margin-bottom: 0px;">Who Are We?</p> -->
+            <div class="heroContainer heroContainerCOL">
                 <div class="heroGroup">
                     <p class="txSubtitle subtitleBorder">Why Join the Club?</p>
                     <p class="txParagraph1" style="text-align: justify;">Curtin Engineers Club aims to foster a community where students can relax and socialise with their peers, whilst also building industry connections with companies. Become of the 700 members and find someone in your unit, in your field or just a friend to drink with. Whilst our industry events are targeted to engineering students, our social events are fun for any student. </p>
@@ -54,7 +67,7 @@
                 </div>
             </div>
 
-            <div class="heroContainer">
+            <div class="heroContainer heroContainerCOL">
                 <div class="heroGroup">
                     <p class="txSubtitle subtitleBorder">Where Can you Find Us?</p>
                     <img alt="Map location of CEC Office" src="https://placehold.co/400x400" class="imageHero">
@@ -66,10 +79,10 @@
             </div>
 
             <!-- Merch Hero Bar-->
-            <div class="heroBar" style="background-color: #5271FF; align-items: center;  gap: 96px; width: 100%;">
-                <div class="footerGroup" style="max-width: max-content;">
-                    <p class="txSubtitleWhite" style="margin-top: 0px;">Want Curtin Engineers Club Mercandise?</p>
-                    <p class="txParagraph1White">Represent the club by purchasing some of our merch. Ranging from hoodies, polo shirts and hats!.</p>
+            <div class="heroBar heroBarCOL" style="background-color: #5271FF; align-items: center;  gap: 96px; width: 100%;">
+                <div class="footerGroup footerBar" style="max-width: max-content;">
+                    <p class="txSubtitleWhite textMobile" style="margin-top: 0px;">Want Curtin Engineers Club Mercandise?</p>
+                    <p class="txParagraph1White textMobile">Represent the club by purchasing some of our merch. Ranging from hoodies, polo shirts and hats!.</p>
                     <a href="https://curtin-cec.tidyhq.com/public/shop/products" class="yellowButton" style="padding: 6px 8px;" target="_blank" rel="noopener noreferrer">Shop via our TidyHQ</a>
                 </div>
                 <div class="heroGroup" style="max-width: max-content;">
@@ -80,13 +93,14 @@
 
             <!-- FAQ -->
             <p class="txHeader headingBorder" style="margin-bottom: 0px;">Frequently Asked Club Questions</p>
-            <div class="faqContainer" id="faqContainer" style="width: 100%; margin-bottom: 50px;"></div>
-        
+            
+            <!-- Landscape -->
+            <div class="faqContainer" id="faqContainerLandscape" style="width: 100%; margin-bottom: 50px;"></div>
             <script>
                 fetch('data/faqData.json')
                 .then(res => res.json())
                 .then(questions => {
-                    const container = document.getElementById('faqContainer');
+                    const container = document.getElementById('faqContainerLandscape');
                     questions.forEach(question => {
                         container.innerHTML += `
                         <div class="faqGroup">
@@ -97,11 +111,30 @@
                         `;
                     })
                 })
-            </script>          
+            </script>
+
+            <!-- Mobile -->
+            <div class="faqContainer" id="faqContainerMobile" style="width: 100%; margin-bottom: 50px;"></div>
+            <script>
+                fetch('data/faqData.json')
+                .then(res => res.json())
+                .then(questions => {
+                    const container = document.getElementById('faqContainerMobile');
+                    questions.forEach(question => {
+                        container.innerHTML += `
+                        <div class="faqGroup" style="flex-direction: column;">
+                            <p class="faqQuestion">${question.question}</p>
+                            <div class="faqSeparator"></div>
+                            <p class="faqAnswer">${question.answer}</p>
+                        </div>
+                        `;
+                    })
+                })
+            </script>
         </div>
 
         <!-- Footer -->
-        <div class="heroBar" style="background-color: #5271FF; align-items: center;">
+        <div class="heroBar footerBar" style="background-color: #5271FF; align-items: center;">
             <div class="footerGroup">
                 <p class="txSubtitleWhite" style="text-align: left; margin-bottom: 5px;">Curtin Engineers Club</p>
                 <p class="txParagraph1White" style="margin-bottom: 30px; margin-top: 0px;">(CEC) Est. 1989</p>
@@ -126,9 +159,6 @@
                 <a href="https://au.linkedin.com/company/curtin-engineers-club" target="_blank" rel="noopener noreferrer">
                     <img src="assets/icons/INDEED-Icon.png" alt="Linkedin Logo"> <!-- Linkedin Logo -->
                 </a>
-                <!-- <a href="https://linktr.ee/Curtin.Engineers.Club" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/icons/LINKTREE-Icon.png" alt="Linktree Logo">
-                </a> -->
             </div>
         </div>
     </body>

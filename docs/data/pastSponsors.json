@@ -1,0 +1,86 @@
+[
+    {
+        "name": "Stantec",
+        "blueLogo": "assets/sponsors/StantecBlue.svg",
+        "whiteLogo": "assets/sponsors/StantecWhite.svg",
+        "blackLogo": "assets/sponsors/StantecBlack.svg",
+        "level": "silver"
+    },
+    {
+        "name": "Pacific Energy",
+        "blueLogo": "assets/sponsors/PacificEBlue.svg",
+        "whiteLogo": "assets/sponsors/PacificEWhite.svg",
+        "blackLogo": "assets/sponsors/PacificEBlack.svg",
+        "level": "gold"
+    },
+    {
+        "name": "civmec",
+        "blueLogo": "assets/sponsors/CivmecBlue.svg",
+        "whiteLogo": "assets/sponsors/CivmecWhite.svg",
+        "blackLogo": "assets/sponsors/CivmecBlack.svg",
+        "level": "silver"
+    },
+    {
+        "name": "Partnets In Performance",
+        "blueLogo": "assets/sponsors/PIPBlue.svg",
+        "whiteLogo": "assets/sponsors/PIPWhite.svg",
+        "blackLogo": "assets/sponsors/PIPBlack.svg",
+        "level": "silver"
+    },
+    {
+        "name": "Fortescue",
+        "blueLogo": "assets/sponsors/FortescueBlue.svg",
+        "whiteLogo": "assets/sponsors/FortescueWhite.svg",
+        "blackLogo": "assets/sponsors/FortescueBlack.svg",
+        "level": "silver"
+    },
+    {
+        "name": "Partum",
+        "blueLogo": "assets/sponsors/PartumBlue.svg",
+        "whiteLogo": "assets/sponsors/PartumWhite.svg",
+        "blackLogo": "assets/sponsors/PartumBlack.svg",
+        "level": "silver"
+    },
+    {
+        "name": "Deloitte",
+        "blueLogo": "assets/sponsors/DeloitteBlue.svg",
+        "whiteLogo": "assets/sponsors/DeloitteWhite.svg",
+        "blackLogo": "assets/sponsors/DeloitteBlack.svg",
+        "level": "other"
+    },
+    {
+        "name": "PROK",
+        "blueLogo": "assets/sponsors/ProkBlue.svg",
+        "whiteLogo": "assets/sponsors/ProkWhite.svg",
+        "blackLogo": "assets/sponsors/ProkBlack.svg",
+        "level": "silver"
+    },
+    {
+        "name": "GHD",
+        "blueLogo": "assets/sponsors/GHDBlue.svg",
+        "whiteLogo": "assets/sponsors/GHDWhite.svg",
+        "blackLogo": "assets/sponsors/GHDBlack.svg",
+        "level": "other"
+    },
+    {
+        "name": "SLB",
+        "blueLogo": "assets/sponsors/SLBBlue.svg",
+        "whiteLogo": "assets/sponsors/SLBWhite.svg",
+        "blackLogo": "assets/sponsors/SLBBlack.svg",
+        "level": "silver"
+    },
+    {
+        "name": "WGA",
+        "blueLogo": "assets/sponsors/WGABlue.svg",
+        "whiteLogo": "assets/sponsors/WGAWhite.svg",
+        "blackLogo": "assets/sponsors/WGABlack.svg",
+        "level": "gold"
+    },
+    {
+        "name": "Yarra",
+        "blueLogo": "assets/sponsors/YarraBlue.svg",
+        "whiteLogo": "assets/sponsors/YarraWhite.svg",
+        "blackLogo": "assets/sponsors/YarraBlack.svg",
+        "level": "silver"
+    }
+]
