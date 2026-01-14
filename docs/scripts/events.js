@@ -51,10 +51,10 @@ function updateIndexes() {
     });
 }
 
-function updateUpcomingEvents() {
+function updateUpcomingEvents(containerID) {
     const hash = location.hash
 
-    var upContainter = document.getElementById("upcomingEventsContainer");
+    var upContainter = document.getElementById(containerID);
     var upHeading = document.getElementById("upcomingEventsHeader");
 
     if(hash == "#1"){
@@ -93,11 +93,6 @@ function updatePastEvents(containerID) {
                 </div>
             </div>
             `;
-            // html += `
-            // <div class="eventCard">
-
-            // </div>
-            // `;
         })
         container.innerHTML = html;
     })

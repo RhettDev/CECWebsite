@@ -86,7 +86,7 @@
                         })
                     }
                 })
-                updateUpcomingEvents();
+                
             </script>
 
             <!-- Mobile -->
@@ -117,7 +117,14 @@
                         })
                     }
                 })
-                updateUpcomingEvents();
+            </script>
+            <script>
+                if(screen.width <= 750){
+                    var containerID = "upcomingEventsContainerMobile";
+                } else {
+                    var containerID = "upcomingEventsContainerLandscape";
+                }
+                updateUpcomingEvents(containerID);
             </script>
 
             <!-- Past Events -->
@@ -159,9 +166,18 @@
 
             <script>
                 // Run when hash changes
+                var upContainerID
+                if(screen.width <= 750){
+                    upContainerID = "upcomingEventsContainerMobile";
+                    paContainerID = "pastEventsContainerMobile";
+                } else {
+                    upContainerID = "upcomingEventsContainerLandscape";
+                    paContainerID = "pastEventsContainerLandscape";
+                }
+
                 window.addEventListener("hashchange", updateIndexes);
-                window.addEventListener("hashchange", updateUpcomingEvents);
-                window.addEventListener("hashchange", updatePastEvents);
+                window.addEventListener("hashchange", () => updateUpcomingEvents(upContainerID));
+                window.addEventListener("hashchange", () => updatePastEvents(paContainerID));
                 window.addEventListener("hashchange", updatePagination);
 
                 window.addEventListener("hashchange", resetScroll);
