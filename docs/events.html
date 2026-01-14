@@ -58,12 +58,13 @@
             <!-- Upcoming Events will be loaded here -->
             <p id="upcomingEventsHeader" class="txHeader headingBorder" style="margin-bottom: 0px;">Upcoming Events</p>
             
-            <div id="upcomingEventsContainer" style="display: flex; flex-direction: column; width: 60%; height: auto; gap: 32px;"></div>
+            <!-- Landscape -->
+            <div id="upcomingEventsContainerLandscape" class="eventContainer"></div>
             <script>
                 fetch('data/upcomingEvents.json')
                 .then(res => res.json())
                 .then(events => {
-                    const container = document.getElementById('upcomingEventsContainer');
+                    const container = document.getElementById('upcomingEventsContainerLandscape');
                     if (events.length === 0) {
                         container.innerHTML = '<p class="txSubtitle" style="text-align: center;">No upcoming events at this time. Please check back later!</p>';
                     }
@@ -88,14 +89,51 @@
                 updateUpcomingEvents();
             </script>
 
+            <!-- Mobile -->
+            <div id="upcomingEventsContainerMobile" class="eventContainer"></div>
+            <script>
+                fetch('data/upcomingEvents.json')
+                .then(res => res.json())
+                .then(events => {
+                    const container = document.getElementById('upcomingEventsContainerMobile');
+                    if (events.length === 0) {
+                        container.innerHTML = '<p class="txSubtitle" style="text-align: center;">No upcoming events at this time. Please check back later!</p>';
+                    }
+                    else {
+                        events.forEach(event => {
+                            container.innerHTML += `
+                            <div class="eventCard">
+                                <img class="eventImg" src="${event.image}" alt="${event.title}">
+                                <div class="eventInfo">
+                                    <div class="eventDetails">
+                                        <p class="txParagraph1White">${event.title}</p>
+                                        <p class="txParagraph2White">${event.date}<br>${event.time}</p>
+                                    </div>
+                                    <p class="txParagraph3White" style="max-width: none;">${event.description}</p>
+                                    <a href="${event.link}" class="yellowButton" style="padding: 6px 8px;" target="_blank" rel="noopener noreferrer">Find Out More!</a>
+                                </div>
+                            </div>
+                            `;
+                        })
+                    }
+                })
+                updateUpcomingEvents();
+            </script>
+
             <!-- Past Events -->
             <p class="txHeader headingBorder" style="margin-bottom: 0px;">Past Events</p>
                 
-            <div id="pastEventsContainer" style="display: flex; flex-direction: column; width: 60%; height: auto; gap: 32px;"></div>
+            <div id="pastEventsContainerLandscape" class="eventContainer"></div>
             <script>
-                updatePastEvents();
+                updatePastEvents('pastEventsContainerLandscape');
             </script>
 
+            <div id="pastEventsContainerMobile" class="eventContainer"></div>
+            <script>
+                updatePastEvents('pastEventsContainerMobile');
+            </script>
+
+            <!-- Pagination -->
             <div id="paginationContainer" class="pagination">
                 <script>
                     fetch('data/pastEvents.json')
@@ -125,7 +163,6 @@
                 window.addEventListener("hashchange", updateUpcomingEvents);
                 window.addEventListener("hashchange", updatePastEvents);
                 window.addEventListener("hashchange", updatePagination);
-                window.addEventListener("hashchange", updateSlices);
 
                 window.addEventListener("hashchange", resetScroll);
                 // Run on initial load

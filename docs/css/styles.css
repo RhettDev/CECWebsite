@@ -831,6 +831,67 @@ a {
     padding-left: 16px;
 }
 
+.eventContainer{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: auto;
+    gap: 32px;
+}
+
+@media screen and (max-width: 750px) {
+    #upcomingEventsContainerLandscape {
+        display: none;
+    }
+    #upcomingEventsContainerMobile {
+        display: flex;
+    }
+    #pastEventsContainerLandscape {
+        display: none;
+    }
+    #pastEventsContainerMobile {
+        display: flex;
+    }
+    .eventContainer{
+        width: 70%;
+    }
+    .eventCard{
+        flex-direction: column;
+        max-height: max-content;
+    }
+    .eventDetails{
+        flex-direction: column;
+        text-align: left;
+        justify-content: start;
+    }
+    .eventDetails .txParagraph1White{
+        margin-bottom: 0px;
+        width: 100%;
+    }
+    .eventDetails .txParagraph2White{
+        margin-bottom: 0px;
+        width: 100%;
+    }
+    .eventInfo{
+        flex: 1;
+        padding: 0px;
+    }
+}
+@media screen and (min-width: 750px) {
+    #upcomingEventsContainerLandscape {
+        display: flex;
+    }
+    #upcomingEventsContainerMobile {
+        display: none;
+    }
+    #pastEventsContainerLandscape {
+        display: flex;
+    }
+    #pastEventsContainerMobile {
+        display: none;
+    }
+}
+
 .pagination{
     display: inline-block;
     font-family: Poppins;
@@ -862,10 +923,6 @@ a {
     background-color: transparent;
     padding: 36px 0px;
 }
-
-
-
-
 
 .txHistoryYear{
     font-family: Poppins;
