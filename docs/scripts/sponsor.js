@@ -55,7 +55,7 @@ function getSponsors(level, groupID, filePath){
 
         const html = filtered.map(s => {
             const name = s.name ? String(s.name).replace(/"/g, '&quot;') : '';
-            const logo = s.blueLogo ? String(s.blueLogo).replace(/"/g, '&quot;') : '';
+            const logo = s.logo ? String(s.logo).replace(/"/g, '&quot;') : '';
             const color = Math.random() < 0.5 ? '#5271ff' : '#FFEB31';
             return `<img alt="${name}" src="${logo}" class="${cssClass}" style="border-color: ${color}">`;
         }).join('\n');

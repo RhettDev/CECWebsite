@@ -1,37 +1,27 @@
 [
     {
         "name": "Stantec",
-        "blueLogo": "assets/sponsors/StantecBlue.svg",
-        "whiteLogo": "assets/sponsors/StantecWhite.svg",
-        "blackLogo": "assets/sponsors/StantecBlack.svg",
+        "logo": "assets/sponsors/StantecBlue.svg",
         "level": "other"
     },
     {
         "name": "civmec",
-        "blueLogo": "assets/sponsors/CivmecBlue.svg",
-        "whiteLogo": "assets/sponsors/CivmecWhite.svg",
-        "blackLogo": "assets/sponsors/CivmecBlack.svg",
+        "logo": "assets/sponsors/CivmecBlue.svg",
         "level": "gold"
     },
     {
         "name": "Partnets In Performance",
-        "blueLogo": "assets/sponsors/PIPBlue.svg",
-        "whiteLogo": "assets/sponsors/PIPWhite.svg",
-        "blackLogo": "assets/sponsors/PIPBlack.svg",
+        "logo": "assets/sponsors/PIPBlue.svg",
         "level": "silver"
     },
     {
         "name": "Partum",
-        "blueLogo": "assets/sponsors/PartumBlue.svg",
-        "whiteLogo": "assets/sponsors/PartumWhite.svg",
-        "blackLogo": "assets/sponsors/PartumBlack.svg",
+        "logo": "assets/sponsors/PartumBlue.svg",
         "level": "gold"
     },
     {
         "name": "SLB",
-        "blueLogo": "assets/sponsors/SLBBlue.svg",
-        "whiteLogo": "assets/sponsors/SLBWhite.svg",
-        "blackLogo": "assets/sponsors/SLBBlack.svg",
+        "logo": "assets/sponsors/SLBBlue.svg",
         "level": "silver"
     }
 ]
