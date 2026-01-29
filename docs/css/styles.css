@@ -256,7 +256,7 @@ a {
         gap: 12px !important;
     }
 
-    .textMobile {
+    .txMobile {
         text-align: center !important;
     }
 }
@@ -280,6 +280,7 @@ a {
     }
 }
 
+/* index.html sponsor carousel logos */
 .sponsorLogo {
     display: flex;
     background-color: var(--BG-Secondary);
@@ -386,19 +387,6 @@ a {
 
 
 /* Text Styles */
-
-/* Headers */
-.txHeaderWhite {
-    color: var(--Text-White);
-    text-align: center;
-    font-family: Poppins;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    font-weight: bolder;
-}
-
 .txHeader{
     color: var(--Text-Primary);
     text-align: center;
@@ -408,17 +396,6 @@ a {
     font-weight: 600;
     line-height: normal;
     font-weight: bolder;
-}
-
-/* Subtitles */
-.txSubtitleWhite {
-    color: var(--Text-White);
-    font-family: Poppins;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    text-align: left;
 }
 
 .txSubtitle {
@@ -431,33 +408,10 @@ a {
     text-align: left;
 }
 
-/* Paragraph Text */
-.txParagraph1White {
-    color: var(--Text-White);
-    font-family: Poppins;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-align: left;
-    max-width: 400px;
-}
-
 .txParagraph1 {
     color: var(--Text-Primary);
     font-family: Poppins;
     font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-align: left;
-    max-width: 400px;
-}
-
-.txParagraph2White {
-    color: var(--Text-White);
-    font-family: Poppins;
-    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -476,17 +430,6 @@ a {
     max-width: 400px;
 }
 
-.txParagraph3White {
-    color: var(--Text-White);
-    font-family: Poppins;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-align: left;
-    max-width: 400px;
-}
-
 .txParagraph3 {
     color: var(--Text-Primary);
     font-family: Poppins;
@@ -496,6 +439,10 @@ a {
     line-height: normal;
     text-align: left;
     max-width: 400px;
+}
+
+.txWhite {
+    color: var(--Text-White);
 }
 
 .txExecProf {
@@ -548,19 +495,17 @@ a {
     width: 100%;
 }
 
-
 /* Image Overlay Classes */
 .image-container {
     position: relative;
     display: inline-block;
 }
 
-
-.landingContainer {
+/* .landingContainer {
     position: relative;
     display: inline-block;
     width: 100%;
-}
+} */
 
 .landingImage {
     display: block;
@@ -649,7 +594,6 @@ a {
         display: none;
     }
 }
-
 
 .headingBorder{
     display: inline-block;
